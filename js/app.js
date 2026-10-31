@@ -204,8 +204,20 @@
   function resetIdleTimer() {
     window.clearTimeout(idleTimer);
     idleTimer = window.setTimeout(() => {
-      const sheetDialog = $('#sheet-dialog');
-      if (sheetDialog && sheetDialog.open && typeof sheetDialog.close === 'function') sheetDialog.close();
+     const sheetDialog = $('#sheet-dialog');
+const blackVideoDialog = $('#black-video-dialog');
+
+if (sheetDialog && sheetDialog.open) {
+    if (typeof sheetDialog.close === 'function') {
+        sheetDialog.close();
+    } else {
+        sheetDialog.removeAttribute('open');
+    }
+}
+
+if (blackVideoDialog && blackVideoDialog.open) {
+    closeBlackEditionVideo();
+}
       currentProduct = null;
       showScreen('home');
     }, IDLE_MS);
@@ -301,6 +313,13 @@
     $('#detail-counter').textContent = `PRODUTO ${String(products.indexOf(currentProduct) + 1).padStart(2,'0')} / ${String(products.length).padStart(2,'0')}`;
     $('#detail-title').innerHTML = titleMarkup(currentProduct.name);
     $('#detail-description').textContent = currentProduct.description;
+    // Exibe o botão de vídeo somente no Black Edition
+const blackVideoButton = $('#black-edition-video-button');
+
+if (blackVideoButton) {
+    blackVideoButton.hidden =
+        currentProduct.id !== LAUNCH_PRODUCT_ID;
+}
     $('#detail-category').textContent = (currentProduct.category || 'SÃO PEDRO').toUpperCase();
     $('#detail-badge').textContent = currentProduct.isLaunch ? 'PRODUTO DE LANÇAMENTO' : (currentProduct.tag || 'LINHA SÃO PEDRO').toUpperCase();
 
@@ -474,6 +493,54 @@ function closeGalleryDialog() {
     showScreen('qr');
   }
 
+  function openBlackEditionVideo() {
+    if (!currentProduct || currentProduct.id !== LAUNCH_PRODUCT_ID) {
+        return;
+    }
+
+    const dialog = $('#black-video-dialog');
+    const video = $('#black-edition-video');
+
+    if (!dialog || !video) return;
+
+    if (typeof dialog.showModal === 'function') {
+        dialog.showModal();
+    } else {
+        dialog.setAttribute('open', 'open');
+    }
+
+    video.currentTime = 0;
+
+    const playPromise = video.play();
+
+    if (playPromise && typeof playPromise.catch === 'function') {
+        playPromise.catch(error => {
+            console.warn('Não foi possível iniciar o vídeo:', error);
+        });
+    }
+
+    resetIdleTimer();
+}
+
+function closeBlackEditionVideo() {
+    const dialog = $('#black-video-dialog');
+    const video = $('#black-edition-video');
+
+    if (video) {
+        video.pause();
+        video.currentTime = 0;
+    }
+
+    if (dialog) {
+        if (typeof dialog.close === 'function' && dialog.open) {
+            dialog.close();
+        } else {
+            dialog.removeAttribute('open');
+        }
+    }
+
+    resetIdleTimer();
+}
 
   function navigateAction(action) {
     switch (action) {
@@ -487,6 +554,13 @@ function closeGalleryDialog() {
       break;
       case 'close-sheet': closeSheetDialog(); break;
       default: break;
+      case 'open-black-video':
+    openBlackEditionVideo();
+    break;
+
+case 'close-black-video':
+    closeBlackEditionVideo();
+    break;
     }
   }
 
@@ -549,6 +623,16 @@ if (galleryImage) {
         closeGalleryDialog();
     }
 });
+// Fecha o vídeo Black Edition ao clicar fora da área do vídeo
+const blackVideoDialog = $('#black-video-dialog');
+
+if (blackVideoDialog) {
+    blackVideoDialog.addEventListener('click', event => {
+        if (event.target === blackVideoDialog) {
+            closeBlackEditionVideo();
+        }
+    });
+}
     ['pointerdown','keydown','input','change','wheel'].forEach(name => document.addEventListener(name, () => resetIdleTimer(), {passive:true}));
     document.addEventListener('visibilitychange', () => { if (!document.hidden) resetIdleTimer(); });
   }

@@ -194,9 +194,47 @@
     <img id="gallery-dialog-image" alt="Imagem ampliada do produto">
   </div>
 </dialog>
+
+<!-- Vídeo exclusivo Black Edition -->
+<dialog id="black-video-dialog" class="black-video-dialog">
+
+    <div class="black-video-header">
+        <div>
+            <span>EXPERIÊNCIA SÃO PEDRO</span>
+            <strong>BLACK EDITION</strong>
+        </div>
+
+        <button
+            type="button"
+            class="black-video-close"
+            data-action="close-black-video"
+            aria-label="Fechar vídeo"
+        >
+            ×
+        </button>
+    </div>
+
+    <div class="black-video-stage">
+        <video
+            id="black-edition-video"
+            src="assets/videos/black-edition-loop.mp4"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+        ></video>
+    </div>
+
+    <div class="black-video-footer">
+        <span>SEMIRREBOQUE BAÚ BLACK EDITION</span>
+        <span>FORÇA • DESIGN • EXCLUSIVIDADE</span>
+    </div>
+
+</dialog>
   
   <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
   <script src="data/products.js?v=20261030-static" defer></script>
-<script src="js/app.js?v=20261030-bdlac4k" defer></script>
+<script src="js/app.js?v=20261030-bddlac4k" defer></script>
 </body>
 </html>
