@@ -568,26 +568,54 @@ function closeBlackEditionVideo() {
 
   function navigateAction(action) {
     switch (action) {
-      case 'home': currentProduct = null; showScreen('home'); break;
-      case 'categories': renderCategories(); showScreen('categories'); break;
-      case 'catalog': renderCatalog(); showScreen('catalog'); break;
-      case 'detail': if (currentProduct) showScreen('detail'); else showScreen('categories'); break;
-      case 'sheet-zoom': openSheetDialog(); break;
-      case 'close-gallery':
-      closeGalleryDialog();
-      break;
 
-      case 'close-gallery':
-    closeGalleryDialog();
-    break;
+        case 'home':
+            currentProduct = null;
+            showScreen('home');
+            break;
 
-case 'close-sheet':
-    closeSheetDialog();
-    break;
-      case 'close-sheet': closeSheetDialog(); break;
-      default: break;
+        case 'categories':
+            renderCategories();
+            showScreen('categories');
+            break;
+
+        case 'catalog':
+            renderCatalog();
+            showScreen('catalog');
+            break;
+
+        case 'detail':
+            if (currentProduct) {
+                showScreen('detail');
+            } else {
+                showScreen('categories');
+            }
+            break;
+
+        case 'sheet-zoom':
+            openSheetDialog();
+            break;
+
+        case 'close-gallery':
+            closeGalleryDialog();
+            break;
+
+        case 'open-black-edition-video':
+            openBlackEditionVideo();
+            break;
+
+        case 'close-black-edition-video':
+            closeBlackEditionVideo();
+            break;
+
+        case 'close-sheet':
+            closeSheetDialog();
+            break;
+
+        default:
+            break;
     }
-  }
+}
 
   
 
