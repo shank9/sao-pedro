@@ -186,47 +186,15 @@
     </svg>`;
   }
 
- 
-function showScreen(screenName) {
-
-    $$('.screen', view).forEach(screen => {
-        screen.classList.toggle(
-            'hidden',
-            screen.dataset.screen !== screenName
-        );
-    });
-// Controle de reprodução do vídeo Black Edition
-const blackVideo = $('#black-edition-video');
-
-if (blackVideo) {
-    if (
-        screenName === 'detail' &&
-        currentProduct &&
-        currentProduct.id === LAUNCH_PRODUCT_ID
-    ) {
-        blackVideo.muted = true;
-
-        blackVideo.play().catch(() => {});
-    } else {
-        blackVideo.pause();
-    }
-}
+  function showScreen(screenName) {
+    $$('.screen', view).forEach(screen => screen.classList.toggle('hidden', screen.dataset.screen !== screenName));
     const selected = $(`[data-screen="${screenName}"]`, view);
-
     if (selected) selected.scrollTop = 0;
-
-    try {
-        view.focus({ preventScroll: true });
-    } catch (_) {
-        try {
-            view.focus();
-        } catch (_) {}
-    }
-
+    // Alguns WebViews antigos não aceitam FocusOptions; a navegação não deve parar por isso.
+    try { view.focus({ preventScroll: true }); } catch (_) { try { view.focus(); } catch (_) {} }
     setClockLabel(screenName);
     resetIdleTimer();
-}
-
+  }
 
   function setClockLabel(screenName) {
     const labels = {home:'TOQUE PARA EXPLORAR', categories:'ESCOLHA UMA CATEGORIA', catalog:'ESCOLHA UM PRODUTO', detail:'EXPLORE OS DETALHES', qr:'APONTE A CÂMERA DO CELULAR'};
@@ -336,96 +304,15 @@ if (blackVideo) {
     $('#detail-category').textContent = (currentProduct.category || 'SÃO PEDRO').toUpperCase();
     $('#detail-badge').textContent = currentProduct.isLaunch ? 'PRODUTO DE LANÇAMENTO' : (currentProduct.tag || 'LINHA SÃO PEDRO').toUpperCase();
 
-    
-
-const isBlackEdition = currentProduct.id === LAUNCH_PRODUCT_ID;
-
-const detailScreen = $('[data-screen="detail"]', view);
-
-if (detailScreen) {
-    // Remove as classes da implementação anterior
-    detailScreen.classList.remove(
-        'is-black-edition',
-        'black-edition-active'
-    );
-
-    // Ativa somente a nova composição
-    detailScreen.classList.toggle(
-        'black-edition-video-enabled',
-        isBlackEdition
-    );
-
-    const caption = $('.visual-caption span:last-child', detailScreen);
-
-    if (caption) {
-        caption.textContent = isBlackEdition
-            ? 'IMAGEM + VÍDEO'
-            : 'IMAGEM DO PRODUTO';
-    }
-}
-
-// PRIMEIRO: mantém a imagem PNG original.
-$('#detail-art').innerHTML = `
-    <img
+    $('#detail-art').innerHTML = `
+      <img
         class="detail-product-image"
         src="${escapeHtml(currentProduct.image || '')}"
         alt="${escapeHtml(currentProduct.name)}"
         loading="eager"
         decoding="async"
-    >
-`;
-
-// SEGUNDO: adiciona o vídeo ao lado da imagem.
-if (isBlackEdition) {
-
-    $('#detail-art').insertAdjacentHTML('beforeend', `
-        <div class="black-edition-motion-card">
-
-            <div class="black-edition-motion-heading">
-                <span></span>
-                <div>
-                    <strong>EM MOVIMENTO</strong>
-                    <small>BLACK EDITION</small>
-                </div>
-            </div>
-
-            <video
-                id="black-edition-video"
-                class="black-edition-motion-video"
-                autoplay
-                muted
-                loop
-                playsinline
-                preload="metadata"
-                aria-label="Vídeo do Semirreboque Black Edition"
-            >
-                <source
-                    src="assets/videos/black-edition-loop.mp4"
-                    type="video/mp4"
-                >
-            </video>
-
-            <div class="black-edition-motion-caption">
-                CONHEÇA CADA DETALHE
-            </div>
-
-        </div>
-    `);
-}
- else {
-
-    // Todos os outros produtos continuam iguais
-    $('#detail-art').innerHTML = `
-        <img
-            class="detail-product-image"
-            src="${escapeHtml(currentProduct.image || '')}"
-            alt="${escapeHtml(currentProduct.name)}"
-            loading="eager"
-            decoding="async"
-        >
+      >
     `;
-}
-
     renderDetailTab();
     showScreen('detail');
   }
