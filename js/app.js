@@ -186,39 +186,61 @@
     </svg>`;
   }
 
-  function showScreen(screenName) {
-    $$('.screen', view).forEach(screen => screen.classList.toggle('hidden', screen.dataset.screen !== screenName));
-    
-// Controla a reprodução do vídeo exclusivo da Black Edition.
-const detailVideo = $('#detail-art .black-edition-video');
+ 
+function showScreen(screenName) {
 
-if (detailVideo) {
+    $$('.screen', view).forEach(screen => {
+        screen.classList.toggle(
+            'hidden',
+            screen.dataset.screen !== screenName
+        );
+    });
 
-    if (
+    // Controle do vídeo Black Edition
+    const blackVideo = $('#black-edition-video');
+
+    const shouldPlay =
         screenName === 'detail' &&
         currentProduct &&
-        currentProduct.id === LAUNCH_PRODUCT_ID
-    ) {
-        detailVideo.muted = true;
+        currentProduct.id === LAUNCH_PRODUCT_ID;
 
-        const playPromise = detailVideo.play();
+    if (blackVideo) {
 
-        if (playPromise && typeof playPromise.catch === 'function') {
-            playPromise.catch(() => {});
+        if (shouldPlay) {
+
+            blackVideo.muted = true;
+
+            const playAttempt = blackVideo.play();
+
+            if (playAttempt && typeof playAttempt.catch === 'function') {
+                playAttempt.catch(error => {
+                    console.warn('Não foi possível iniciar o vídeo:', error);
+                });
+            }
+
+        } else {
+
+            blackVideo.pause();
+
         }
-
-    } else {
-        detailVideo.pause();
     }
-}
 
     const selected = $(`[data-screen="${screenName}"]`, view);
+
     if (selected) selected.scrollTop = 0;
-    // Alguns WebViews antigos não aceitam FocusOptions; a navegação não deve parar por isso.
-    try { view.focus({ preventScroll: true }); } catch (_) { try { view.focus(); } catch (_) {} }
+
+    try {
+        view.focus({ preventScroll: true });
+    } catch (_) {
+        try {
+            view.focus();
+        } catch (_) {}
+    }
+
     setClockLabel(screenName);
     resetIdleTimer();
-  }
+}
+
 
   function setClockLabel(screenName) {
     const labels = {home:'TOQUE PARA EXPLORAR', categories:'ESCOLHA UMA CATEGORIA', catalog:'ESCOLHA UM PRODUTO', detail:'EXPLORE OS DETALHES', qr:'APONTE A CÂMERA DO CELULAR'};
@@ -331,37 +353,43 @@ if (detailVideo) {
     
 const isBlackEdition = currentProduct.id === LAUNCH_PRODUCT_ID;
 
-// Identifica a página especial sem alterar os demais produtos.
-const detailScreen = $('[data-screen="detail"]');
+// Aplica uma classe exclusiva à página Black Edition
+const detailScreen = $('[data-screen="detail"]', view);
 
 if (detailScreen) {
-    detailScreen.classList.toggle('black-edition-active', isBlackEdition);
+    detailScreen.classList.toggle('is-black-edition', isBlackEdition);
 }
 
-// Atualiza a legenda da área visual.
-const visualCaption = $('.detail-visual-panel .visual-caption span:last-child');
+// Atualiza o selo do produto
+$('#detail-badge').textContent = isBlackEdition
+    ? 'EDIÇÃO ESPECIAL'
+    : (currentProduct.isLaunch
+        ? 'PRODUTO DE LANÇAMENTO'
+        : (currentProduct.tag || 'LINHA SÃO PEDRO').toUpperCase());
 
-if (visualCaption) {
-    visualCaption.textContent = isBlackEdition
-        ? 'VÍDEO EM DESTAQUE'
-        : 'IMAGEM DO PRODUTO';
-}
-
-// Conteúdo visual específico do Black Edition.
+// Exibição exclusiva do Black Edition
 if (isBlackEdition) {
+
+    const poster = escapeHtml(currentProduct.image || '');
 
     $('#detail-art').innerHTML = `
         <div class="black-edition-video-frame">
 
+            <img
+                class="black-edition-video-poster"
+                src="${poster}"
+                alt="${escapeHtml(currentProduct.name)}"
+            >
+
             <video
+                id="black-edition-video"
                 class="black-edition-video"
                 autoplay
                 muted
                 loop
                 playsinline
                 preload="auto"
-                poster="${escapeHtml(currentProduct.image || '')}"
-                aria-label="Vídeo do Semirreboque Baú Black Edition"
+                poster="${poster}"
             >
                 <source
                     src="assets/videos/black-edition-loop.mp4"
@@ -371,17 +399,35 @@ if (isBlackEdition) {
 
             <div class="black-edition-video-shade"></div>
 
-            <div class="black-edition-video-label">
-                <span>SÃO PEDRO · EDIÇÃO ESPECIAL</span>
-                <strong>BLACK EDITION</strong>
+            <div class="black-edition-video-content">
+                <span class="black-edition-video-kicker">
+                    SÃO PEDRO · EDIÇÃO ESPECIAL
+                </span>
+
+                <div class="black-edition-video-title">
+                    <span>SEMIRREBOQUE BAÚ</span>
+                    <strong>BLACK <em>EDITION</em></strong>
+                    <p>Presença marcante. Robustez em cada detalhe.</p>
+                </div>
             </div>
 
         </div>
     `;
 
+    const video = $('#black-edition-video');
+
+    video.addEventListener('playing', () => {
+        video.classList.add('is-playing');
+    });
+
+    video.addEventListener('error', () => {
+        video.classList.remove('is-playing');
+        console.error('Erro ao carregar vídeo:', video.currentSrc, video.error);
+    });
+
 } else {
 
-    // Mantém exatamente o comportamento original dos outros produtos.
+    // Todos os outros produtos continuam iguais
     $('#detail-art').innerHTML = `
         <img
             class="detail-product-image"
