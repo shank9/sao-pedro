@@ -186,15 +186,37 @@
     </svg>`;
   }
 
-  function showScreen(screenName) {
-    $$('.screen', view).forEach(screen => screen.classList.toggle('hidden', screen.dataset.screen !== screenName));
+
+function showScreen(screenName) {
+    $$('.screen', view).forEach(screen =>
+        screen.classList.toggle('hidden', screen.dataset.screen !== screenName)
+    );
+
     const selected = $(`[data-screen="${screenName}"]`, view);
     if (selected) selected.scrollTop = 0;
-    // Alguns WebViews antigos não aceitam FocusOptions; a navegação não deve parar por isso.
-    try { view.focus({ preventScroll: true }); } catch (_) { try { view.focus(); } catch (_) {} }
+
+    // Controla o vídeo especial do Black Edition
+    const blackVideo = $('#black-edition-video');
+
+    if (blackVideo) {
+        if (screenName === 'detail' &&
+            $('#detail-screen')?.classList.contains('black-edition-active')) {
+            blackVideo.play().catch(() => {});
+        } else {
+            blackVideo.pause();
+        }
+    }
+
+    try {
+        view.focus({ preventScroll: true });
+    } catch (_) {
+        try { view.focus(); } catch (_) {}
+    }
+
     setClockLabel(screenName);
     resetIdleTimer();
-  }
+}
+
 
   function setClockLabel(screenName) {
     const labels = {home:'TOQUE PARA EXPLORAR', categories:'ESCOLHA UMA CATEGORIA', catalog:'ESCOLHA UM PRODUTO', detail:'EXPLORE OS DETALHES', qr:'APONTE A CÂMERA DO CELULAR'};
@@ -302,9 +324,64 @@
     $('#detail-title').innerHTML = titleMarkup(currentProduct.name);
     $('#detail-description').textContent = currentProduct.description;
     $('#detail-category').textContent = (currentProduct.category || 'SÃO PEDRO').toUpperCase();
-    $('#detail-badge').textContent = currentProduct.isLaunch ? 'PRODUTO DE LANÇAMENTO' : (currentProduct.tag || 'LINHA SÃO PEDRO').toUpperCase();
+    
+const isBlackEdition = currentProduct.id === 'semirreboque-bau-bk-edition';
 
+$('#detail-screen').classList.toggle('black-edition-active', isBlackEdition);
+
+$('#detail-badge').textContent = isBlackEdition
+    ? 'BLACK EDITION • EDIÇÃO ESPECIAL'
+    : (currentProduct.isLaunch
+        ? 'PRODUTO DE LANÇAMENTO'
+        : (currentProduct.tag || 'LINHA SÃO PEDRO').toUpperCase());
+
+if (isBlackEdition) {
     $('#detail-art').innerHTML = `
+        <video
+            id="black-edition-video"
+            class="black-edition-video"
+            src="assets/videos/black-edition-loop.mp4"
+            poster="${escapeHtml(currentProduct.image)}"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto">
+        </video>
+
+        <div class="black-video-overlay">
+            <span class="black-edition-label">
+                SÃO PEDRO / BLACK EDITION
+            </span>
+
+            <div class="black-video-title">
+                <span>UMA NOVA</span>
+                <strong>EXPRESSÃO.</strong>
+                <span>DE FORÇA.</span>
+            </div>
+
+            <div class="black-video-bottom">
+                <span>DESIGN EXCLUSIVO</span>
+                <span class="black-red-line"></span>
+                <span>ENGENHARIA SÃO PEDRO</span>
+            </div>
+        </div>
+    `;
+} else {
+    $('#detail-art').innerHTML = `
+        <img
+            class="detail-product-image"
+            src="${escapeHtml(currentProduct.image || '')}"
+            alt="${escapeHtml(currentProduct.name)}"
+            loading="eager"
+            decoding="async"
+        >
+    `;
+}
+
+$('#detail-description').textContent = currentProduct.description;
+$('#detail-category').textContent = (currentProduct.category || 'SÃO PEDRO').toUpperCase();
+
       <img
         class="detail-product-image"
         src="${escapeHtml(currentProduct.image || '')}"
