@@ -6,9 +6,10 @@
   <meta name="theme-color" content="#ffffff">
   <meta name="description" content="Catálogo interativo São Pedro — implementos rodoviários.">
   <title>São Pedro | Catálogo Interativo</title>
-  <link rel="stylesheet" href="css/style.css?v=202610d29-detail-imadge-clean-03">
+  <link rel="stylesheet" href="css/style.css?v=20261031-black-edition-video">
   <link rel="stylesheet" href="css/portrait-kiosk.css?v=20261028-qr-unfreeze-fix-01">
-  <link rel="stylesheet" href="css/categories-launch.css?v=20261031-dblacdk-edition">  <style>
+  <link rel="stylesheet" href="css/categories-launch.css?v=20261028-qr-unfreeze-fix-01">
+  <style>
     /* Mantém telas secundárias ocultas mesmo com CSS antigo em cache. */
     .screen.hidden { display: none !important; }
 
@@ -157,6 +158,27 @@
             </div>
             <div class="tab-panel" id="detail-tab-panel"></div>
           <button class="primary-button large" id="qr-button">Ver QR Code <span class="arrow">↗</span></button>
+          <button
+    type="button"
+    class="black-edition-video-button"
+    id="black-edition-video-button"
+    data-action="open-black-edition-video"
+    aria-label="Assistir ao vídeo do Semirreboque Baú Black Edition"
+    hidden
+>
+    <span class="black-edition-video-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+            <path d="M8 5.5v13l10-6.5-10-6.5z"/>
+        </svg>
+    </span>
+
+    <span class="black-edition-video-copy">
+        <strong>ASSISTA AO VÍDEO</strong>
+        <small>Conheça o Black Edition em movimento</small>
+    </span>
+
+    <span class="black-edition-video-arrow" aria-hidden="true">↗</span>
+</button>
           </div>
         </div>
         <div class="screen-footer"><button class="text-button" data-action="catalog">← Voltar aos produtos</button><span>Conteúdo organizado a partir das fichas técnicas fornecidas.</span></div>
@@ -194,27 +216,29 @@
     <img id="gallery-dialog-image" alt="Imagem ampliada do produto">
   </div>
 </dialog>
+  <dialog
+    class="black-edition-video-dialog"
+    id="black-edition-video-dialog"
+    aria-label="Vídeo do Semirreboque Baú Black Edition"
+>
+    <div class="black-edition-video-header">
 
-<!-- Vídeo exclusivo Black Edition -->
-<dialog id="black-video-dialog" class="black-video-dialog">
-
-    <div class="black-video-header">
-        <div>
-            <span>EXPERIÊNCIA SÃO PEDRO</span>
+        <div class="black-edition-video-heading">
+            <span>SÃO PEDRO · EDIÇÃO ESPECIAL</span>
             <strong>BLACK EDITION</strong>
         </div>
 
         <button
             type="button"
-            class="black-video-close"
-            data-action="close-black-video"
-            aria-label="Fechar vídeo"
+            class="secondary-button"
+            data-action="close-black-edition-video"
         >
-            ×
+            Fechar ×
         </button>
+
     </div>
 
-    <div class="black-video-stage">
+    <div class="black-edition-video-stage">
         <video
             id="black-edition-video"
             src="assets/videos/black-edition-loop.mp4"
@@ -222,19 +246,12 @@
             muted
             loop
             playsinline
-            preload="auto"
+            preload="metadata"
+            aria-label="Vídeo vertical do Semirreboque Baú Black Edition"
         ></video>
     </div>
-
-    <div class="black-video-footer">
-        <span>SEMIRREBOQUE BAÚ BLACK EDITION</span>
-        <span>FORÇA • DESIGN • EXCLUSIVIDADE</span>
-    </div>
-
 </dialog>
-  
   <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
   <script src="data/products.js?v=20261030-static" defer></script>
-<script src="js/app.js?v=20261030-bddlac4k" defer></script>
-</body>
+<script src="js/app.js?v=20261031-black-edition-video" defer></script></body>
 </html>

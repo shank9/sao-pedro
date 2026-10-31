@@ -3878,252 +3878,303 @@ body:has(.screen[data-screen="home"]:not(.hidden))
         font-size: clamp(27px, 6vw, 35px);
         line-height: 1.2;
     }
+}/* ==========================================
+   VÍDEO VERTICAL — BLACK EDITION
+========================================== */
+
+.detail-screen.has-black-edition-video {
+    padding-bottom: 180px !important;
 }
 
-/* =========================================
-   BLACK EDITION - BOTÃO DE VÍDEO
-========================================= */
+/* Botão de acesso ao vídeo */
 
-.black-edition-video-button[hidden] {
-    display: none !important;
-}
+.detail-screen.has-black-edition-video .black-edition-video-button {
+    position: fixed !important;
+    left: 50% !important;
 
-.black-edition-video-button {
-    position: relative;
-    width: 100%;
-    min-height: 88px;
-    margin: 0 0 24px;
-    padding: 16px 20px;
+    bottom: calc(max(16px, env(safe-area-inset-bottom)) + 62px + 12px) !important;
 
-    display: flex;
+    z-index: 99998 !important;
+
+    display: flex !important;
     align-items: center;
-    gap: 16px;
+    justify-content: space-between;
 
-    border: 1px solid rgba(255,255,255,.18);
+    gap: 14px;
+
+    width: min(520px, calc(100vw - 32px));
+    min-height: 64px;
+
+    padding: 9px 18px;
+
+    transform: translateX(-50%);
+
+    border: 1px solid rgba(225, 183, 120, .65);
     border-radius: 15px;
 
-    color: #fff;
-    background:
-        linear-gradient(115deg, #292a2e 0%, #111214 65%, #242529 100%);
+    background: linear-gradient(
+        110deg,
+        #17181d 0%,
+        #292a31 58%,
+        #451b20 100%
+    );
 
-    cursor: pointer;
+    color: #fff;
     text-align: left;
 
     box-shadow:
-        0 12px 30px rgba(0,0,0,.20),
-        inset 0 1px 0 rgba(255,255,255,.08);
+        0 12px 34px rgba(0, 0, 0, .38),
+        0 0 24px rgba(198, 40, 40, .16);
 
-    transition: transform .25s ease,
-                border-color .25s ease,
-                box-shadow .25s ease;
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        border-color .2s ease;
 }
 
-.black-edition-video-button:hover {
-    transform: translateY(-3px);
-    border-color: #ed145b;
+.detail-screen.has-black-edition-video .black-edition-video-button:hover {
+    transform: translate(-50%, -3px);
+
+    border-color: rgba(255, 215, 160, .95);
+
     box-shadow:
-        0 16px 36px rgba(0,0,0,.30),
-        0 0 22px rgba(237,20,91,.15);
+        0 16px 38px rgba(0, 0, 0, .48),
+        0 0 28px rgba(198, 40, 40, .25);
 }
 
-.black-edition-video-button:active {
-    transform: scale(.98);
+.detail-screen.has-black-edition-video .black-edition-video-button:active {
+    transform: translate(-50%, 0) scale(.98);
 }
 
-.black-video-icon {
-    width: 49px;
-    height: 49px;
-    flex-shrink: 0;
+/* Ícone de reprodução */
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.black-edition-video-icon {
+    display: grid;
+    flex: 0 0 42px;
 
-    border-radius: 50%;
-    background: #ed145b;
-    box-shadow: 0 5px 18px rgba(237,20,91,.35);
+    width: 42px;
+    height: 42px;
+
+    place-items: center;
+
+    border-radius: 11px;
+
+    background: linear-gradient(145deg, #ed1c24, #a70f18);
+
+    box-shadow: 0 6px 18px rgba(237, 28, 36, .3);
 }
 
-.black-video-icon svg {
+.black-edition-video-icon svg {
+    display: block;
+
     width: 22px;
     height: 22px;
-    margin-left: 3px;
+
+    fill: #fff;
 }
 
-.black-video-copy {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
+/* Textos do botão */
+
+.black-edition-video-copy {
+    display: grid;
     flex: 1;
+
+    gap: 3px;
+    min-width: 0;
 }
 
-.black-video-copy strong {
-    font-size: 12px;
-    font-weight: 900;
-    letter-spacing: .13em;
-}
-
-.black-video-copy small {
-    color: #a5a6ad;
-    font-size: 11px;
-    font-weight: 500;
-}
-
-.black-video-arrow {
-    font-size: 24px;
-    color: #ed145b;
-    font-weight: 400;
-}
-
-/* =========================================
-   BLACK EDITION - TELA DO VÍDEO
-========================================= */
-
-.black-video-dialog {
-    width: min(94vw, 540px);
-    max-width: 540px;
-    max-height: 94dvh;
-
-    padding: 18px;
-
-    border: 1px solid rgba(255,255,255,.13);
-    border-radius: 22px;
-
+.black-edition-video-copy strong {
     color: #fff;
-    background: #111214;
 
-    box-shadow: 0 30px 100px rgba(0,0,0,.65);
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: .09em;
+}
+
+.black-edition-video-copy small {
+    color: #d2c8c1;
+
+    font-size: 10px;
+    line-height: 1.3;
+}
+
+.black-edition-video-arrow {
+    flex: 0 0 auto;
+
+    color: #e1b778;
+
+    font-size: 23px;
+    line-height: 1;
+}
+
+
+/* ==========================================
+   JANELA DO VÍDEO
+========================================== */
+
+.black-edition-video-dialog {
+    width: min(94vw, 720px);
+    max-width: none;
+    max-height: 96dvh;
+
+    margin: auto;
+    padding: 15px;
 
     overflow: hidden;
+
+    border: 1px solid rgba(255, 255, 255, .16);
+    border-radius: 19px;
+
+    background: linear-gradient(
+        145deg,
+        #24252c,
+        #101115 72%
+    );
+
+    color: #fff;
+
+    box-shadow: 0 25px 90px rgba(0, 0, 0, .7);
 }
 
-.black-video-dialog[open] {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    animation: blackVideoEnter .3s ease both;
+.black-edition-video-dialog::backdrop {
+    background: rgba(5, 6, 8, .88);
+    backdrop-filter: blur(9px);
 }
 
-.black-video-dialog::backdrop {
-    background: rgba(5,6,8,.90);
-    backdrop-filter: blur(12px);
-}
+/* Cabeçalho da janela */
 
-@keyframes blackVideoEnter {
-    from {
-        opacity: 0;
-        transform: scale(.96) translateY(12px);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-    }
-}
-
-.black-video-header {
+.black-edition-video-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-shrink: 0;
+
+    gap: 14px;
+
+    padding: 0 0 13px;
 }
 
-.black-video-header > div {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+.black-edition-video-heading {
+    display: grid;
+    gap: 4px;
 }
 
-.black-video-header span {
-    color: #ed145b;
+.black-edition-video-heading span {
+    color: #e1b778;
+
     font-size: 9px;
-    font-weight: 900;
-    letter-spacing: .18em;
+    font-weight: 800;
+    letter-spacing: .15em;
 }
 
-.black-video-header strong {
-    font-size: 17px;
-    font-weight: 900;
-    letter-spacing: .06em;
-}
-
-.black-video-close {
-    width: 40px;
-    height: 40px;
-
-    border: 1px solid rgba(255,255,255,.15);
-    border-radius: 50%;
-
-    background: #25262a;
+.black-edition-video-heading strong {
     color: #fff;
 
-    font-size: 27px;
-    line-height: 1;
-    cursor: pointer;
-
-    transition: background .2s ease, transform .2s ease;
+    font-size: 17px;
+    font-weight: 900;
+    letter-spacing: .08em;
 }
 
-.black-video-close:hover {
-    background: #ed145b;
-    transform: rotate(90deg);
+.black-edition-video-header .secondary-button {
+    flex: 0 0 auto;
+
+    min-height: 40px;
+    padding: 0 15px;
 }
 
-/* Área vertical 9:16 */
+/* Área do vídeo */
 
-.black-video-stage {
-    width: 100%;
-    max-height: calc(94dvh - 130px);
-
-    aspect-ratio: 9 / 16;
-
+.black-edition-video-stage {
     display: flex;
     align-items: center;
     justify-content: center;
 
+    width: 100%;
+
     overflow: hidden;
-    border-radius: 15px;
+
+    border-radius: 13px;
 
     background: #050505;
 }
 
-.black-video-stage video {
+.black-edition-video-stage video {
     display: block;
-    width: 100%;
-    height: 100%;
+
+    width: min(640px, 84vw, 43.5vh);
+    height: auto;
+
+    aspect-ratio: 9 / 16;
 
     object-fit: contain;
-    background: #050505;
+
+    background: #000;
 }
 
-.black-video-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
 
-    padding: 3px 0 2px;
-    flex-shrink: 0;
-}
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
 
-.black-video-footer span:first-child {
-    font-size: 10px;
-    font-weight: 900;
-    letter-spacing: .13em;
-}
+@media (max-width: 720px) {
 
-.black-video-footer span:last-child {
-    color: #85868e;
-    font-size: 8px;
-    letter-spacing: .13em;
-}
-
-@media (max-width: 640px) {
-    .black-video-dialog {
-        width: 94vw;
-        padding: 12px;
+    .detail-screen.has-black-edition-video {
+        padding-bottom: 165px !important;
     }
 
-    .black-edition-video-button {
-        min-height: 78px;
+    .detail-screen.has-black-edition-video .black-edition-video-button {
+        bottom: calc(max(16px, env(safe-area-inset-bottom)) + 58px + 10px) !important;
+
+        width: calc(100vw - 28px);
+
+        min-height: 58px;
+
+        padding: 7px 13px;
+
+        gap: 10px;
+    }
+
+    .black-edition-video-icon {
+        flex-basis: 38px;
+
+        width: 38px;
+        height: 38px;
+    }
+
+    .black-edition-video-copy strong {
+        font-size: 11px;
+    }
+
+    .black-edition-video-copy small {
+        font-size: 9px;
+    }
+
+    .black-edition-video-dialog {
+        width: 94vw;
+        padding: 10px;
+    }
+
+    .black-edition-video-heading strong {
+        font-size: 14px;
+    }
+
+    .black-edition-video-header .secondary-button {
+        min-height: 36px;
+        padding: 0 11px;
+    }
+}
+
+
+/* Telas horizontais com pouca altura */
+
+@media (max-height: 700px) and (min-width: 721px) and (orientation: landscape) {
+
+    .detail-screen.has-black-edition-video {
+        padding-bottom: 180px !important;
+    }
+
+    .detail-screen.has-black-edition-video .black-edition-video-button {
+        bottom: calc(38px + 58px + 12px) !important;
+
+        min-height: 54px;
     }
 }

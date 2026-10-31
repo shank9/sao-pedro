@@ -203,25 +203,26 @@
 
   function resetIdleTimer() {
     window.clearTimeout(idleTimer);
-    idleTimer = window.setTimeout(() => {
-     const sheetDialog = $('#sheet-dialog');
-const blackVideoDialog = $('#black-video-dialog');
 
-if (sheetDialog && sheetDialog.open) {
-    if (typeof sheetDialog.close === 'function') {
-        sheetDialog.close();
-    } else {
-        sheetDialog.removeAttribute('open');
+    // Não encerra a experiência enquanto o vídeo estiver aberto.
+    const videoDialog = $('#black-edition-video-dialog');
+
+    if (videoDialog && videoDialog.open) {
+        return;
     }
-}
 
-if (blackVideoDialog && blackVideoDialog.open) {
-    closeBlackEditionVideo();
-}
-      currentProduct = null;
-      showScreen('home');
+    idleTimer = window.setTimeout(() => {
+        const sheetDialog = $('#sheet-dialog');
+
+        if (sheetDialog && sheetDialog.open && typeof sheetDialog.close === 'function') {
+            sheetDialog.close();
+        }
+
+        currentProduct = null;
+        showScreen('home');
+
     }, IDLE_MS);
-  }
+}
 
   function showToast(message) {
     const toast = $('#toast');
@@ -313,15 +314,17 @@ if (blackVideoDialog && blackVideoDialog.open) {
     $('#detail-counter').textContent = `PRODUTO ${String(products.indexOf(currentProduct) + 1).padStart(2,'0')} / ${String(products.length).padStart(2,'0')}`;
     $('#detail-title').innerHTML = titleMarkup(currentProduct.name);
     $('#detail-description').textContent = currentProduct.description;
-    // Exibe o botão de vídeo somente no Black Edition
-const blackVideoButton = $('#black-edition-video-button');
-
-if (blackVideoButton) {
-    blackVideoButton.hidden =
-        currentProduct.id !== LAUNCH_PRODUCT_ID;
-}
     $('#detail-category').textContent = (currentProduct.category || 'SÃO PEDRO').toUpperCase();
     $('#detail-badge').textContent = currentProduct.isLaunch ? 'PRODUTO DE LANÇAMENTO' : (currentProduct.tag || 'LINHA SÃO PEDRO').toUpperCase();
+    // Exibe o botão de vídeo exclusivamente no Black Edition.
+const isBlackEdition = currentProduct.id === LAUNCH_PRODUCT_ID;
+
+$('#black-edition-video-button').hidden = !isBlackEdition;
+
+$('.detail-screen').classList.toggle(
+    'has-black-edition-video',
+    isBlackEdition
+);
 
     $('#detail-art').innerHTML = `
       <img
@@ -460,6 +463,75 @@ function closeGalleryDialog() {
     resetIdleTimer();
 }
 
+
+function openBlackEditionVideo() {
+
+    if (!currentProduct || currentProduct.id !== LAUNCH_PRODUCT_ID) {
+        return;
+    }
+
+    const dialog = $('#black-edition-video-dialog');
+    const video = $('#black-edition-video');
+
+    if (!dialog || !video) {
+        return;
+    }
+
+    if (typeof dialog.showModal === 'function') {
+        dialog.showModal();
+    } else {
+        dialog.setAttribute('open', 'open');
+    }
+
+    video.muted = true;
+    video.loop = true;
+    video.playsInline = true;
+
+    const playPromise = video.play();
+
+    if (playPromise && typeof playPromise.catch === 'function') {
+        playPromise.catch(error => {
+            console.warn(
+                'Não foi possível iniciar o vídeo Black Edition:',
+                error
+            );
+        });
+    }
+
+    resetIdleTimer();
+}
+
+
+function stopBlackEditionVideo() {
+
+    const video = $('#black-edition-video');
+
+    if (video) {
+        video.pause();
+
+        try {
+            video.currentTime = 0;
+        } catch (_) {}
+    }
+
+    resetIdleTimer();
+}
+
+
+function closeBlackEditionVideo() {
+
+    const dialog = $('#black-edition-video-dialog');
+
+    if (dialog && typeof dialog.close === 'function' && dialog.open) {
+        dialog.close();
+    } else {
+        if (dialog) {
+            dialog.removeAttribute('open');
+        }
+
+        stopBlackEditionVideo();
+    }
+}
   function closeSheetDialog() {
     const dialog = $('#sheet-dialog');
     if (typeof dialog.close === 'function' && dialog.open) dialog.close();
@@ -493,54 +565,6 @@ function closeGalleryDialog() {
     showScreen('qr');
   }
 
-  function openBlackEditionVideo() {
-    if (!currentProduct || currentProduct.id !== LAUNCH_PRODUCT_ID) {
-        return;
-    }
-
-    const dialog = $('#black-video-dialog');
-    const video = $('#black-edition-video');
-
-    if (!dialog || !video) return;
-
-    if (typeof dialog.showModal === 'function') {
-        dialog.showModal();
-    } else {
-        dialog.setAttribute('open', 'open');
-    }
-
-    video.currentTime = 0;
-
-    const playPromise = video.play();
-
-    if (playPromise && typeof playPromise.catch === 'function') {
-        playPromise.catch(error => {
-            console.warn('Não foi possível iniciar o vídeo:', error);
-        });
-    }
-
-    resetIdleTimer();
-}
-
-function closeBlackEditionVideo() {
-    const dialog = $('#black-video-dialog');
-    const video = $('#black-edition-video');
-
-    if (video) {
-        video.pause();
-        video.currentTime = 0;
-    }
-
-    if (dialog) {
-        if (typeof dialog.close === 'function' && dialog.open) {
-            dialog.close();
-        } else {
-            dialog.removeAttribute('open');
-        }
-    }
-
-    resetIdleTimer();
-}
 
   function navigateAction(action) {
     switch (action) {
@@ -552,15 +576,16 @@ function closeBlackEditionVideo() {
       case 'close-gallery':
       closeGalleryDialog();
       break;
-      case 'close-sheet': closeSheetDialog(); break;
-      default: break;
-      case 'open-black-video':
-    openBlackEditionVideo();
+
+      case 'close-gallery':
+    closeGalleryDialog();
     break;
 
-case 'close-black-video':
-    closeBlackEditionVideo();
+case 'close-sheet':
+    closeSheetDialog();
     break;
+      case 'close-sheet': closeSheetDialog(); break;
+      default: break;
     }
   }
 
@@ -623,16 +648,19 @@ if (galleryImage) {
         closeGalleryDialog();
     }
 });
-// Fecha o vídeo Black Edition ao clicar fora da área do vídeo
-const blackVideoDialog = $('#black-video-dialog');
+// Eventos da janela de vídeo Black Edition.
+const videoDialog = $('#black-edition-video-dialog');
 
-if (blackVideoDialog) {
-    blackVideoDialog.addEventListener('click', event => {
-        if (event.target === blackVideoDialog) {
-            closeBlackEditionVideo();
-        }
-    });
-}
+videoDialog.addEventListener('click', event => {
+    if (event.target === videoDialog) {
+        closeBlackEditionVideo();
+    }
+});
+
+// Também interrompe o vídeo quando a janela é fechada pelo teclado.
+videoDialog.addEventListener('close', () => {
+    stopBlackEditionVideo();
+});
     ['pointerdown','keydown','input','change','wheel'].forEach(name => document.addEventListener(name, () => resetIdleTimer(), {passive:true}));
     document.addEventListener('visibilitychange', () => { if (!document.hidden) resetIdleTimer(); });
   }
