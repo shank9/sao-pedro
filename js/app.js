@@ -316,15 +316,29 @@
     $('#detail-description').textContent = currentProduct.description;
     $('#detail-category').textContent = (currentProduct.category || 'SÃO PEDRO').toUpperCase();
     $('#detail-badge').textContent = currentProduct.isLaunch ? 'PRODUTO DE LANÇAMENTO' : (currentProduct.tag || 'LINHA SÃO PEDRO').toUpperCase();
-    // Exibe o botão de vídeo exclusivamente no Black Edition.
+    // Controle de exibição do botão Black Edition.
 const isBlackEdition = currentProduct.id === LAUNCH_PRODUCT_ID;
 
-$('#black-edition-video-button').hidden = !isBlackEdition;
+const videoButton = $('#black-edition-video-button');
+const detailScreen = $('.detail-screen');
 
-$('.detail-screen').classList.toggle(
-    'has-black-edition-video',
-    isBlackEdition
-);
+if (videoButton) {
+    videoButton.style.setProperty(
+        'display',
+        isBlackEdition ? 'flex' : 'none',
+        'important'
+    );
+
+    videoButton.setAttribute('aria-hidden', String(!isBlackEdition));
+    videoButton.tabIndex = isBlackEdition ? 0 : -1;
+}
+
+if (detailScreen) {
+    detailScreen.classList.toggle(
+        'has-black-edition-video',
+        isBlackEdition
+    );
+}
 
     $('#detail-art').innerHTML = `
       <img
