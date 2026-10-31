@@ -1,0 +1,1300 @@
+[
+  {
+    "id": "semirreboque-porta-container",
+    "name": "Semirreboque Porta-contêiner",
+    "shortName": "Semirreboque Porta-contêiner",
+    "category": "Semirreboques",
+    "tag": "Porta-contêiner",
+    "description": "Implemento para transporte de contêineres de 20 e 40 pés, com engates homologados e plataforma de desova.",
+    "subtitle": "Contêineres de 20 e 40 pés",
+    "accent": "#ed1c24",
+    "isLaunch": false,
+    "image": "assets/products/semirreboque-porta-container-cover.png",
+    "gallery": [
+    "assets/products/galeria/pc1.CR2",
+    "assets/products/galeria/pc2.jpg",
+    "assets/products/galeria/pc3.jpg",
+    "assets/products/galeria/pc4.jpg",
+    "assets/products/galeria/pc5.jpg",
+    "assets/products/galeria/pc6.jpg"
+],
+    "sheetImage": "assets/products/semirreboque-porta-container-sheet.png",
+    "summary": [
+      "Configuração ilustrada para contêineres de 20 e 40 pés.",
+      "12 engates homologados, com opção de 8 ou 4 engates.",
+      "Plataforma de desova com chapa xadrez de 3/16” (4,75 mm) e reforço anti-afundamento."
+    ],
+    "sections": [
+      {
+        "title": "Chassi",
+        "items": [
+          "Longarinas em vigas de perfil “I” de aço estrutural, com travessas interligando as longarinas.",
+          "Pino-rei flangeado de 2”, conforme NBR NM ISO 337/2001.",
+          "Pé de apoio de duas velocidades, capacidade de levantamento de 28 t e carga estática de 80 t."
+        ]
+      },
+      {
+        "title": "Suspensão",
+        "items": [
+          "Sistema tipo balancim, com suportes de molas estampados e balanças de aço articuladas em pinos e buchas Lub-free, que dispensam lubrificação.",
+          "Braços tensores articulados em buchas de borracha e suspensor pneumático no 1º eixo.",
+          "Molas: 10 lâminas."
+        ]
+      },
+      {
+        "title": "Sistema rodante",
+        "items": [
+          "Eixos tubulares, capacidade de 11 t.",
+          "Freios a ar, com ABS e EBS, duas linhas: serviço e emergência, tambor 16 ½” × 8”.",
+          "Câmara de freio Spring-brake, conforme resolução CONTRAN 519/15.",
+          "Rodagem: cubos em ferro fundido nodular para rodas 8,25 × 22,5."
+        ]
+      },
+      {
+        "title": "Pintura",
+        "items": [
+          "Superfície metálica com aplicação de fundo anticorrosivo.",
+          "Base do chassi e piso: pintura na cor preta semibrilho.",
+          "Acabamento: pintura em PU."
+        ]
+      },
+      {
+        "title": "Base de carga",
+        "items": [
+          "Braços em perfis de aço enrijecidos.",
+          "12 engates para contêiner, homologados; opções de 8 ou 4 engates.",
+          "Plataforma de desova com assoalho em chapa xadrez de 3/16” (4,75 mm), com perfis de reforço anti-afundamento."
+        ]
+      },
+      {
+        "title": "Sistema elétrico",
+        "items": [
+          "Sistema elétrico para 24 V, com lanternas em LED."
+        ]
+      },
+      {
+        "title": "Acessórios",
+        "items": [
+          "Suporte de estepe parafusado, tipo catraca.",
+          "Caixa de ferramentas.",
+          "Corote de água de 25 litros com saboneteira.",
+          "Batentes traseiros de borracha.",
+          "Para-lamas envolventes de plástico e para-barros de borracha antisspray.",
+          "Itens normatizados do CONTRAN: para-choque traseiro (Resolução 952/22), protetor lateral (Resolução 953/22) e faixas refletivas (Resolução 948/22)."
+        ]
+      }
+    ],
+    "dimensions": {
+      "headers": [
+        "Referência do desenho",
+        "Cota indicada"
+      ],
+      "rows": [
+        [
+          "Comprimento lateral do implemento",
+          "12.500 mm"
+        ],
+        [
+          "Vista frontal",
+          "2.260 mm e 2.580 mm"
+        ],
+        [
+          "Posição para contêiner de 20 pés",
+          "5.853 mm por posição (conforme cotas ilustradas)"
+        ],
+        [
+          "Configuração para contêiner de 40 pés",
+          "11.985 mm (conforme cota ilustrada)"
+        ]
+      ],
+      "notes": [
+        "Valores transcritos das cotas do desenho técnico fornecido. Consulte a ficha original para verificar a geometria completa."
+      ]
+    },
+    "qrImage": "assets/qrcodes/semirreboque-porta-container.png",
+    "sourcePdf": "Semirrboque Porta conteiner.pdf"
+  },
+  {
+    "id": "bitrem-porta-container",
+    "name": "Bitrem Porta-contêiner",
+    "shortName": "Bitrem Porta-contêiner",
+    "category": "Bitrens",
+    "tag": "Porta-contêiner",
+    "description": "Conjunto bitrem porta-contêiner com engates homologados e plataforma de desova para operações com contêineres.",
+    "subtitle": "Conjunto para contêineres",
+    "accent": "#ed1c24",
+    "isLaunch": false,
+    "image": "assets/products/bitrem-porta-container-cover.png",
+      "gallery": [
+    "assets/products/galeria/porta1.jpg",
+    "assets/products/galeria/porta2.jfif",
+    "assets/products/galeria/porta3.jpg"
+],
+    "sheetImage": "assets/products/bitrem-porta-container-sheet.png",
+    "summary": [
+      "Conjunto com dimensões ilustradas para contêineres de 20 e 40 pés.",
+      "12+12 engates homologados para contêiner.",
+      "Plataforma de desova com assoalho xadrez de 3/16” (4,75 mm)."
+    ],
+    "sections": [
+      {
+        "title": "Chassi",
+        "items": [
+          "Longarinas em vigas de perfil “I” de aço estrutural e travessas interligando as longarinas.",
+          "Pino-rei flangeado de 2”, conforme NBR NM ISO 337/2001.",
+          "Pés de apoio de duas velocidades, capacidade de levantamento de 28 t e carga estática de 80 t."
+        ]
+      },
+      {
+        "title": "Suspensão",
+        "items": [
+          "Sistema tipo balancim, com suportes de molas estampados e balanças de aço articuladas em pinos e buchas (Lub-free), que dispensam lubrificação.",
+          "Braços tensores articulados em buchas de borracha; suspensor pneumático no 1º eixo.",
+          "Primeira composição com suspensão fixa ou com trole deslizante.",
+          "Molas: 10 lâminas."
+        ]
+      },
+      {
+        "title": "Sistema rodante",
+        "items": [
+          "Eixos tubulares, capacidade de 11 t.",
+          "Freios a ar, com ABS e EBS, duas linhas: serviço e emergência, tambor 16 ½” × 8”.",
+          "Câmara de freio Spring-brake, conforme resolução CONTRAN 519/15.",
+          "Rodagem: cubos em ferro fundido nodular para rodas 8,25 × 22,5."
+        ]
+      },
+      {
+        "title": "Pintura",
+        "items": [
+          "Superfície metálica com aplicação de fundo anticorrosivo.",
+          "Base do chassi e piso: pintura na cor preta semibrilho.",
+          "Acabamento: pintura em PU."
+        ]
+      },
+      {
+        "title": "Base de carga",
+        "items": [
+          "Braços em perfis de aço enrijecidos.",
+          "12+12 engates homologados para contêiner.",
+          "Plataforma de desova com assoalho em chapa xadrez de 3/16” (4,75 mm), com perfis de reforço anti-afundamento."
+        ]
+      },
+      {
+        "title": "Sistema elétrico",
+        "items": [
+          "Sistema elétrico para 24 V, com lanternas em LED."
+        ]
+      },
+      {
+        "title": "Acessórios",
+        "items": [
+          "Suporte de estepe tipo cesto para dois pneus.",
+          "Caixa de ferramentas.",
+          "Corote de água de 25 litros com saboneteira.",
+          "Batentes traseiros de borracha.",
+          "Para-lamas de plástico e para-barros de borracha antisspray.",
+          "Itens normatizados do CONTRAN: para-choque traseiro (Resolução 952/22), protetor lateral (Resolução 953/22) e faixas refletivas (Resolução 948/22)."
+        ]
+      }
+    ],
+    "dimensions": {
+      "headers": [
+        "Referência do desenho",
+        "Cota indicada"
+      ],
+      "rows": [
+        [
+          "Comprimento indicado do conjunto",
+          "25.950 mm"
+        ],
+        [
+          "Comprimento indicado por módulo",
+          "12.440 mm"
+        ],
+        [
+          "Vista frontal",
+          "2.260 mm e 2.580 mm"
+        ],
+        [
+          "Configurações ilustradas",
+          "Contêineres de 20 e 40 pés"
+        ]
+      ],
+      "notes": [
+        "Valores transcritos das cotas do desenho técnico fornecido. Consulte a ficha original para verificar a geometria completa."
+      ]
+    },
+    "qrImage": "assets/qrcodes/bitrem-porta-container.png",
+    "sourcePdf": "BT Porta conteiner.pdf"
+  },
+  {
+    "id": "bitrem-sider",
+    "name": "Bitrem Sider",
+    "shortName": "Bitrem Sider",
+    "category": "Bitrens",
+    "tag": "Sider",
+    "description": "Implemento tipo sider com laterais em lona vinílica, colunas removíveis e teto com lona vinílica branca.",
+    "subtitle": "Bitrem 4 eixos (2+2) ou super bitrem 6 eixos (3+3)",
+    "accent": "#ed1c24",
+    "isLaunch": false,
+    "image": "assets/products/bitrem-sider-cover.png",
+      "gallery": [
+    "assets/products/galeria/btsider1.jfif",
+    "assets/products/galeria/btsider2.jfif",
+    "assets/products/galeria/btsider3.jfif",
+    "assets/products/galeria/btsider4.jfif",
+    "assets/products/galeria/btsider5.jpg"
+],
+    "sheetImage": "assets/products/bitrem-sider-sheet.png",
+    "summary": [
+      "Lateral em lona vinílica com cores definidas pelo cliente; logomarca opcional com impressão digital.",
+      "Oito colunas móveis por vão e quatro travessas de contenção por vão.",
+      "Configurações de 24+24 paletes indicadas na ficha."
+    ],
+    "sections": [
+      {
+        "title": "Chassi",
+        "items": [
+          "Longarinas: vigas em perfil “I” de aço estrutural.",
+          "Travessas: passantes em perfil de aço estrutural, seção “U”, interligando as longarinas.",
+          "Corrimãos: perfil lateral em aço estrutural, seção “U”.",
+          "Pino-rei flangeado de 2”, conforme NBR NM ISO 337/2001.",
+          "Pé de apoio de duas velocidades, capacidade de levantamento de 28 t e carga estática de 80 t."
+        ]
+      },
+      {
+        "title": "Suspensão",
+        "items": [
+          "Sistema tipo balancim, com suportes de molas estampados e balanças de aço articuladas em pinos e buchas (Lub-free), que dispensam lubrificação.",
+          "Braços tensores articulados em buchas de borracha; suspensor pneumático no 1º eixo.",
+          "Primeira composição com suspensão fixa ou com trole deslizante.",
+          "Molas: 10 lâminas."
+        ]
+      },
+      {
+        "title": "Sistema rodante",
+        "items": [
+          "Eixos tubulares, capacidade de 11 t.",
+          "Freios a ar, com ABS e EBS, duas linhas: serviço e emergência, tambor 16 ½” × 8”.",
+          "Câmara de freio Spring-brake, conforme resolução CONTRAN 519/15.",
+          "Rodagem: cubos em ferro fundido nodular para rodas 8,25 × 22,5."
+        ]
+      },
+      {
+        "title": "Pintura",
+        "items": [
+          "Superfície metálica com aplicação de fundo anticorrosivo.",
+          "Base do chassi e piso: pintura na cor preta semibrilho.",
+          "Acabamento: pintura em PU."
+        ]
+      },
+      {
+        "title": "Caixa de carga",
+        "items": [
+          "Painel frontal metálico enrijecido, com revestimento interno em madeira OSB.",
+          "Laterais em lona vinílica trava (12×12), nas cores definidas pelo cliente; logomarca com impressão digital opcional.",
+          "Oito colunas móveis de fácil remoção, com encaixe de travamento em aço fundido; quatro travessas de contenção em cada vão.",
+          "Teto composto por perfis (trilho) de alumínio longitudinal, treliçado com travessas em aço tubular galvanizado, lona vinílica branca e bandas laterais de borracha.",
+          "Quadro traseiro em perfis de aço enrijecidos. Portas: duas folhas de alumínio liso, com quatro varões de travamento.",
+          "Assoalho em chapa xadrez de 3/16” (4,75 mm), com perfis de reforço anti-afundamento."
+        ]
+      },
+      {
+        "title": "Sistema elétrico",
+        "items": [
+          "Sistema elétrico para 24 V, com lanternas em LED."
+        ]
+      },
+      {
+        "title": "Acessórios",
+        "items": [
+          "Suporte de estepe tipo cesto para dois pneus.",
+          "Caixa de cozinha somente na primeira composição.",
+          "Caixa de ferramentas: uma em cada composição.",
+          "Corote de água de 25 litros com saboneteira.",
+          "Batentes traseiros de borracha.",
+          "Para-lamas de plástico e para-barros de borracha antisspray.",
+          "Itens normatizados do CONTRAN: para-choque traseiro (Resolução 952/22), protetor lateral (Resolução 953/22) e faixas refletivas (Resolução 948/22)."
+        ]
+      }
+    ],
+    "dimensions": {
+      "headers": [
+        "Dimensão (mm)",
+        "Capacidade (paletes)",
+        "Nº de eixos",
+        "Acoplamento"
+      ],
+      "rows": [
+        [
+          "12500+12500 × 2600 × 3056",
+          "24+24",
+          "02+02",
+          "4×2 ou 6×2"
+        ],
+        [
+          "12500+12500 × 2600 × 3056",
+          "24+24",
+          "03+03",
+          "6×4"
+        ]
+      ],
+      "notes": [
+        "Configurações conforme tabela da ficha técnica fornecida."
+      ]
+    },
+    "qrImage": "assets/qrcodes/bitrem-sider.png",
+    "sourcePdf": "Bitrem Sider.pdf"
+  },
+  {
+    "id": "bitrem-carga-seca",
+    "name": "Bitrem Carga Seca",
+    "shortName": "Bitrem Carga Seca",
+    "category": "Bitrens",
+    "tag": "Carga seca",
+    "description": "Implemento de carga seca com painel frontal de aço, laterais com estrutura metálica e placas ACM, e dispositivos de amarração para cintas de 6 t.",
+    "subtitle": "Super bitrem 6 eixos (3+3)",
+    "accent": "#ed1c24",
+    "isLaunch": false,
+    "image": "assets/products/bitrem-carga-seca-cover.png",
+    "gallery": [
+    "assets/products/galeria/cargaaberta1.jfif",
+    "assets/products/galeria/cargaaberta2.jpg",
+    "assets/products/galeria/cargaaberta3.jpg"
+],
+    "sheetImage": "assets/products/bitrem-carga-seca-sheet.png",
+    "summary": [
+      "Painel frontal com altura padrão de 900 mm e tampas laterais com altura padrão de 450 mm.",
+      "Assoalho em chapa xadrez de 1/8” (3,17 mm), com reforço anti-afundamento.",
+      "Dispositivos de amarração no assoalho para cinta de 6 t."
+    ],
+    "sections": [
+      {
+        "title": "Chassi",
+        "items": [
+          "Longarinas: vigas em perfil “I” de aço estrutural.",
+          "Travessas: passantes em perfil de aço estrutural, seção “U”, interligando as longarinas.",
+          "Corrimãos: perfil lateral em aço estrutural, seção “U”.",
+          "Pino-rei flangeado de 2”, conforme NBR NM ISO 337/2001.",
+          "Pé de apoio de duas velocidades, capacidade de levantamento de 28 t e carga estática de 80 t."
+        ]
+      },
+      {
+        "title": "Suspensão",
+        "items": [
+          "Sistema tipo balancim, com suportes de molas estampados e balanças de aço articuladas em pinos e buchas (Lub-free), que dispensam lubrificação.",
+          "Braços tensores articulados em buchas de borracha; suspensor pneumático no 1º eixo.",
+          "Primeira composição com suspensão fixa ou com trole deslizante.",
+          "Molas: 10 lâminas."
+        ]
+      },
+      {
+        "title": "Sistema rodante",
+        "items": [
+          "Eixos tubulares, capacidade de 11 t.",
+          "Freios a ar, com ABS e EBS, duas linhas: serviço e emergência, tambor 16 ½” × 8”.",
+          "Câmara de freio Spring-brake, conforme resolução CONTRAN 519/15.",
+          "Rodagem: cubos em ferro fundido nodular para rodas 8,25 × 22,5."
+        ]
+      },
+      {
+        "title": "Pintura",
+        "items": [
+          "Superfície metálica com aplicação de fundo anticorrosivo.",
+          "Base do chassi e piso: pintura na cor preta semibrilho.",
+          "Acabamento: pintura em PU."
+        ]
+      },
+      {
+        "title": "Caixa de carga",
+        "items": [
+          "Painel frontal de chapa de aço estrutural e perfis enrijecidos, com altura padrão de 900 mm.",
+          "Tampas laterais com perfis em aço estrutural e placas de ACM, com altura padrão de 450 mm.",
+          "Fueiros em perfis de aço enrijecidos.",
+          "Assoalho em chapa xadrez de 1/8” (3,17 mm), com perfis de reforço anti-afundamento.",
+          "Dispositivos de amarração de carga no assoalho para cinta de 6 t."
+        ]
+      },
+      {
+        "title": "Sistema elétrico",
+        "items": [
+          "Sistema elétrico para 24 V, com lanternas em LED."
+        ]
+      },
+      {
+        "title": "Acessórios",
+        "items": [
+          "Suporte de estepe tipo cesto para dois pneus.",
+          "Caixa de cozinha somente na primeira composição.",
+          "Caixa de ferramentas: uma em cada composição.",
+          "Corote de água de 25 litros com saboneteira.",
+          "Batentes traseiros de borracha.",
+          "Para-lamas de plástico e para-barros de borracha antisspray.",
+          "Itens normatizados do CONTRAN: para-choque traseiro (Resolução 952/22), protetor lateral (Resolução 953/22) e faixas refletivas (Resolução 948/22)."
+        ]
+      }
+    ],
+    "dimensions": {
+      "headers": [
+        "Dimensão (mm)",
+        "Altura das tampas (ACM)",
+        "Nº de eixos",
+        "Acoplamento"
+      ],
+      "rows": [
+        [
+          "9000+11500",
+          "450",
+          "03+03",
+          "6×4"
+        ],
+        [
+          "9500+12500",
+          "450",
+          "03+03",
+          "6×4"
+        ],
+        [
+          "12500+12500",
+          "450",
+          "03+03",
+          "6×4"
+        ]
+      ],
+      "notes": [
+        "Dimensões da tabela transcritas conforme aparecem na ficha técnica."
+      ]
+    },
+    "qrImage": "assets/qrcodes/bitrem-carga-seca.png",
+    "sourcePdf": "Bitrem Carga seca.pdf"
+  },
+  {
+    "id": "bitrem-bau",
+    "name": "Bitrem Baú",
+    "shortName": "Bitrem Baú",
+    "category": "Bitrens",
+    "tag": "Baú",
+    "description": "Implemento tipo baú com painéis de alumínio, teto liso em peça única e estrutura interna em perfis de aço galvanizado.",
+    "subtitle": "Bitrem 4 eixos (2+2) ou super bitrem 6 eixos (3+3)",
+    "accent": "#ed1c24",
+    "isLaunch": false,
+    "image": "assets/products/bitrem-bau-cover.png",
+    "gallery": [
+    "assets/products/galeria/bitrembau1.jpg",
+    "assets/products/galeria/bitrembau2.jfif",
+    "assets/products/galeria/bitrembau3.jfif",
+    "assets/products/galeria/bitrembau4.jfif",
+    "assets/products/galeria/bitrembau5.jpg",
+    "assets/products/galeria/bitrembau6.jfif",
+    "assets/products/galeria/bitrembau7.PNG"
+],
+    "sheetImage": "assets/products/bitrem-bau-sheet.png",
+    "summary": [
+      "Painéis laterais e frontal em chapa corrugada de alumínio natural.",
+      "Teto em chapa lisa de peça única, sem emendas.",
+      "Configurações de 24+24 paletes na ficha técnica."
+    ],
+    "sections": [
+      {
+        "title": "Chassi",
+        "items": [
+          "Longarinas: vigas em perfil “I” de aço estrutural.",
+          "Travessas: passantes em perfil de aço estrutural, seção “U”, interligando as longarinas.",
+          "Corrimãos: perfil lateral em aço estrutural, seção “U”.",
+          "Pino-rei flangeado de 2”, conforme NBR NM ISO 337/2001.",
+          "Pé de apoio de duas velocidades, capacidade de levantamento de 28 t e carga estática de 80 t."
+        ]
+      },
+      {
+        "title": "Suspensão",
+        "items": [
+          "Sistema tipo balancim, com suportes de molas estampados e balanças de aço articuladas em pinos e buchas (Lub-free), que dispensam lubrificação.",
+          "Braços tensores articulados em buchas de borracha; suspensor pneumático no 1º eixo.",
+          "Molas: 10 lâminas."
+        ]
+      },
+      {
+        "title": "Sistema rodante",
+        "items": [
+          "Eixos tubulares, capacidade de 11 t.",
+          "Freios a ar, com ABS e EBS, duas linhas: serviço e emergência, tambor 16 ½” × 8”.",
+          "Câmara de freio Spring-brake, conforme resolução CONTRAN 519/15.",
+          "Rodagem: cubos em ferro fundido nodular para rodas 8,25 × 22,5."
+        ]
+      },
+      {
+        "title": "Pintura",
+        "items": [
+          "Superfície metálica com aplicação de fundo anticorrosivo.",
+          "Base do chassi e piso: pintura na cor preta semibrilho.",
+          "Acabamento: pintura em PU."
+        ]
+      },
+      {
+        "title": "Caixa de carga",
+        "items": [
+          "Painéis laterais, frontal e teto em perfis extrudados de alumínio, formando a estrutura interna e externa.",
+          "Revestimento externo: painéis laterais e frontal em chapa corrugada de alumínio natural; teto em chapa lisa, peça única, sem emendas.",
+          "Revestimento interno: painéis laterais e frontal com ripamento em perfis de aço galvanizado e perfil tubular para amarração de carga; rodapés em perfil galvanizado.",
+          "Quadro traseiro com perfis de aço enrijecidos.",
+          "Portas com duas folhas de alumínio liso branco e quatro varões de travamento.",
+          "Assoalho em chapa xadrez de 3/16” (4,75 mm), com perfis de reforço anti-afundamento."
+        ]
+      },
+      {
+        "title": "Sistema elétrico",
+        "items": [
+          "Sistema elétrico para 24 V, com lanternas em LED."
+        ]
+      },
+      {
+        "title": "Acessórios",
+        "items": [
+          "Suporte de estepe tipo cesto para dois pneus.",
+          "Caixa de cozinha somente na primeira composição.",
+          "Caixa de ferramentas: uma em cada composição.",
+          "Corote de água de 25 litros com saboneteira.",
+          "Batentes traseiros de borracha.",
+          "Para-lamas de plástico e para-barros de borracha antisspray.",
+          "Itens normatizados do CONTRAN: para-choque traseiro (Resolução 952/22), protetor lateral (Resolução 953/22) e faixas refletivas (Resolução 948/22)."
+        ]
+      }
+    ],
+    "dimensions": {
+      "headers": [
+        "Dimensão (mm)",
+        "Capacidade (paletes)",
+        "Nº de eixos",
+        "Acoplamento"
+      ],
+      "rows": [
+        [
+          "12500+12500 × 2600 × 3011",
+          "24+24",
+          "02+02",
+          "4×2 ou 6×2"
+        ],
+        [
+          "12500+12500 × 2600 × 3011",
+          "24+24",
+          "03+03",
+          "6×4"
+        ]
+      ],
+      "notes": [
+        "Configurações conforme tabela da ficha técnica fornecida."
+      ]
+    },
+    "qrImage": "assets/qrcodes/bitrem-bau.png",
+    "sourcePdf": "Bitrem Baú.pdf"
+  },
+  {
+    "id": "semirreboque-sider",
+    "name": "Semirreboque Sider",
+    "shortName": "Semirreboque Sider",
+    "category": "Semirreboques",
+    "tag": "Sider",
+    "description": "Implemento sider com painel frontal reforçado, laterais em lona vinílica e colunas móveis para facilitar a operação de carga.",
+    "subtitle": "Configurações de 2, 3 ou 4 eixos",
+    "accent": "#ed1c24",
+    "isLaunch": false,
+    "image": "assets/products/semirreboque-sider-cover.png",
+    "gallery": [
+    "assets/products/galeria/s1.jfif",
+    "assets/products/galeria/s2.jfif",
+    "assets/products/galeria/s3.jfif",
+    "assets/products/galeria/s4.jfif",
+    "assets/products/galeria/s5.jpeg",
+    "assets/products/galeria/s6.jpg",
+    "assets/products/galeria/s7.jfif",
+    "assets/products/galeria/s8.jfif",
+    "assets/products/galeria/s9.jpg",
+    "assets/products/galeria/s10.jpg",
+    "assets/products/galeria/s11.jpg",
+    "assets/products/galeria/s12.jpg",
+    "assets/products/galeria/s13.jpg",
+    "assets/products/galeria/s14.jpg",
+    "assets/products/galeria/s15.jpg",
+    "assets/products/galeria/s16.jpg",
+    "assets/products/galeria/s17.jpg",
+    "assets/products/galeria/s18.jpg",
+    "assets/products/galeria/s19.jpg",
+    "assets/products/galeria/s20.jfif",
+    "assets/products/galeria/s21.jpg",
+    "assets/products/galeria/s22.jfif"
+],
+    "sheetImage": "assets/products/semirreboque-sider-sheet.png",
+    "summary": [
+      "Laterais em lona vinílica trava (12×12), com cores definidas pelo cliente.",
+      "Oito colunas móveis de fácil remoção e quatro travessas de contenção em cada vão.",
+      "Capacidade indicada na tabela: 30 paletes."
+    ],
+    "sections": [
+      {
+        "title": "Chassi",
+        "items": [
+          "Longarinas: vigas em perfil “I” de aço estrutural.",
+          "Travessas: passantes em perfil de aço estrutural, seção “U”, interligando as longarinas.",
+          "Corrimãos: perfil lateral em aço estrutural, seção “U”.",
+          "Pino-rei flangeado de 2”, conforme NBR NM ISO 337/2001.",
+          "Pé de apoio de duas velocidades, capacidade de levantamento de 28 t e carga estática de 80 t."
+        ]
+      },
+      {
+        "title": "Suspensão",
+        "items": [
+          "Sistema tipo balancim, com suportes de molas estampados e balanças de aço articuladas em pinos e buchas (Lub-free), que dispensam lubrificação.",
+          "Braços tensores articulados em buchas de borracha; suspensor pneumático no 1º eixo.",
+          "Molas: 10 lâminas. Para configuração de quatro eixos, a ficha indica 11 lâminas, com quatro lâminas mestras."
+        ]
+      },
+      {
+        "title": "Sistema rodante",
+        "items": [
+          "Eixos tubulares, capacidade de 11 t. Para a configuração de quatro eixos, a ficha indica capacidade de 13 t.",
+          "Freios a ar, com ABS e EBS, duas linhas: serviço e emergência, tambor 16 ½” × 8”.",
+          "Câmara de freio Spring-brake, conforme resolução CONTRAN 519/15.",
+          "Rodagem: cubos em ferro fundido nodular para rodas 8,25 × 22,5."
+        ]
+      },
+      {
+        "title": "Pintura",
+        "items": [
+          "Superfície metálica com aplicação de fundo anticorrosivo.",
+          "Base do chassi e piso: pintura na cor preta semibrilho.",
+          "Acabamento: pintura em PU."
+        ]
+      },
+      {
+        "title": "Caixa de carga",
+        "items": [
+          "Painel frontal metálico enrijecido, com revestimento interno em madeira OSB.",
+          "Laterais em lona vinílica trava (12×12), nas cores definidas pelo cliente; logomarca com impressão digital opcional.",
+          "Oito colunas móveis de fácil remoção, com encaixe de travamento em aço fundido, e quatro travessas de contenção em cada vão.",
+          "Teto com perfis (trilho) de alumínio longitudinal, treliçado com travessas em aço tubular galvanizado, lona vinílica branca e bandas laterais de borracha.",
+          "Quadro traseiro em perfis de aço enrijecidos; portas com duas folhas de alumínio liso e quatro varões de travamento.",
+          "Assoalho em chapa xadrez de 3/16” (4,75 mm), com perfis de reforço anti-afundamento."
+        ]
+      },
+      {
+        "title": "Sistema elétrico",
+        "items": [
+          "Sistema elétrico para 24 V, com lanternas em LED."
+        ]
+      },
+      {
+        "title": "Acessórios",
+        "items": [
+          "Suporte de estepe tipo cesto para dois pneus.",
+          "Caixa de cozinha.",
+          "Caixa de ferramentas.",
+          "Corote de água de 25 litros com saboneteira.",
+          "Batentes traseiros de borracha.",
+          "Para-lamas de plástico e para-barros de borracha antisspray.",
+          "Itens normatizados do CONTRAN: para-choque traseiro (Resolução 952/22), protetor lateral (Resolução 953/22) e faixas refletivas (Resolução 948/22)."
+        ]
+      }
+    ],
+    "dimensions": {
+      "headers": [
+        "Dimensão (mm)",
+        "Capacidade (paletes)",
+        "Nº de eixos",
+        "Acoplamento"
+      ],
+      "rows": [
+        [
+          "15400 × 2600 × 3056",
+          "30",
+          "02",
+          "4×2 ou 6×2"
+        ],
+        [
+          "15400 × 2600 × 3056",
+          "30",
+          "02 (1+1)",
+          "4×2 ou 6×2"
+        ],
+        [
+          "15400 × 2600 × 3056",
+          "30",
+          "03",
+          "4×2 ou 6×2"
+        ],
+        [
+          "15400 × 2600 × 3056",
+          "30",
+          "03 (1+1+1)",
+          "6×2"
+        ],
+        [
+          "15400 × 2600 × 3056",
+          "30",
+          "04 (1+3)",
+          "6×2"
+        ]
+      ],
+      "notes": [
+        "Configurações conforme tabela da ficha técnica fornecida."
+      ]
+    },
+    "qrImage": "assets/qrcodes/semirreboque-sider.png",
+    "sourcePdf": "SR Sider.pdf"
+  },
+  {
+    "id": "semirreboque-graneleiro",
+    "name": "Semirreboque Graneleiro",
+    "shortName": "Semirreboque Graneleiro",
+    "category": "Semirreboques",
+    "tag": "Graneleiro",
+    "description": "Implemento graneleiro com laterais de estrutura metálica e placas ACM, lona de cobertura, bocas de escoamento e amarração para cinta de 6 t.",
+    "subtitle": "Configurações de 2, 3 ou 4 eixos",
+    "accent": "#ed1c24",
+    "isLaunch": false,
+    "image": "assets/products/semirreboque-graneleiro-cover.png",
+    "gallery": [
+    "assets/products/galeria/granel1.jfif",
+    "assets/products/galeria/granel2.jpeg",
+    "assets/products/galeria/granel3.jpg",
+    "assets/products/galeria/granel4.jpg",
+    "assets/products/galeria/granel5.jpg"
+],
+    "sheetImage": "assets/products/semirreboque-graneleiro-sheet.png",
+    "summary": [
+      "Painel frontal e laterais com altura padrão 900+900 mm.",
+      "Assoalho em chapa xadrez de 1/8” (3,17 mm), com reforço anti-afundamento.",
+      "Bocas de escoamento e dispositivos de amarração para cinta de 6 t."
+    ],
+    "sections": [
+      {
+        "title": "Chassi",
+        "items": [
+          "Longarinas: vigas em perfil “I” de aço estrutural.",
+          "Travessas: passantes em perfil de aço estrutural, seção “U”, interligando as longarinas.",
+          "Corrimãos: perfil lateral em aço estrutural, seção “U”.",
+          "Pino-rei flangeado de 2”, conforme NBR NM ISO 337/2001.",
+          "Pé de apoio de duas velocidades, capacidade de levantamento de 28 t e carga estática de 80 t."
+        ]
+      },
+      {
+        "title": "Suspensão",
+        "items": [
+          "Sistema tipo balancim, com suportes de molas estampados e balanças de aço articuladas em pinos e buchas (Lub-free), que dispensam lubrificação.",
+          "Braços tensores articulados em buchas de borracha; suspensor pneumático no 1º eixo.",
+          "Molas: 10 lâminas. Para configuração de quatro eixos, a ficha indica 11 lâminas, com quatro lâminas mestras."
+        ]
+      },
+      {
+        "title": "Sistema rodante",
+        "items": [
+          "Eixos tubulares, capacidade de 11 t. Para a configuração de quatro eixos, a ficha indica capacidade de 13 t.",
+          "Freios a ar, com ABS e EBS, duas linhas: serviço e emergência, tambor 16 ½” × 8”.",
+          "Câmara de freio Spring-brake, conforme resolução CONTRAN 519/15.",
+          "Rodagem: cubos em ferro fundido nodular para rodas 8,25 × 22,5."
+        ]
+      },
+      {
+        "title": "Pintura",
+        "items": [
+          "Superfície metálica com aplicação de fundo anticorrosivo.",
+          "Base do chassi e piso: pintura na cor preta semibrilho.",
+          "Acabamento: pintura em PU."
+        ]
+      },
+      {
+        "title": "Caixa de carga",
+        "items": [
+          "Painel frontal em chapa de aço estrutural e perfis enrijecidos, altura padrão 900+900 mm.",
+          "Tampas laterais com perfis em aço estrutural e placas de ACM, altura padrão 900+900 mm.",
+          "Cintas de nylon para travamento interno das tampas; arcos e lonas de cobertura.",
+          "Fueiros em perfis de aço enrijecidos.",
+          "Assoalho em chapa xadrez de 1/8” (3,17 mm), com perfis de reforço anti-afundamento.",
+          "Bocas de escoamento e dispositivos de amarração de carga no assoalho para cinta de 6 t."
+        ]
+      },
+      {
+        "title": "Sistema elétrico",
+        "items": [
+          "Sistema elétrico para 24 V, com lanternas em LED."
+        ]
+      },
+      {
+        "title": "Acessórios",
+        "items": [
+          "Suporte de estepe tipo cesto para dois pneus.",
+          "Caixa de cozinha.",
+          "Caixa de ferramentas.",
+          "Corote de água de 25 litros com saboneteira.",
+          "Batentes traseiros de borracha.",
+          "Para-lamas de plástico e para-barros de borracha antisspray.",
+          "Itens normatizados do CONTRAN: para-choque traseiro (Resolução 952/22), protetor lateral (Resolução 953/22) e faixas refletivas (Resolução 948/22)."
+        ]
+      }
+    ],
+    "dimensions": {
+      "headers": [
+        "Dimensão (mm)",
+        "Altura das tampas (ACM)",
+        "Nº de eixos",
+        "Acoplamento"
+      ],
+      "rows": [
+        [
+          "10500 / 11500 / 12500",
+          "900+900",
+          "02 (1+1)",
+          "4×2 ou 6×2"
+        ],
+        [
+          "12500 / 13500 / 14100 / 14500 / 15500",
+          "900+900",
+          "03",
+          "4×2 ou 6×2"
+        ],
+        [
+          "12500 / 13500 / 14100 / 14500 / 15500",
+          "900+900",
+          "03 (1+1+1)",
+          "6×2"
+        ],
+        [
+          "13500 / 14100 / 14500 / 15500",
+          "900+900",
+          "04 (1+3)",
+          "6×2"
+        ]
+      ],
+      "notes": [
+        "Dimensões indicadas na ficha técnica; confira o desenho original para a configuração escolhida."
+      ]
+    },
+    "qrImage": "assets/qrcodes/semirreboque-graneleiro.png",
+    "sourcePdf": "SR Graneleiro.pdf"
+  },
+  {
+    "id": "semirreboque-carga-seca",
+    "name": "Semirreboque Carga Seca",
+    "shortName": "Semirreboque Carga Seca",
+    "category": "Semirreboques",
+    "tag": "Carga seca",
+    "description": "Implemento de carga seca com estrutura frontal em aço, tampas laterais com placas ACM e dispositivos de amarração de carga.",
+    "subtitle": "Configurações de 2, 3 ou 4 eixos",
+    "accent": "#ed1c24",
+    "isLaunch": false,
+    "image": "assets/products/semirreboque-carga-seca-cover.png",
+    "gallery": [
+    "assets/products/galeria/ca1.jpg",
+    "assets/products/galeria/ca2.jfif",
+    "assets/products/galeria/ca3.jfif",
+    "assets/products/galeria/ca4.jpg",
+    "assets/products/galeria/ca5.jfif",
+    "assets/products/galeria/ca6.jfif",
+    "assets/products/galeria/ca7.jpg",
+    "assets/products/galeria/ca8.jpg",
+    "assets/products/galeria/ca9.jpg",
+    "assets/products/galeria/ca10.jpg",
+    "assets/products/galeria/ca11.jpg"
+],
+    "sheetImage": "assets/products/semirreboque-carga-seca-sheet.png",
+    "summary": [
+      "Painel frontal com altura padrão de 900 mm; tampas laterais com altura padrão de 450 mm.",
+      "Assoalho em chapa xadrez de 1/8” (3,17 mm).",
+      "Dispositivos de amarração de carga para cintas de 6 t."
+    ],
+    "sections": [
+      {
+        "title": "Chassi",
+        "items": [
+          "Longarinas: vigas em perfil “I” de aço estrutural.",
+          "Travessas: passantes em perfil de aço estrutural, seção “U”, interligando as longarinas.",
+          "Corrimãos: perfil lateral em aço estrutural, seção “U”.",
+          "Pino-rei flangeado de 2”, conforme NBR NM ISO 337/2001.",
+          "Pé de apoio de duas velocidades, capacidade de levantamento de 28 t e carga estática de 80 t."
+        ]
+      },
+      {
+        "title": "Suspensão",
+        "items": [
+          "Sistema tipo balancim, com suportes de molas estampados e balanças de aço articuladas em pinos e buchas (Lub-free), que dispensam lubrificação.",
+          "Braços tensores articulados em buchas de borracha; suspensor pneumático no 1º eixo.",
+          "Molas: 10 lâminas. Para configuração de quatro eixos, a ficha indica 11 lâminas, com quatro lâminas mestras."
+        ]
+      },
+      {
+        "title": "Sistema rodante",
+        "items": [
+          "Eixos tubulares, capacidade de 11 t. Para a configuração de quatro eixos, a ficha indica capacidade de 13 t.",
+          "Freios a ar, com ABS e EBS, duas linhas: serviço e emergência, tambor 16 ½” × 8”.",
+          "Câmara de freio Spring-brake, conforme resolução CONTRAN 519/15.",
+          "Rodagem: cubos em ferro fundido nodular para rodas 8,25 × 22,5."
+        ]
+      },
+      {
+        "title": "Pintura",
+        "items": [
+          "Superfície metálica com aplicação de fundo anticorrosivo.",
+          "Base do chassi e piso: pintura na cor preta semibrilho.",
+          "Acabamento: pintura em PU."
+        ]
+      },
+      {
+        "title": "Caixa de carga",
+        "items": [
+          "Painel frontal em chapa de aço estrutural e perfis enrijecidos, altura padrão de 900 mm.",
+          "Tampas laterais com perfis em aço estrutural e placas de ACM, altura padrão de 450 mm.",
+          "Fueiros em perfis de aço enrijecidos.",
+          "Assoalho em chapa xadrez de 1/8” (3,17 mm), com perfis de reforço anti-afundamento.",
+          "Dispositivos de amarração de carga no assoalho para cinta de 6 t."
+        ]
+      },
+      {
+        "title": "Sistema elétrico",
+        "items": [
+          "Sistema elétrico para 24 V, com lanternas em LED."
+        ]
+      },
+      {
+        "title": "Acessórios",
+        "items": [
+          "Suporte de estepe tipo cesto para dois pneus.",
+          "Caixa de cozinha.",
+          "Caixa de ferramentas.",
+          "Corote de água de 25 litros com saboneteira.",
+          "Batentes traseiros de borracha.",
+          "Para-lamas de plástico e para-barros de borracha antisspray.",
+          "Itens normatizados do CONTRAN: para-choque traseiro (Resolução 952/22), protetor lateral (Resolução 953/22) e faixas refletivas (Resolução 948/22)."
+        ]
+      }
+    ],
+    "dimensions": {
+      "headers": [
+        "Dimensão (mm)",
+        "Altura das tampas (ACM)",
+        "Nº de eixos",
+        "Acoplamento"
+      ],
+      "rows": [
+        [
+          "10500 / 11500 / 12500",
+          "450",
+          "02 (1+1)",
+          "4×2 ou 6×2"
+        ],
+        [
+          "12500 / 13500 / 14100 / 14500 / 15500",
+          "450",
+          "03",
+          "4×2 ou 6×2"
+        ],
+        [
+          "12500 / 13500 / 14100 / 14500 / 15500",
+          "450",
+          "03 (1+1+1)",
+          "6×2"
+        ],
+        [
+          "13500 / 14100 / 14500 / 15500",
+          "450",
+          "04 (1+3)",
+          "6×2"
+        ]
+      ],
+      "notes": [
+        "Dimensões indicadas na ficha técnica; confira o desenho original para a configuração escolhida."
+      ]
+    },
+    "qrImage": "assets/qrcodes/semirreboque-carga-seca.png",
+    "sourcePdf": "SR Carga seca.pdf"
+  },
+  {
+    "id": "semirreboque-bau",
+    "name": "Semirreboque Baú",
+    "shortName": "Semirreboque Baú",
+    "category": "Semirreboques",
+    "tag": "Baú",
+    "description": "Implemento baú com estrutura em perfis extrudados de alumínio, revestimentos corrugados e portas traseiras de alumínio.",
+    "subtitle": "Configurações com 2, 3 ou 4 eixos",
+    "accent": "#ed1c24",
+    "isLaunch": false,
+    "image": "assets/products/semirreboque-bau-cover.png",
+    "gallery": [
+    "assets/products/galeria/bau1.jpg",
+    "assets/products/galeria/bau2.jpeg",
+    "assets/products/galeria/bau3.jpg",
+    "assets/products/galeria/bau4.jpg",
+    "assets/products/galeria/bau5.jfif"
+],
+    "sheetImage": "assets/products/semirreboque-bau-sheet.png",
+    "summary": [
+      "Revestimento externo em alumínio corrugado natural; teto liso em peça única.",
+      "Estrutura interna com perfis de aço galvanizado.",
+      "Variantes de 30 ou 32 paletes indicadas na tabela técnica."
+    ],
+    "sections": [
+      {
+        "title": "Chassi",
+        "items": [
+          "Longarinas: vigas em perfil “I” de aço estrutural.",
+          "Travessas: passantes em perfil de aço estrutural, seção “U”, interligando as longarinas.",
+          "Corrimãos: perfil lateral em aço estrutural, seção “U”.",
+          "Pino-rei flangeado de 2”, conforme NBR NM ISO 337/2001.",
+          "Pé de apoio de duas velocidades, capacidade de levantamento de 28 t e carga estática de 80 t."
+        ]
+      },
+      {
+        "title": "Suspensão",
+        "items": [
+          "Sistema tipo balancim, com suportes de molas estampados e balanças de aço articuladas em pinos e buchas (Lub-free), que dispensam lubrificação.",
+          "Braços tensores articulados em buchas de borracha; suspensor pneumático no 1º eixo.",
+          "Molas: 10 lâminas. Para configuração de quatro eixos, a ficha indica 11 lâminas, com quatro lâminas mestras."
+        ]
+      },
+      {
+        "title": "Sistema rodante",
+        "items": [
+          "Eixos tubulares, capacidade de 11 t. Para a configuração de quatro eixos, a ficha indica capacidade de 13 t.",
+          "Freios a ar, com ABS e EBS, duas linhas: serviço e emergência, tambor 16 ½” × 8”.",
+          "Câmara de freio Spring-brake, conforme resolução CONTRAN 519/15.",
+          "Rodagem: cubos em ferro fundido nodular para rodas 8,25 × 22,5."
+        ]
+      },
+      {
+        "title": "Pintura",
+        "items": [
+          "Superfície metálica com aplicação de fundo anticorrosivo.",
+          "Base do chassi e piso: pintura na cor preta semibrilho.",
+          "Acabamento: pintura em PU."
+        ]
+      },
+      {
+        "title": "Caixa de carga",
+        "items": [
+          "Painéis laterais, frontal e teto em perfis extrudados de alumínio, formando as estruturas interna e externa.",
+          "Revestimento externo: chapas corrugadas de alumínio natural nas laterais e na frente; teto em chapa lisa, peça única, sem emendas.",
+          "Revestimento interno: painéis laterais e frontal com ripamento em perfis de aço galvanizado; perfil tubular para amarração de carga e rodapés em perfil galvanizado.",
+          "Quadro traseiro com perfis de aço enrijecidos.",
+          "Portas: duas folhas de alumínio liso natural, com quatro varões de travamento.",
+          "Assoalho em chapa xadrez de 3/16” (4,75 mm), com perfis de reforço anti-afundamento."
+        ]
+      },
+      {
+        "title": "Sistema elétrico",
+        "items": [
+          "Sistema elétrico para 24 V, com lanternas em LED."
+        ]
+      },
+      {
+        "title": "Acessórios",
+        "items": [
+          "Suporte de estepe tipo cesto para dois pneus.",
+          "Caixa de cozinha.",
+          "Caixa de ferramentas.",
+          "Corote de água de 25 litros com saboneteira.",
+          "Batentes traseiros de borracha.",
+          "Para-lamas de plástico e para-barros de borracha antisspray.",
+          "Itens normatizados do CONTRAN: para-choque traseiro (Resolução 952/22), protetor lateral (Resolução 953/22) e faixas refletivas (Resolução 948/22)."
+        ]
+      }
+    ],
+    "dimensions": {
+      "headers": [
+        "Dimensão (mm)",
+        "Capacidade (paletes)",
+        "Nº de eixos",
+        "Acoplamento"
+      ],
+      "rows": [
+        [
+          "15400 × 2600 × 3011",
+          "30",
+          "02",
+          "4×2 ou 6×2"
+        ],
+        [
+          "16300 × 2600 × 3011",
+          "32",
+          "02",
+          "4×2"
+        ],
+        [
+          "15400 × 2600 × 3011",
+          "30",
+          "02 (1+1)",
+          "4×2 ou 6×2"
+        ],
+        [
+          "16300 × 2600 × 3011",
+          "32",
+          "02 (1+1)",
+          "4×2"
+        ],
+        [
+          "15400 × 2600 × 3011",
+          "30",
+          "03",
+          "4×2 ou 6×2"
+        ],
+        [
+          "16300 × 2600 × 3011",
+          "32",
+          "03",
+          "4×2"
+        ],
+        [
+          "15400 × 2600 × 3011",
+          "30",
+          "03 (1+1+1)",
+          "6×2"
+        ],
+        [
+          "15400 × 2600 × 3011",
+          "30",
+          "04 (1+3)",
+          "6×2"
+        ]
+      ],
+      "notes": [
+        "Combinações reproduzidas da tabela do PDF. A ficha apresenta as variantes por dimensões, capacidade, eixos e acoplamento."
+      ]
+    },
+    "qrImage": "assets/qrcodes/semirreboque-bau.png",
+    "sourcePdf": "SR Baú.pdf"
+  },
+  {
+    "id": "semirreboque-bau-bk-edition",
+    "name": "Semirreboque Baú Black Edition",
+    "shortName": "Semirreboque Baú Black Edition",
+    "category": "Semirreboques",
+    "tag": "Black Edition",
+    "description": "Versão Black Edition do semirreboque baú, com painéis externos corrugados em alumínio preto e portas traseiras em alumínio liso preto.",
+    "subtitle": "Acabamento Black Edition",
+    "accent": "#ed1c24",
+    "isLaunch": false,
+    "image": "assets/products/semirreboque-bau-bk-edition-cover.png",
+    "gallery": [
+    "assets/products/galeria/bk1.jpg",
+    "assets/products/galeria/bk2.jpg",
+    "assets/products/galeria/bk3.jpg",
+    "assets/products/galeria/bk4.jpg",
+    "assets/products/galeria/bk5.jpg",
+    "assets/products/galeria/bk6.jfif",
+    "assets/products/galeria/bk7.jfif",
+    "assets/products/galeria/bk8.jfif",
+    "assets/products/galeria/bk9.jfif",
+    "assets/products/galeria/bk10.jpeg",
+    "assets/products/galeria/bk11.jpeg"
+],
+    "sheetImage": "assets/products/semirreboque-bau-bk-edition-sheet.png",
+    "summary": [
+      "Painéis laterais e frontal em alumínio corrugado preto.",
+      "Teto em chapa lisa de peça única, sem emendas.",
+      "Portas traseiras em alumínio liso preto com quatro varões de travamento."
+    ],
+    "sections": [
+      {
+        "title": "Chassi",
+        "items": [
+          "Longarinas: vigas em perfil “I” de aço estrutural.",
+          "Travessas: passantes em perfil de aço estrutural, seção “U”, interligando as longarinas.",
+          "Corrimãos: perfil lateral em aço estrutural, seção “U”.",
+          "Pino-rei flangeado de 2”, conforme NBR NM ISO 337/2001.",
+          "Pé de apoio de duas velocidades, capacidade de levantamento de 28 t e carga estática de 80 t."
+        ]
+      },
+      {
+        "title": "Suspensão",
+        "items": [
+          "Sistema tipo balancim, com suportes de molas estampados e balanças de aço articuladas em pinos e buchas (Lub-free), que dispensam lubrificação.",
+          "Braços tensores articulados em buchas de borracha; suspensor pneumático no 1º eixo.",
+          "Molas: 11 lâminas, com quatro lâminas mestras."
+        ]
+      },
+      {
+        "title": "Sistema rodante",
+        "items": [
+          "Eixos tubulares, capacidade de 11 t. Para a configuração de quatro eixos, a ficha indica capacidade de 13 t.",
+          "Freios a ar, com ABS e EBS, duas linhas: serviço e emergência, tambor 16 ½” × 8”.",
+          "Câmara de freio Spring-brake, conforme resolução CONTRAN 519/15.",
+          "Rodagem: cubos em ferro fundido nodular para rodas 8,25 × 22,5."
+        ]
+      },
+      {
+        "title": "Pintura",
+        "items": [
+          "Superfície metálica com aplicação de fundo anticorrosivo.",
+          "Base do chassi e piso: pintura na cor preta semibrilho.",
+          "Acabamento: pintura em PU."
+        ]
+      },
+      {
+        "title": "Caixa de carga",
+        "items": [
+          "Painéis laterais, frontal e teto em perfis extrudados de alumínio, formando a estrutura interna e externa.",
+          "Revestimento externo: painéis laterais e frontal em chapa corrugada de alumínio; teto em chapa lisa, peça única, sem emendas.",
+          "Revestimento interno: painéis laterais com ripamento em perfis de aço galvanizado e perfil tubular de amarração de carga; rodapés em perfil galvanizado.",
+          "Quadro traseiro em perfis de aço enrijecidos.",
+          "Portas: duas folhas de alumínio liso preto, com quatro varões de travamento.",
+          "Painel frontal em chapa corrugada de alumínio preta.",
+          "Assoalho em chapa xadrez de 3/16” (4,75 mm), com perfis de reforço anti-afundamento."
+        ]
+      },
+      {
+        "title": "Sistema elétrico",
+        "items": [
+          "Sistema elétrico para 24 V, com lanternas em LED."
+        ]
+      },
+      {
+        "title": "Acessórios",
+        "items": [
+          "Suporte de estepe tipo cesto para dois pneus.",
+          "Caixa de cozinha.",
+          "Caixa de ferramentas.",
+          "Corote de água de 25 litros com saboneteira.",
+          "Batentes traseiros de borracha.",
+          "Para-lamas de plástico e para-barros de borracha antisspray.",
+          "Itens normatizados do CONTRAN: para-choque traseiro (Resolução 952/22), protetor lateral (Resolução 953/22) e faixas refletivas (Resolução 948/22)."
+        ]
+      }
+    ],
+    "dimensions": {
+      "headers": [
+        "Dimensão (mm)",
+        "Capacidade (paletes)",
+        "Nº de eixos",
+        "Acoplamento"
+      ],
+      "rows": [
+        [
+          "15400 × 2600 × 3011",
+          "30",
+          "02 (1+1)",
+          "4×2 ou 6×2"
+        ],
+        [
+          "16300 × 2600 × 3011",
+          "32",
+          "02 (1+1)",
+          "4×2"
+        ],
+        [
+          "15400 × 2600 × 3011",
+          "30",
+          "03",
+          "4×2 ou 6×2"
+        ],
+        [
+          "16300 × 2600 × 3011",
+          "32",
+          "03",
+          "4×2"
+        ]
+      ],
+      "notes": [
+        "Combinações reproduzidas da tabela do PDF."
+      ]
+    },
+    "qrImage": "assets/qrcodes/semirreboque-bau-bk-edition.png",
+    "sourcePdf": "SR Baú BK Edition.pdf"
+  }
+]

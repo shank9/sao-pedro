@@ -1,0 +1,236 @@
+/* São Pedro — otimização para totens verticais/portrait.
+   Carregar depois do css/style.css e dos estilos inline do index.html. */
+:root {
+  --sp-portrait-gutter: clamp(22px, 4.2vw, 58px);
+  --sp-portrait-red: #c62828;
+  --sp-portrait-ink: #17212b;
+}
+
+/* Toque: alvos maiores e feedback visível em telas touch. */
+button, [role="button"], .category-card, .product-card, .detail-tab {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+button:focus-visible, [role="button"]:focus-visible {
+  outline: 3px solid var(--sp-portrait-red);
+  outline-offset: 4px;
+}
+
+@media (orientation: portrait) and (max-aspect-ratio: 3/4) {
+  html, body { min-width: 320px; min-height: 100%; }
+  body { overflow-x: hidden; }
+  .app-shell {
+    width: 100%;
+    min-height: 100svh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    overflow: clip;
+  }
+  .topbar {
+    position: relative;
+    z-index: 5;
+    flex: 0 0 auto;
+    min-height: clamp(72px, 8svh, 112px);
+    padding: 10px var(--sp-portrait-gutter);
+    gap: 12px;
+  }
+  .brand, .brand-logo-slot {
+    width: auto;
+    min-width: 0;
+    min-height: 0;
+  }
+  .brand-logo-slot { max-width: min(56vw, 320px); }
+  .brand-logo-image {
+    width: 100%;
+    max-width: 320px;
+    max-height: clamp(48px, 6.5svh, 78px);
+    object-fit: contain;
+    object-position: left center;
+  }
+  .topbar-right { gap: 10px; }
+  .edition-label { font-size: clamp(9px, 1.1vw, 13px); letter-spacing: .1em; }
+  .icon-button { width: 46px; height: 46px; flex: 0 0 46px; }
+
+  .view {
+    width: 100%;
+    max-width: 900px;
+    flex: 1 0 auto;
+    min-height: 0;
+    margin-inline: auto;
+    padding: 0 var(--sp-portrait-gutter) 28px;
+    overflow: visible;
+  }
+  .screen { width: 100%; min-width: 0; }
+
+  /* Início: mensagem e CTA primeiro, mídia em seguida. */
+  .home-screen .home-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: clamp(24px, 4svh, 48px);
+    width: 100%;
+    padding: clamp(18px, 3svh, 38px) 0 24px;
+  }
+  .home-screen .home-copy {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+    text-align: left;
+  }
+  .home-brand-lockup {
+    margin: 0 0 clamp(24px, 3.5svh, 42px);
+    justify-content: flex-start;
+  }
+  .home-brand-logo {
+    width: clamp(220px, 58vw, 420px);
+    max-width: 100%;
+    max-height: clamp(86px, 11svh, 140px);
+    object-position: left center;
+  }
+  .home-brand-fallback { font-size: clamp(32px, 6vw, 48px); }
+  .home-screen .eyebrow {
+    margin-bottom: 18px;
+    font-size: clamp(11px, 1.5vw, 15px);
+    line-height: 1.4;
+    letter-spacing: .14em;
+  }
+  .home-screen h1 {
+    max-width: 100%;
+    font-size: clamp(48px, 8.3vw, 84px);
+    line-height: .98;
+    letter-spacing: -.06em;
+    overflow-wrap: normal;
+  }
+  .home-screen h1 span { margin-top: 7px; }
+  .home-screen .lead-copy {
+    max-width: 620px;
+    margin: clamp(18px, 2.8svh, 30px) 0 clamp(24px, 3.5svh, 38px);
+    font-size: clamp(18px, 2.4vw, 25px);
+    line-height: 1.5;
+  }
+  .home-screen .primary-button.large {
+    width: 100%;
+    min-height: clamp(62px, 7.5svh, 82px);
+    justify-content: center;
+    padding: 16px 24px;
+    font-size: clamp(16px, 2vw, 21px);
+    border-radius: 14px;
+  }
+  .home-screen .home-visual {
+    position: relative;
+    width: 100%;
+    min-height: 0;
+    height: clamp(250px, 34svh, 560px);
+    border-radius: clamp(16px, 2.4vw, 28px);
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .home-screen .home-loop-video,
+  .home-screen .home-video-fallback {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  /* Demais telas: uma coluna, leitura vertical e áreas de toque maiores. */
+  .category-heading, .section-heading, .detail-layout, .qr-screen, .lead-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: clamp(22px, 3svh, 38px);
+  }
+  .category-heading, .section-heading { padding-top: clamp(24px, 4svh, 46px); }
+  .category-heading h1, .section-heading h1, .detail-info h1,
+  .qr-content h1, .lead-intro h1, .success-screen h1 {
+    font-size: clamp(38px, 6.5vw, 66px);
+    line-height: 1.02;
+    letter-spacing: -.055em;
+    overflow-wrap: break-word;
+  }
+  .category-heading > p, .section-heading > p,
+  .lead-intro > p, .qr-content > p {
+    font-size: clamp(16px, 2vw, 21px);
+    line-height: 1.55;
+  }
+  .category-grid, .product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(12px, 2vw, 22px);
+    width: 100%;
+  }
+  .category-card, .product-card { min-width: 0; }
+  .category-card { min-height: 190px; }
+  .product-card { min-height: 210px; }
+  .catalog-instruction { margin: 22px 0 14px; font-size: 12px; letter-spacing: .12em; }
+
+  .detail-topline { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; padding-top: 20px; }
+  .detail-layout { padding-top: 20px; }
+  .detail-visual-panel { width: 100%; min-height: clamp(260px, 34svh, 480px); }
+  .detail-art { min-height: clamp(220px, 28svh, 400px); }
+  .detail-info { width: 100%; min-width: 0; }
+  .detail-tabs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .detail-tab { min-height: 52px; padding: 12px 10px; font-size: 14px; }
+  .detail-actions { display: flex; flex-direction: column; gap: 12px; }
+  .detail-actions button { width: 100%; min-height: 58px; }
+
+  .qr-screen { padding-top: 24px; }
+  .qr-content { width: 100%; }
+  .qr-frame { width: min(72vw, 380px); aspect-ratio: 1; margin: 22px auto; }
+  .qr-side-visual { display: none; }
+  .lead-layout { padding-top: 24px; }
+  .lead-form { width: 100%; min-width: 0; }
+  .form-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .form-grid .field { grid-column: 1 / -1; }
+  .field input, .field select, .field textarea { min-height: 54px; font-size: 16px; }
+  .consent { align-items: flex-start; gap: 12px; line-height: 1.45; }
+  .consent input { width: 22px; height: 22px; flex: 0 0 22px; }
+  .form-submit { width: 100%; min-height: 62px; }
+  .success-screen { padding: clamp(38px, 8svh, 100px) 0; }
+
+  .screen-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: clamp(28px, 5svh, 54px);
+    padding-top: 18px;
+  }
+  .screen-footer > span { font-size: 11px; line-height: 1.4; }
+  .text-button { min-height: 48px; padding: 10px 4px; }
+  .global-footer {
+    position: relative;
+    inset: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px 14px;
+    padding: 14px var(--sp-portrait-gutter) max(14px, env(safe-area-inset-bottom));
+    font-size: 9px;
+    line-height: 1.4;
+  }
+  .global-footer .footer-center { display: none; }
+
+  /* Telas de menor altura em orientação vertical: permitir rolagem sem cortar conteúdo. */
+  @media (max-height: 900px) {
+    .home-screen .home-layout { gap: 22px; padding-top: 16px; }
+    .home-brand-lockup { margin-bottom: 20px; }
+    .home-screen .home-visual { height: clamp(210px, 30svh, 320px); }
+    .home-screen .lead-copy { margin-block: 16px 22px; }
+  }
+}
+
+@media (orientation: portrait) and (max-width: 560px) {
+  .category-grid, .product-grid { grid-template-columns: minmax(0, 1fr); }
+  .category-card, .product-card { min-height: 170px; }
+  .edition-label { display: none; }
+  .home-screen h1 { font-size: clamp(42px, 10.5vw, 58px); }
+  .home-screen .home-visual { height: clamp(210px, 30svh, 330px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}

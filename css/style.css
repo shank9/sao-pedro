@@ -1,0 +1,3881 @@
+:root{color-scheme:dark;--bg:#111216;--panel:#191a20;--panel2:#202128;--line:rgba(255,255,255,.105);--text:#f5f5f7;--muted:#a5a5af;--pink:#ed145b;--pink2:#ff3f77;--green:#a8d98c;--font:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;background:var(--bg);color:var(--text);font-family:var(--font);font-size:16px;overflow:hidden}button,input,select{font:inherit}button{color:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #ff7da2;outline-offset:3px}.app-shell{position:relative;isolation:isolate;display:flex;flex-direction:column;width:100%;height:100dvh;min-height:540px;padding:clamp(16px,2.6vw,42px) clamp(18px,4.7vw,76px) 16px;overflow:hidden}.ambient{position:absolute;pointer-events:none;z-index:-1;border-radius:50%;filter:blur(3px);opacity:.2}.ambient-one{width:40vw;height:40vw;right:-17vw;top:-22vw;background:radial-gradient(circle,#8b0e3b 0,rgba(139,14,59,0) 70%)}.ambient-two{width:34vw;height:34vw;left:-20vw;bottom:-22vw;background:radial-gradient(circle,#5b1633 0,rgba(91,22,51,0) 70%)}.topbar{display:flex;align-items:center;justify-content:space-between;gap:20px;flex:0 0 auto;border-bottom:1px solid var(--line);padding-bottom:clamp(15px,1.8vh,24px);z-index:4}.brand{display:flex;align-items:center;gap:12px;text-align:left;background:none;border:0;padding:0}.brand-mark{display:grid;place-items:center;width:45px;height:45px;border-radius:12px 12px 12px 3px;background:var(--pink);font-weight:950;letter-spacing:-2px;font-size:18px;color:white;box-shadow:0 8px 28px #ed145b35}.brand-copy{display:grid;gap:4px}.brand-copy strong{letter-spacing:.11em;font-size:14px;font-weight:900}.brand-copy small{color:#b8b8c1;font-weight:700;font-size:9px;letter-spacing:.12em}.topbar-right{display:flex;align-items:center;gap:22px}.edition-label{font-size:10px;letter-spacing:.17em;font-weight:800;color:#c0c0c8;display:flex;align-items:center;gap:9px}.status-dot,.footer-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--pink);box-shadow:0 0 13px #ed145b8a}.icon-button{width:44px;height:44px;border:1px solid var(--line);background:#ffffff04;border-radius:13px;display:grid;place-items:center;transition:.2s}.icon-button svg{width:20px;fill:none;stroke:#e9e9ed;stroke-width:1.8;stroke-linejoin:round}.icon-button:hover{background:#ffffff0d;border-color:#ffffff33}.view{position:relative;flex:1;min-height:0;overflow:hidden}.screen{position:absolute;inset:0;min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#44444f transparent;animation:screenIn .45s cubic-bezier(.2,.75,.25,1) both}.hidden{display:none!important}@keyframes screenIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}.home-screen{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);grid-template-rows:1fr auto;align-items:center;column-gap:clamp(28px,6vw,100px);padding:clamp(28px,5vh,70px) 0 15px}.home-copy{align-self:center;padding:0 0 25px;z-index:1}.eyebrow{display:flex;align-items:center;gap:11px;font-size:10px;font-weight:850;letter-spacing:.2em;color:#bdbdc7;margin-bottom:24px}.eyebrow-line{width:28px;height:2px;background:var(--pink);display:inline-block}.home-screen h1,.section-heading h1,.detail-info h1,.qr-content h1,.lead-intro h1,.success-screen h1{margin:0;font-size:clamp(44px,5.6vw,88px);letter-spacing:-.065em;line-height:.98;font-weight:850}.home-screen h1 span,.section-heading h1 span,.detail-info h1 span,.qr-content h1 span,.lead-intro h1 span,.success-screen h1 span{color:var(--pink)}.lead-copy{font-size:clamp(15px,1.25vw,19px);line-height:1.7;color:#b3b3bd;max-width:480px;margin:27px 0 30px}.primary-button,.secondary-button{min-height:53px;border:0;border-radius:11px;display:inline-flex;align-items:center;justify-content:center;gap:22px;padding:0 23px;background:var(--pink);font-weight:850;font-size:13px;letter-spacing:.01em;color:white;box-shadow:0 11px 30px #ed145b29;transition:transform .2s,background .2s,box-shadow .2s}.primary-button:hover{background:var(--pink2);transform:translateY(-2px);box-shadow:0 14px 33px #ed145b3a}.primary-button:active{transform:translateY(0)}.primary-button.large{min-height:61px;padding:0 28px}.arrow{font-size:20px;line-height:1;font-weight:500}.secondary-button{background:transparent;border:1px solid #ffffff28;box-shadow:none}.secondary-button:hover{background:#ffffff0a}.home-proof{display:flex;align-items:center;gap:10px;margin-top:40px;font-size:11px;color:#888994;max-width:310px;line-height:1.5}.proof-symbol{color:var(--pink);font-size:20px}.home-visual{position:relative;min-height:390px;height:100%;display:flex;align-items:center;justify-content:center;isolation:isolate}.home-visual:before{content:"";position:absolute;width:min(40vw,530px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 50% 50%,#ed145b21,transparent 68%);z-index:-1}.visual-orbit{position:absolute;border:1px solid #ffffff0d;border-radius:50%;aspect-ratio:1}.orbit-a{width:min(45vw,550px);transform:rotate(-20deg) scaleY(.57)}.orbit-b{width:min(35vw,430px);transform:rotate(25deg) scaleY(.57);border-color:#ed145b33}.visual-number{position:absolute;top:6%;right:3%;font-size:clamp(45px,6vw,94px);font-weight:950;letter-spacing:-.08em;color:#ffffff0a;line-height:1}.visual-number span{font-size:.18em;letter-spacing:.08em;color:#ed145b75;text-transform:uppercase}.truck-scene{width:100%;max-width:750px;position:relative;z-index:1}.truck-scene svg{width:100%;height:auto;overflow:visible;filter:drop-shadow(0 25px 22px #0008)}.hero-truck{transform:translateX(-5%) scale(1.04)}.visual-caption{position:absolute;bottom:22px;left:0;right:0;display:flex;justify-content:space-between;gap:12px;color:#777985;font-size:9px;font-weight:800;letter-spacing:.15em}.visual-caption span:first-child{color:var(--pink)}.home-bottom{grid-column:1/-1;display:flex;align-items:center;gap:15px;color:#777985;font-size:9px;font-weight:800;letter-spacing:.16em;padding-top:4px}.bottom-line{width:50px;height:1px;background:var(--pink)}.global-footer{flex:0 0 auto;display:flex;justify-content:space-between;align-items:center;gap:16px;border-top:1px solid var(--line);padding-top:14px;color:#737580;font-size:9px;font-weight:800;letter-spacing:.13em}.footer-center{display:flex;align-items:center;gap:8px}.footer-dot{width:5px;height:5px}.catalog-screen{padding:clamp(25px,4vh,48px) 0 14px}.section-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:35px;margin-bottom:36px}.section-heading h1{font-size:clamp(36px,4vw,60px)}.section-heading .eyebrow{margin-bottom:17px}.section-heading p{max-width:330px;line-height:1.65;color:var(--muted);font-size:14px;margin:0 0 4px}.catalog-filter{display:flex;align-items:center;gap:14px;margin-bottom:18px}.filter-label{font-size:9px;letter-spacing:.15em;color:#787985;font-weight:850}.filter-chip{background:#ffffff0a;border:1px solid #ffffff16;border-radius:9px;padding:10px 14px;font-size:11px;font-weight:800}.filter-options{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.filter-chip.active{background:#ed145b1c;border-color:#ed145b88;color:#fff}.filter-chip.active span{background:#ed145b;color:#fff}.filter-chip span{display:inline-grid;place-items:center;background:#ed145b22;color:#ff719b;width:23px;height:21px;border-radius:6px;margin-left:9px}.catalog-note{margin-left:auto;font-size:9px;letter-spacing:.13em;color:#787985;font-weight:800}.catalog-instruction{margin:-10px 0 18px;color:#858692;font-size:9px;font-weight:850;letter-spacing:.15em}.product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.product-card{position:relative;min-width:0;min-height:295px;padding:18px;border:1px solid #ffffff13;border-radius:16px;background:linear-gradient(135deg,#23242b,#191a20 75%);overflow:hidden;text-align:left;display:flex;flex-direction:column;justify-content:space-between;transition:transform .22s,border-color .22s,background .22s}.product-card:hover{transform:translateY(-4px);border-color:#ed145b7a;background:linear-gradient(135deg,#2a2028,#191a20 75%)}.product-card:before{content:"";position:absolute;right:-20%;top:-20%;width:75%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#ed145b1a,transparent 70%)}.card-top{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:10px}.product-tag{border:1px solid #ed145b58;background:#ed145b17;color:#ff7ca1;padding:7px 9px;border-radius:6px;font-size:8px;font-weight:850;letter-spacing:.1em;text-transform:uppercase}.product-index{font-size:10px;color:#6f707b;font-weight:850;letter-spacing:.1em}.product-art{height:135px;display:flex;align-items:center;justify-content:center;position:relative;margin:10px -8px 4px}.product-art svg{width:115%;max-height:100%;filter:drop-shadow(0 14px 12px #0005)}.product-card:nth-child(2) .trailer-box{fill:#c81049}.product-card:nth-child(3) .trailer-box{fill:#aeb0b8}.product-card h2{font-size:22px;letter-spacing:-.04em;margin:0 0 8px;position:relative;z-index:1}.product-card p{font-size:11px;color:#9d9eaa;margin:0;line-height:1.5;position:relative;z-index:1}.card-bottom{display:flex;align-items:center;justify-content:space-between;border-top:1px solid #ffffff13;margin-top:17px;padding-top:14px;color:#d8d8df;font-size:10px;font-weight:850;letter-spacing:.04em}.card-bottom span:last-child{display:grid;place-items:center;width:28px;height:28px;border:1px solid #ffffff25;border-radius:8px;color:var(--pink);font-size:17px}.screen-footer{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-top:28px;padding:14px 0 0;border-top:1px solid var(--line);font-size:9px;color:#70717c;letter-spacing:.05em}.text-button{border:0;background:transparent;color:#c0c0c8;padding:7px 0;font-size:11px;font-weight:800;text-align:left}.text-button:hover{color:white}.detail-screen{padding:clamp(18px,2.8vh,32px) 0 18px}.detail-topline{display:flex;justify-content:space-between;align-items:center;padding-bottom:14px}.detail-counter{font-size:9px;letter-spacing:.16em;color:#81828e;font-weight:850}.detail-layout{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:clamp(30px,5vw,75px);align-items:stretch;min-height:440px}.detail-visual-panel{background:linear-gradient(145deg,#22232a,#191a20 72%);border:1px solid #ffffff12;border-radius:18px;position:relative;min-height:350px;display:flex;align-items:center;justify-content:center;padding:35px;overflow:hidden}.detail-visual-panel:before{content:"";position:absolute;width:80%;aspect-ratio:1;border:1px solid #ffffff0b;border-radius:50%;transform:scaleY(.58) rotate(-20deg)}.detail-visual-panel:after{content:"";position:absolute;inset:auto 10% 19%;height:1px;background:linear-gradient(90deg,transparent,#ffffff24,transparent)}.detail-badge{position:absolute;left:22px;top:22px;z-index:2;color:#ff79a1;background:#ed145b1a;border:1px solid #ed145b50;padding:7px 9px;border-radius:6px;font-size:8px;font-weight:850;letter-spacing:.13em;text-transform:uppercase}.detail-art{position:relative;z-index:1;width:100%;max-width:680px}.detail-art svg{width:100%;height:auto;filter:drop-shadow(0 19px 15px #0007)}.detail-visual-panel .visual-caption{left:22px;right:22px;bottom:18px}.detail-info{padding:14px 0;display:flex;flex-direction:column;align-items:flex-start}.detail-info .eyebrow{margin-bottom:19px}.detail-info h1{font-size:clamp(36px,4vw,58px)}.detail-info h1 span{display:inline-block}.detail-description{color:#a7a8b2;line-height:1.7;font-size:13px;margin:18px 0 22px;max-width:500px}.detail-tabs{width:100%;display:flex;gap:4px;border-bottom:1px solid #ffffff18;margin-bottom:17px}.detail-tab{border:0;background:transparent;padding:12px 14px;margin-bottom:-1px;border-bottom:2px solid transparent;color:#858692;font-size:10px;font-weight:850}.detail-tab.active{border-color:var(--pink);color:#fff}.tab-panel{width:100%;min-height:105px;color:#a5a6b0;font-size:12px;line-height:1.7}.overview-list{list-style:none;margin:0;padding:0;display:grid;gap:9px}.overview-list li{display:flex;align-items:flex-start;gap:10px}.overview-list li:before{content:"✓";color:var(--pink);font-weight:900}.spec-table{width:100%;border-collapse:collapse}.spec-table td{border-bottom:1px solid #ffffff10;padding:8px 0}.spec-table td:first-child{color:#777985;width:40%;font-size:10px;letter-spacing:.03em}.spec-table td:last-child{color:#e9e9ee;font-size:11px;font-weight:750}.material-list{margin:0;padding-left:18px;display:grid;gap:7px}.detail-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px;width:100%}.detail-actions .primary-button,.detail-actions .secondary-button{min-height:48px;padding:0 16px;font-size:11px;gap:12px}.qr-screen{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:45px;padding:clamp(25px,5vh,55px) 2vw}.qr-content{max-width:510px}.qr-content .eyebrow{margin-bottom:20px}.qr-content h1{font-size:clamp(44px,5.3vw,76px)}.qr-content .lead-copy{font-size:14px;margin:22px 0}.qr-product-name{font-size:12px;font-weight:850;color:#f2f2f6;margin:22px 0 14px}.qr-frame{width:min(100%,290px);aspect-ratio:1;background:#fff;border-radius:16px;padding:14px;display:grid;place-items:center;box-shadow:0 20px 50px #0004;border:1px solid #ffffff30}.qr-frame img{width:100%;height:100%;object-fit:contain;image-rendering:pixelated}.qr-placeholder{width:100%;height:100%;border:1px dashed #c9c9d0;border-radius:9px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#444;gap:8px;text-align:center;padding:14px}.qr-placeholder-mark{display:grid;place-items:center;width:55px;height:55px;background:var(--pink);color:white;border-radius:10px;font-size:22px;font-weight:950}.qr-placeholder strong{font-size:13px;letter-spacing:.14em}.qr-placeholder span{font-size:10px;line-height:1.5;max-width:180px}.qr-help{max-width:290px;font-size:10px;line-height:1.6;color:#7f808c;margin:13px 0 22px}.qr-content .primary-button{margin-top:2px}.qr-side-visual{min-height:430px;position:relative;display:flex;align-items:center;justify-content:center;flex-direction:column;background:linear-gradient(145deg,#202129aa,#17181d66);border:1px solid #ffffff0b;border-radius:20px;overflow:hidden}.qr-side-visual:before{content:"";position:absolute;width:500px;max-width:90%;aspect-ratio:1;border:1px solid #ffffff0a;border-radius:50%;transform:scaleY(.55)}.qr-side-number{position:absolute;top:26px;right:25px;color:#ffffff15;font-size:65px;font-weight:950;letter-spacing:-.08em}.qr-side-number span{font-size:15px;color:#ed145b8c;letter-spacing:.1em}.qr-side-visual .truck-scene{max-width:100%;padding:20px;transform:translateY(7%)}.qr-side-visual p{position:absolute;bottom:24px;left:25px;right:25px;text-align:center;color:#777985;font-size:9px;letter-spacing:.16em;font-weight:850}.lead-screen{padding:clamp(22px,4vh,40px) 0 15px}.lead-layout{display:grid;grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);gap:clamp(26px,5vw,75px);align-items:start;max-width:1200px;margin:0 auto}.lead-intro{padding:14px 0}.lead-intro .eyebrow{margin-bottom:20px}.lead-intro h1{font-size:clamp(36px,4vw,58px)}.lead-intro>p{font-size:13px;color:#a5a6b0;line-height:1.75;max-width:410px;margin:20px 0 26px}.lead-product-card{display:flex;align-items:center;gap:17px;padding:13px;border:1px solid #ffffff14;border-radius:13px;background:linear-gradient(120deg,#22232a,#191a20);max-width:420px}.lead-truck{width:130px;flex:0 0 130px}.lead-truck svg{width:100%;filter:drop-shadow(0 8px 7px #0006)}.lead-product-card div:last-child{display:grid;gap:6px}.lead-product-card small{color:#ff75a0;font-size:8px;font-weight:900;letter-spacing:.12em}.lead-product-card strong{font-size:14px}.lead-product-card span{color:#898a96;font-size:10px}.privacy-note{font-size:10px;line-height:1.65;color:#777985;max-width:420px;margin-top:22px}.lead-form{border:1px solid #ffffff14;background:linear-gradient(145deg,#1e1f26,#17181d);border-radius:17px;padding:clamp(18px,2.5vw,30px)}.form-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid #ffffff13;padding-bottom:16px;margin-bottom:20px;font-size:9px;letter-spacing:.15em;font-weight:900}.form-heading>span:first-child{color:#ff6d98}.required-note{font-size:9px;letter-spacing:0;color:#777985;font-weight:600}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:flex;flex-direction:column;gap:8px;min-width:0}.field.full{grid-column:1/-1}.field>span{font-size:10px;font-weight:800;color:#d8d8df}.field b,.consent b{color:#ff6b97}.field input,.field select{width:100%;height:46px;border-radius:8px;border:1px solid #ffffff17;background:#14151a;color:#f5f5f7;padding:0 12px;outline:none;font-size:11px}.field input::placeholder{color:#646571}.field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%239696a2' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:32px}.field input:focus,.field select:focus{border-color:#ed145b9c}.consent{display:flex;align-items:flex-start;gap:10px;margin:18px 0;color:#a1a2ad;font-size:10px;line-height:1.55}.consent input{accent-color:var(--pink);width:16px;height:16px;flex:0 0 16px;margin:0}.form-submit{width:100%;min-height:50px;font-size:11px}.form-footnote{font-size:9px;color:#777985;margin:11px 0 0;text-align:center}.form-error{margin:0 0 12px;background:#6b1e32;color:#ffd8e2;padding:10px;border-radius:8px;font-size:11px;line-height:1.45}.honeypot{position:absolute!important;left:-10000px!important;opacity:0!important}.success-screen{display:flex;align-items:flex-start;justify-content:center;flex-direction:column;max-width:660px;padding:30px 0;margin:auto}.success-mark{display:grid;place-items:center;width:72px;height:72px;border-radius:23px 23px 23px 5px;background:#9bd67e18;border:1px solid #9bd67e45;margin-bottom:35px}.success-mark svg{width:38px;fill:none;stroke:#a8d98c;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.success-screen .eyebrow{margin-bottom:18px}.success-screen h1{font-size:clamp(48px,6vw,80px)}.success-screen .lead-copy{margin:22px 0 27px}.toast{position:absolute;z-index:10;bottom:70px;left:50%;transform:translateX(-50%);background:#292a31;border:1px solid #ffffff22;color:#fff;border-radius:10px;padding:12px 18px;font-size:11px;box-shadow:0 10px 30px #0006;max-width:min(90vw,500px);text-align:center}.reduced-motion *{animation-duration:.01ms!important;transition-duration:.01ms!important}
+@media (min-width:1500px){.home-screen h1{font-size:92px}.product-card{min-height:345px;padding:24px}.product-art{height:165px}.product-card h2{font-size:25px}.detail-layout{min-height:500px}}
+@media (max-width:1000px){.app-shell{padding-left:28px;padding-right:28px}.home-screen{column-gap:25px}.home-screen h1{font-size:clamp(48px,6vw,70px)}.home-visual{min-height:310px}.product-grid{gap:10px}.product-card{padding:14px;min-height:270px}.product-art{height:115px}.product-card h2{font-size:18px}.detail-layout{gap:25px}.detail-visual-panel{padding:20px}.detail-info h1{font-size:42px}.lead-layout{gap:24px}.lead-product-card{gap:10px}.lead-truck{width:95px;flex-basis:95px}}
+@media (max-width:720px){html,body{overflow:hidden}.app-shell{padding:14px 16px 12px;min-height:0}.topbar{padding-bottom:13px}.brand-mark{width:38px;height:38px;border-radius:10px 10px 10px 3px}.brand-copy strong{font-size:12px}.brand-copy small{font-size:7px}.topbar-right{gap:10px}.edition-label{font-size:8px;letter-spacing:.08em}.icon-button{width:38px;height:38px}.view{overflow:hidden}.screen{padding-top:20px;padding-bottom:18px}.home-screen{display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;overflow:auto;padding-top:30px}.home-copy{padding:0}.home-screen h1{font-size:clamp(46px,11vw,70px)}.home-screen .eyebrow{margin-bottom:17px;font-size:9px}.lead-copy{font-size:14px;margin:18px 0 23px;line-height:1.6}.primary-button.large{min-height:55px}.home-proof{margin-top:22px}.home-visual{min-height:245px;flex:0 0 245px;margin-top:12px}.visual-number{font-size:55px;right:7%}.orbit-a{width:95vw}.orbit-b{width:72vw}.hero-truck{transform:translateX(0) scale(1.04)}.visual-caption{bottom:10px}.home-bottom{padding:12px 0 0;font-size:8px}.global-footer{font-size:7px;padding-top:10px;letter-spacing:.07em}.footer-center{display:none}.catalog-screen{overflow:auto}.section-heading{display:block;margin-bottom:22px}.section-heading h1{font-size:clamp(35px,8vw,50px)}.section-heading p{font-size:12px;margin-top:14px}.section-heading .eyebrow{margin-bottom:15px}.catalog-filter{flex-wrap:wrap;gap:8px;margin-bottom:13px}.catalog-note{width:100%;margin:5px 0 0;font-size:8px}.product-grid{grid-template-columns:1fr;gap:11px}.product-card{min-height:190px;display:grid;grid-template-columns:minmax(0,1fr) 36%;grid-template-rows:auto 1fr auto;padding:14px;column-gap:8px}.card-top{grid-column:1/-1}.product-art{grid-column:2;grid-row:2/4;height:auto;min-height:90px;margin:0 -15px 0 0;align-self:center}.product-art svg{width:145%;max-width:none;transform:translateX(-4%)}.product-card h2{grid-column:1;grid-row:2;align-self:end;font-size:19px;margin-bottom:6px}.product-card p{grid-column:1;grid-row:3;align-self:start;font-size:10px}.card-bottom{grid-column:1/-1;margin-top:11px;padding-top:10px}.screen-footer{margin-top:17px}.detail-screen{overflow:auto}.detail-topline{padding-bottom:12px}.detail-layout{display:flex;flex-direction:column;gap:20px}.detail-visual-panel{min-height:235px;flex:0 0 235px;padding:18px}.detail-visual-panel .visual-caption{bottom:12px;left:14px;right:14px;font-size:7px}.detail-badge{left:14px;top:14px}.detail-info{padding:0}.detail-info h1{font-size:clamp(36px,9vw,52px)}.detail-description{margin:13px 0 17px;font-size:12px}.detail-info .eyebrow{margin-bottom:12px}.detail-tabs{margin-bottom:12px}.detail-tab{padding:11px 10px;font-size:9px}.tab-panel{min-height:0}.detail-actions{margin-top:18px}.detail-actions button{flex:1}.qr-screen{display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;overflow:auto;gap:20px;padding-top:25px}.qr-content{max-width:none}.qr-content h1{font-size:clamp(46px,10vw,65px)}.qr-content .lead-copy{font-size:13px;margin:16px 0}.qr-product-name{margin-top:16px}.qr-frame{width:min(68vw,255px);margin:0 auto}.qr-help{text-align:center;max-width:330px;margin:10px auto 16px}.qr-content .primary-button{width:100%}.qr-side-visual{min-height:165px;flex:0 0 165px}.qr-side-visual .truck-scene{max-width:78%;padding:5px;transform:translateY(0)}.qr-side-number{font-size:38px;top:9px;right:14px}.qr-side-visual p{font-size:7px;bottom:12px}.lead-screen{overflow:auto}.lead-layout{display:flex;flex-direction:column;gap:18px}.lead-intro{padding:0}.lead-intro .eyebrow{margin-bottom:15px}.lead-intro h1{font-size:clamp(35px,8vw,48px)}.lead-intro>p{font-size:12px;margin:14px 0}.lead-product-card{max-width:none}.lead-truck{width:100px;flex-basis:100px}.privacy-note{margin-top:12px}.lead-form{width:100%;padding:17px}.form-grid{gap:12px}.field input,.field select{height:44px}.form-heading{margin-bottom:15px}.success-screen{padding:35px 0}.success-mark{margin-bottom:25px;width:62px;height:62px}.success-screen h1{font-size:clamp(48px,11vw,67px)}.toast{bottom:58px}}
+@media (max-width:390px){.app-shell{padding-left:12px;padding-right:12px}.edition-label{display:none}.home-screen h1{font-size:44px}.product-card{grid-template-columns:minmax(0,1fr) 32%}.product-tag{font-size:7px}.product-card h2{font-size:17px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.lead-form{padding:14px}.required-note{font-size:8px}.detail-actions{flex-direction:column}.detail-actions button{width:100%}}
+@media (max-height:700px) and (min-width:721px){.app-shell{padding-top:15px}.home-screen{padding-top:20px}.home-screen h1{font-size:clamp(43px,5vw,66px)}.home-visual{min-height:260px}.home-proof{margin-top:20px}.global-footer{padding-top:8px}.detail-layout{min-height:350px}.detail-visual-panel{min-height:320px}.detail-info .eyebrow{margin-bottom:10px}.detail-description{margin:12px 0}.tab-panel{min-height:75px}.qr-screen{padding-top:20px;padding-bottom:20px}.qr-side-visual{min-height:320px}.lead-screen{padding-top:16px}.lead-intro h1{font-size:42px}.lead-intro>p{margin:12px 0}.lead-product-card{padding:9px}.privacy-note{margin-top:12px}.field input,.field select{height:39px}.form-grid{gap:10px}.lead-form{padding:19px}}
+@media (orientation:portrait) and (min-width:721px) and (max-width:1300px){
+  .app-shell{padding:28px 38px 18px}
+  .home-screen{display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;overflow:auto;padding-top:clamp(38px,5vh,84px)}
+  .home-copy{padding:0;flex:0 0 auto}
+  .home-screen h1{font-size:clamp(68px,8.4vh,112px)}
+  .home-screen .lead-copy{font-size:clamp(17px,1.8vh,23px);max-width:690px}
+  .home-proof{margin-top:27px;font-size:13px;max-width:460px}
+  .home-visual{flex:0 0 min(38vh,620px);min-height:370px;margin-top:18px}
+  .hero-truck{transform:translateX(0) scale(1.00)}
+  .orbit-a{width:min(80vw,780px)}.orbit-b{width:min(62vw,590px)}
+  .home-bottom{padding:14px 0 8px}
+  .catalog-screen{overflow:auto;padding-top:36px}
+  .section-heading h1{font-size:clamp(50px,5.4vh,72px)}
+  .section-heading p{font-size:16px;max-width:410px}
+  .product-grid{grid-template-columns:1fr;gap:15px}
+  .product-card{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,36%);grid-template-rows:auto 1fr auto;min-height:290px;padding:20px 24px;column-gap:15px}
+  .card-top{grid-column:1/-1}.product-art{grid-column:2;grid-row:2/4;height:auto;min-height:145px;margin:0 -15px 0 0;align-self:center}.product-art svg{width:125%;max-width:none}
+  .product-card h2{grid-column:1;grid-row:2;align-self:end;font-size:clamp(24px,2.8vh,34px);margin-bottom:10px}
+  .product-card p{grid-column:1;grid-row:3;align-self:start;font-size:14px}
+  .card-bottom{grid-column:1/-1;margin-top:16px;padding-top:13px;font-size:12px}
+  .detail-screen{overflow:auto;padding-top:24px}
+  .detail-layout{grid-template-columns:1fr;gap:28px}
+  .detail-visual-panel{min-height:470px}.detail-art{max-width:850px}.detail-info{padding:0}.detail-info h1{font-size:clamp(52px,5.7vh,76px)}
+  .detail-description{font-size:16px;max-width:800px}.detail-tab{font-size:13px;padding:15px 18px}.tab-panel{font-size:15px}.spec-table td:first-child{font-size:13px}.spec-table td:last-child{font-size:14px}.detail-actions .primary-button,.detail-actions .secondary-button{min-height:58px;font-size:13px;padding:0 24px}
+  .qr-screen{grid-template-columns:1fr;overflow:auto;gap:35px;padding:38px 4vw}
+  .qr-content{max-width:none}.qr-content h1{font-size:clamp(66px,7vh,92px)}.qr-content .lead-copy{font-size:17px;max-width:650px}.qr-frame{width:320px}.qr-side-visual{min-height:400px}.qr-side-visual .truck-scene{max-width:90%}
+  .lead-screen{overflow:auto;padding-top:30px}.lead-layout{grid-template-columns:1fr;gap:28px}.lead-intro h1{font-size:clamp(48px,5.4vh,72px)}.lead-intro>p{font-size:16px;max-width:800px}.lead-product-card{max-width:620px;padding:18px}.lead-truck{width:160px;flex-basis:160px}.lead-product-card strong{font-size:17px}.lead-product-card span{font-size:12px}.privacy-note{font-size:12px;max-width:680px}.lead-form{padding:30px}.form-heading{font-size:11px}.field>span{font-size:13px}.field input,.field select{height:58px;font-size:14px}.form-grid{gap:19px}.consent{font-size:13px}.form-submit{min-height:60px;font-size:14px}
+  .success-screen h1{font-size:clamp(68px,7vh,90px)}
+}
+
+/* Product catalog: assets sourced from the 10 supplied São Pedro product PDFs. */
+.hero-product-image{display:block;width:112%;max-width:none;aspect-ratio:1.85;object-fit:cover;object-position:center;border-radius:18px;filter:drop-shadow(0 22px 24px #0008)}
+.product-card .product-art{height:clamp(116px,14vw,176px);width:calc(100% + 12px);margin:8px -6px 12px;overflow:hidden;border:1px solid #ffffff12;border-radius:10px;background:#101116}
+.product-card .product-art .product-card-image{display:block;width:100%;height:100%;object-fit:cover;object-position:center;border-radius:9px;filter:saturate(.96)}
+.product-card .product-art:after{content:"";position:absolute;inset:48% 0 0;background:linear-gradient(0deg,#17181ddd,transparent);pointer-events:none}
+.product-card h2{font-size:clamp(17px,1.5vw,23px);line-height:1.16}
+.detail-layout{align-items:start}
+.detail-visual-panel{height:clamp(340px,43vh,520px);min-height:340px;align-self:start;position:sticky;top:14px;padding:26px}
+.detail-art{width:100%;height:100%;max-width:none;min-height:0;display:flex;align-items:center;justify-content:center}
+.detail-art .detail-product-image{display:block;width:100%;height:100%;max-height:100%;object-fit:contain;border-radius:10px;filter:drop-shadow(0 18px 20px #0008)}
+.detail-info{min-width:0;width:100%}
+.detail-tabs{overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none;gap:2px}
+.detail-tabs::-webkit-scrollbar{display:none}
+.detail-tab{flex:0 0 auto;white-space:nowrap;padding:12px 10px;font-size:10px}
+.tab-panel{min-height:0;width:100%;overflow-wrap:anywhere}
+.detail-overview{display:grid;gap:12px}
+.overview-intro{margin:0 0 2px;color:#e2e2e7;font-size:13px;line-height:1.65}
+.overview-list{gap:11px}
+.overview-fact{display:grid!important;grid-template-columns:27px 1fr;gap:10px!important;align-items:start!important;padding:10px 12px;background:#ffffff06;border:1px solid #ffffff0d;border-radius:9px;color:#d7d7df;font-size:12px;line-height:1.55}
+.overview-fact:before{display:none!important}
+.fact-index{display:grid;place-items:center;width:25px;height:25px;border-radius:7px;background:#ed1c241a;color:#ff6c73;font-size:9px;font-weight:900}
+.overview-note{color:#81828e;font-size:10px;line-height:1.6;margin:5px 0 0}
+.spec-sections{display:grid;grid-template-columns:1fr;gap:10px;padding-bottom:8px}
+.spec-section{padding:14px 15px;border:1px solid #ffffff12;border-radius:11px;background:linear-gradient(145deg,#202127,#191a20);}
+.spec-section-heading{display:flex;align-items:center;gap:10px;margin-bottom:9px}
+.spec-section-heading>span{font-size:9px;color:#ff6670;font-weight:900;letter-spacing:.12em}
+.spec-section-heading h3{font-size:12px;color:#fff;letter-spacing:.09em;text-transform:uppercase;margin:0}
+.spec-section ul,.dimension-notes ul{margin:0;padding-left:16px;display:grid;gap:7px}
+.spec-section li,.dimension-notes li{padding-left:2px;color:#c4c4ce;font-size:11px;line-height:1.6}
+.spec-section li::marker,.dimension-notes li::marker{color:#ed1c24}
+.dimensions-panel{display:grid;gap:15px;padding-bottom:8px}
+.dimensions-title{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin:2px 0 0}
+.dimensions-title>span{font-size:10px;color:#fff;font-weight:900;letter-spacing:.1em}
+.dimensions-title small{font-size:9px;color:#858692}
+.table-scroll{width:100%;overflow-x:auto;border:1px solid #ffffff12;border-radius:9px;scrollbar-width:thin;scrollbar-color:#4b4c55 transparent}
+.dimensions-table{width:100%;min-width:500px;border-collapse:collapse;background:#18191f}
+.dimensions-table th{background:#ed1c24;color:#fff;text-align:left;padding:10px 9px;font-size:9px;line-height:1.4;font-weight:900;letter-spacing:.04em}
+.dimensions-table td{border-top:1px solid #ffffff12;padding:9px;color:#e3e3e8;font-size:10px;line-height:1.4;vertical-align:top}
+.dimensions-table tbody tr:nth-child(even){background:#ffffff05}
+.dimension-notes{padding:13px;border:1px solid #ffffff12;border-radius:10px;background:#ffffff05}
+.dimension-notes h3{font-size:11px;letter-spacing:.06em;color:#fff;margin:0 0 9px}
+.original-sheet-card{display:grid;gap:12px;padding-bottom:8px}
+.original-sheet-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.original-sheet-head>div{display:grid;gap:5px}
+.original-sheet-head strong{font-size:12px;color:#f2f2f5}
+.original-sheet-head span{font-size:10px;color:#858692;line-height:1.45}
+.original-sheet-head .secondary-button{min-height:38px;padding:0 12px;white-space:nowrap;font-size:10px;flex:0 0 auto}
+.original-sheet-preview{display:block;width:100%;padding:0;border:1px solid #ffffff1a;border-radius:9px;background:#e7e7e7;overflow:hidden;cursor:pointer}
+.original-sheet-preview img{display:block;width:100%;height:auto}
+.sheet-dialog{width:min(97vw,1850px);max-width:none;max-height:96vh;padding:14px;border:1px solid #ffffff20;border-radius:14px;background:#17181e;color:#f8f8fa;box-shadow:0 20px 90px #000b}
+.sheet-dialog::backdrop{background:#08090cdd;backdrop-filter:blur(8px)}
+.sheet-dialog-toolbar{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:0 0 12px}
+.sheet-dialog-toolbar strong{font-size:14px}
+.sheet-dialog-toolbar .secondary-button{min-height:40px;padding:0 16px}
+.sheet-dialog-stage{max-height:calc(96vh - 86px);overflow:auto;background:#e8e8e8;border-radius:8px;overscroll-behavior:contain}
+.sheet-dialog-stage img{display:block;width:max(100%,1100px);height:auto;margin:0 auto}
+@media (orientation:portrait) and (min-width:721px) and (max-width:1300px){
+  .hero-product-image{width:100%;max-width:100%;aspect-ratio:1.85}
+  .detail-layout{display:flex;flex-direction:column;align-items:stretch;gap:24px}
+  .detail-visual-panel{position:relative;top:auto;width:100%;height:clamp(380px,35vh,540px);min-height:380px}
+  .detail-art{height:100%;width:100%}
+  .detail-info{padding:0;width:100%}
+  .detail-tabs{width:100%}
+  .spec-section li,.dimension-notes li{font-size:13px}
+  .dimensions-table th{font-size:11px;padding:12px}
+  .dimensions-table td{font-size:12px;padding:12px}
+}
+@media (max-width:720px){
+  .hero-product-image{width:100%;max-width:100%;aspect-ratio:1.85;border-radius:12px}
+  .product-card .product-art{height:104px;min-height:104px;width:100%;margin:0;grid-column:2;grid-row:2/4}
+  .product-card .product-art:after{display:none}
+  .product-card .product-art .product-card-image{object-position:center}
+  .detail-visual-panel{position:relative;top:auto;height:235px;min-height:235px;padding:18px}
+  .detail-art{height:100%;min-height:0}
+  .detail-art .detail-product-image{max-height:100%;object-fit:contain}
+  .detail-tabs{gap:0}
+  .detail-tab{font-size:9px;padding:11px 9px}
+  .spec-section{padding:12px}
+  .spec-section li,.dimension-notes li{font-size:11px}
+  .original-sheet-head{align-items:flex-start;flex-direction:column}
+  .original-sheet-head .secondary-button{width:100%}
+  .sheet-dialog{width:98vw;padding:9px}
+  .sheet-dialog-toolbar strong{font-size:11px}
+  .sheet-dialog-stage img{width:max(100%,1000px)}
+}
+
+
+/* Ilustrações vetoriais dos implementos: desenhadas em SVG inline, sem fotos nos cards. */
+.product-card .product-art.vehicle-art {
+  background: radial-gradient(ellipse at 52% 78%, #29303b 0, #171a21 54%, #101116 100%);
+  border-color: #ffffff14;
+}
+.product-card .product-art.vehicle-art::after { display: none; }
+.product-card .product-art.vehicle-art svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  transform: none;
+  filter: drop-shadow(0 12px 10px #0009);
+}
+.detail-art > svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  overflow: visible;
+  filter: drop-shadow(0 18px 20px #0008);
+}
+@media (max-width: 720px) {
+  .product-card .product-art.vehicle-art {
+    width: 100%;
+    min-height: 104px;
+    height: 104px;
+    margin: 0;
+    grid-column: 2;
+    grid-row: 2 / 4;
+    overflow: hidden;
+  }
+  .product-card .product-art.vehicle-art svg {
+    width: 150%;
+    max-width: none;
+    transform: translateX(-7%);
+  }
+}
+
+
+/* Etapa intermediária: escolha de categoria antes de abrir a grade de produtos. */
+.category-screen{padding:clamp(22px,4vh,46px) 0 16px;display:flex;flex-direction:column}
+.category-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin-bottom:clamp(18px,3vh,32px)}
+.category-heading h1{margin:0;font-size:clamp(42px,5vw,74px);font-weight:850;letter-spacing:-.065em;line-height:.98}
+.category-heading h1 span{color:var(--pink)}
+.category-heading .eyebrow{margin-bottom:18px}
+.category-heading>p{max-width:420px;margin:0 0 4px;color:var(--muted);font-size:clamp(13px,1.2vw,17px);line-height:1.7}
+.category-grid{flex:1;min-height:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.4vw,22px);align-items:stretch}
+.category-card{position:relative;isolation:isolate;display:flex;flex-direction:column;min-width:0;min-height:330px;padding:clamp(16px,1.8vw,26px);overflow:hidden;text-align:left;border:1px solid #ffffff18;border-radius:18px;background:linear-gradient(145deg,#232831 0%,#181a20 72%);transition:transform .22s,border-color .22s,background .22s}
+.category-card:before{content:"";position:absolute;z-index:-1;right:-18%;top:-12%;width:85%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#ed1c2424,transparent 69%)}
+.category-card:hover,.category-card:focus-visible{transform:translateY(-3px);border-color:#ed1c248c;background:linear-gradient(145deg,#2a2b33 0%,#191a20 72%)}
+.category-card-all{background:linear-gradient(145deg,#341c25 0%,#1a1b22 75%)}
+.category-card-top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.category-kicker{font-size:9px;font-weight:900;letter-spacing:.15em;color:#9194a0}
+.category-count{white-space:nowrap;border:1px solid #ed1c245b;background:#ed1c2416;border-radius:7px;padding:7px 9px;color:#ff7f86;font-size:10px;font-weight:850}
+.category-art{flex:1;min-height:150px;display:flex;align-items:center;justify-content:center;margin:12px -8px 10px;overflow:hidden;border-radius:10px;background:radial-gradient(ellipse at 50% 72%,#303744 0,#181b22 60%,#12141a 100%)}
+.category-art svg{display:block;width:118%;max-width:none;height:auto;max-height:100%;overflow:visible;filter:drop-shadow(0 14px 14px #0009)}
+.category-card-copy h2{margin:0 0 10px;font-size:clamp(22px,2.2vw,32px);font-weight:850;letter-spacing:-.04em;line-height:1.08}
+.category-card-copy p{max-width:340px;margin:0;color:#a8aab5;font-size:clamp(11px,1vw,14px);line-height:1.6}
+.category-card-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:18px;padding-top:14px;border-top:1px solid #ffffff14;color:#d8d9e0;font-size:9px;font-weight:900;letter-spacing:.11em}
+.category-arrow{display:grid;place-items:center;width:36px;height:36px;border:1px solid #ed1c2473;border-radius:10px;color:#fff;background:#ed1c2418;font-size:20px;flex:0 0 auto}
+@media (orientation:portrait) and (min-width:721px) and (max-width:1300px){
+  .category-screen{padding-top:clamp(28px,4vh,46px)}
+  .category-heading{display:block;margin-bottom:26px}
+  .category-heading h1{font-size:clamp(52px,6vh,76px)}
+  .category-heading>p{max-width:680px;margin-top:16px;font-size:16px}
+  .category-grid{grid-template-columns:1fr;gap:14px}
+  .category-card{display:grid;grid-template-columns:minmax(0,1fr) minmax(240px,38%);grid-template-rows:auto 1fr auto;min-height:220px;padding:20px 24px;column-gap:20px}
+  .category-card-top{grid-column:1/-1}
+  .category-art{grid-column:2;grid-row:2/4;min-height:120px;margin:4px -12px 0;align-self:stretch}
+  .category-card-copy{grid-column:1;grid-row:2;align-self:end}
+  .category-card-copy h2{font-size:clamp(26px,3vh,36px)}
+  .category-card-copy p{font-size:14px}
+  .category-card-bottom{grid-column:1/-1;margin-top:12px}
+}
+@media (max-width:720px){
+  .category-screen{padding-top:24px}
+  .category-heading{display:block;margin-bottom:19px}
+  .category-heading h1{font-size:clamp(38px,9vw,54px)}
+  .category-heading .eyebrow{margin-bottom:14px;font-size:9px}
+  .category-heading>p{font-size:12px;margin-top:12px}
+  .category-grid{grid-template-columns:1fr;gap:12px}
+  .category-card{display:grid;grid-template-columns:minmax(0,1fr) 36%;grid-template-rows:auto 1fr auto;min-height:190px;padding:14px;column-gap:10px}
+  .category-card-top{grid-column:1/-1}
+  .category-art{grid-column:2;grid-row:2/4;min-height:85px;margin:0 -14px 0 0;align-self:center}
+  .category-art svg{width:155%;max-width:none;transform:translateX(-7%)}
+  .category-card-copy{grid-column:1;grid-row:2/4;align-self:center}
+  .category-card-copy h2{font-size:20px;margin-bottom:7px}
+  .category-card-copy p{font-size:10px}
+  .category-card-bottom{grid-column:1/-1;margin-top:11px;padding-top:10px;font-size:8px}
+  .category-arrow{width:29px;height:29px;font-size:17px}
+}
+
+@media (orientation:portrait) and (min-width:721px) and (max-width:1300px){
+  .catalog-instruction{margin:-9px 0 20px;font-size:10px}
+}
+@media (max-width:720px){
+  .catalog-instruction{margin:-5px 0 12px;font-size:8px}
+}
+
+/* Tema claro da São Pedro: branco, vermelho institucional e grafite. */
+:root {
+  color-scheme: light;
+  --bg: #ffffff;
+  --panel: #ffffff;
+  --panel2: #f4f5f6;
+  --line: rgba(35, 39, 44, .14);
+  --text: #25272b;
+  --muted: #686e75;
+  --pink: #ed1c24;
+  --pink2: #c9141c;
+  --green: #237b45;
+}
+html, body { background: #fff !important; color: #25272b; }
+body { background: #fff; }
+.ambient { display: none !important; }
+.app-shell, .view, .screen { background-color: #fff; color: #25272b; }
+.app-shell { background: #fff; }
+.topbar { border-bottom-color: #e2e4e7; }
+.brand-mark { background: #ed1c24; color: #fff; box-shadow: none; border-radius: 4px; }
+.brand-copy strong { color: #24262a; }
+.brand-copy small { color: #777c82; }
+.edition-label { color: #646970; }
+.status-dot, .footer-dot { background: #ed1c24; box-shadow: none; }
+.icon-button { background: #fff; border-color: #d9dde1; }
+.icon-button:hover { background: #f5f6f7; border-color: #b7bdc3; }
+.icon-button svg { stroke: #383b40; }
+.global-footer { color: #777d83; border-top-color: #e2e4e7; }
+.view { scrollbar-color: #c8cdd2 transparent; }
+.screen { scrollbar-color: #c8cdd2 transparent; }
+.eyebrow { color: #6f747b; }
+.eyebrow-line { background: #ed1c24; }
+.home-screen h1, .section-heading h1, .detail-info h1, .qr-content h1, .lead-intro h1, .success-screen h1 { color: #24262a; }
+.home-screen h1 span, .section-heading h1 span, .detail-info h1 span, .qr-content h1 span, .lead-intro h1 span, .success-screen h1 span { color: #ed1c24; }
+.lead-copy { color: #626970; }
+.primary-button { background: #ed1c24; color: #fff; box-shadow: 0 10px 24px #ed1c2420; }
+.primary-button:hover { background: #cf151d; box-shadow: 0 12px 28px #ed1c242b; }
+.secondary-button { background: #fff; color: #30343a; border: 1px solid #d1d5d9; box-shadow: none; }
+.secondary-button:hover { background: #f5f6f7; }
+.text-button { color: #555c63; }
+.text-button:hover { color: #ed1c24; }
+.home-proof { color: #70767c; }
+.proof-symbol { color: #ed1c24; }
+.home-bottom { color: #787e84; }
+.bottom-line { background: #ed1c24; }
+.visual-caption { color: #747a81; }
+.visual-caption span:first-child { color: #ed1c24; }
+.visual-orbit { border-color: #e8e9eb; }
+.orbit-b { border-color: #ed1c2420; }
+.visual-number { color: #20232808; }
+.visual-number span { color: #ed1c2470; }
+
+/* Cards e categorias */
+.product-card { background: linear-gradient(145deg, #fff 0%, #f7f8f9 100%); border-color: #dfe2e5; box-shadow: 0 8px 24px #1b222b0a; color: #25272b; }
+.product-card:hover { background: linear-gradient(145deg, #fff 0%, #f2f4f5 100%); border-color: #ed1c2470; box-shadow: 0 12px 28px #1b222b12; }
+.product-card:before { background: radial-gradient(circle, #ed1c240d, transparent 70%); }
+.product-card h2, .category-card-copy h2 { color: #24262a; }
+.product-card p, .category-card-copy p { color: #676d74; }
+.product-index { color: #83888e; }
+.product-tag { border-color: #ed1c243b; background: #ed1c240c; color: #c7161d; }
+.product-card .product-art { background: #f1f3f5; border-color: #e0e3e6; }
+.product-card .product-art.vehicle-art { background: radial-gradient(ellipse at 52% 78%, #e2e5e8 0%, #f5f6f7 62%, #fff 100%); border-color: #e0e3e6; }
+.product-card .product-art svg { filter: drop-shadow(0 9px 8px #0002); }
+.product-card .product-art:after { background: linear-gradient(0deg, #f7f8f9dd, transparent); }
+.card-bottom { color: #656b72; border-top-color: #e1e4e7; }
+.catalog-instruction { color: #777d84; }
+.catalog-filter { color: #5d636a; }
+.filter-chip { color: #42474d; border-color: #dfe2e5; background: #f7f8f9; }
+.filter-chip.active, .filter-chip[aria-pressed="true"] { border-color: #ed1c24; background: #ed1c24; color: #fff; }
+.category-card { background: linear-gradient(145deg, #fff 0%, #f4f5f6 100%); border-color: #dfe2e5; color: #25272b; box-shadow: 0 8px 25px #20252c0b; }
+.category-card:hover, .category-card:focus-visible { background: linear-gradient(145deg, #fff 0%, #f1f3f4 100%); border-color: #ed1c24; }
+.category-card:before { background: radial-gradient(circle, #ed1c240b, transparent 70%); }
+.category-card-all { background: linear-gradient(145deg, #fff 0%, #fff5f5 100%); }
+.category-kicker { color: #6f757b; }
+.category-count { border-color: #ed1c2438; background: #ed1c240b; color: #c7161d; }
+.category-art { background: radial-gradient(ellipse at 50% 72%, #e4e7ea 0, #f4f5f6 60%, #fff 100%); }
+.category-art svg { filter: drop-shadow(0 10px 12px #0002); }
+.category-card-bottom { border-top-color: #e0e3e6; color: #646b72; }
+.category-arrow { border-color: #ed1c2460; color: #ed1c24; background: #ed1c240c; }
+
+/* Detalhes, especificações e ficha original */
+.detail-topline { border-bottom-color: #e2e4e7; }
+.detail-counter { color: #777d84; }
+.detail-visual-panel { background: linear-gradient(145deg, #fafbfc, #f0f2f4); border-color: #e0e3e6; }
+.detail-visual-panel:before { border-color: #d8dce0; }
+.detail-visual-panel:after { background: linear-gradient(90deg, transparent, #ffffffaa, transparent); }
+.detail-visual-panel .truck-scene svg, .detail-art > svg { filter: drop-shadow(0 14px 15px #0002); }
+.detail-badge { background: #ed1c24; color: #fff; }
+.detail-description { color: #626970; }
+.detail-tabs { border-bottom-color: #dfe2e5; }
+.detail-tab { color: #737980; }
+.detail-tab.active { color: #c7161d; border-bottom-color: #ed1c24; }
+.tab-panel { color: #525960; }
+.overview-intro { color: #4f565d; }
+.overview-fact { background: #f6f7f8; border-color: #e3e5e7; color: #454b52; }
+.fact-index { background: #ed1c2410; color: #c7161d; }
+.overview-note { color: #777d83; }
+.spec-section { border-color: #e1e4e7; background: linear-gradient(145deg, #fff, #f7f8f9); }
+.spec-section-heading>span { color: #c7161d; }
+.spec-section-heading h3 { color: #2d3034; }
+.spec-section li, .dimension-notes li { color: #50575e; }
+.spec-section li::marker, .dimension-notes li::marker { color: #ed1c24; }
+.dimensions-title>span { color: #31353a; }
+.dimensions-title small { color: #777d84; }
+.table-scroll { border-color: #dfe2e5; }
+.dimensions-table { background: #fff; }
+.dimensions-table th { background: #ed1c24; color: #fff; }
+.dimensions-table td { border-top-color: #e1e4e7; color: #34383d; }
+.dimensions-table tbody tr:nth-child(even) { background: #f4f5f6; }
+.dimension-notes { background: #f7f8f9; border-color: #e0e3e6; }
+.dimension-notes h3 { color: #33383d; }
+.original-sheet-card { background: #fff; border-color: #e0e3e6; }
+.original-sheet-head strong { color: #30343a; }
+.original-sheet-head span { color: #737980; }
+.original-sheet-preview { border-color: #dce0e3; background: #f5f6f7; }
+.sheet-dialog { background: #fff; color: #25272b; border-color: #dfe2e5; box-shadow: 0 20px 90px #0003; }
+.sheet-dialog::backdrop { background: #20252b55; }
+.sheet-dialog-stage { background: #eef0f2; }
+.sheet-dialog-toolbar { border-bottom-color: #e0e3e6; }
+
+/* QR Code, lead e confirmação */
+.qr-frame { background: #fff; border-color: #e0e3e6; box-shadow: 0 15px 40px #20252b12; }
+.qr-placeholder { border-color: #c9cdd2; color: #5e646b; background: #fafbfc; }
+.qr-placeholder-mark { background: #ed1c24; color: #fff; }
+.qr-product-name { color: #292d32; }
+.qr-help { color: #656c73; }
+.qr-side-visual { background: linear-gradient(145deg, #f5f6f7, #fff); border-color: #e0e3e6; }
+.qr-side-visual:before { border-color: #e2e4e7; }
+.qr-side-number { color: #24282d0b; }
+.qr-side-visual p { color: #777d83; }
+.lead-intro>p { color: #5d646b; }
+.lead-product-card { border-color: #e0e3e6; background: linear-gradient(120deg, #fff, #f5f6f7); }
+.lead-product-card small { color: #c7161d; }
+.lead-product-card strong { color: #292d32; }
+.lead-product-card span { color: #767c82; }
+.lead-truck svg { filter: drop-shadow(0 8px 9px #0002); }
+.privacy-note { color: #70767d; }
+.lead-form { border-color: #e0e3e6; background: linear-gradient(145deg, #fff, #f7f8f9); box-shadow: 0 12px 32px #20252b0c; }
+.form-heading { color: #33383d; border-bottom-color: #e2e4e7; }
+.required-note { color: #737980; }
+.field>span { color: #454b52; }
+.field b, .consent b { color: #c7161d; }
+.field input, .field select { border-color: #d8dce0; background: #fff; color: #282c31; }
+.field input::placeholder { color: #9aa0a6; }
+.field input:focus, .field select:focus { border-color: #ed1c24; box-shadow: 0 0 0 3px #ed1c2415; }
+.consent { color: #5d646b; }
+.success-mark { background: #237b4510; border-color: #237b4540; }
+.success-mark svg { stroke: #237b45; }
+.toast { background: #25282d; border-color: #d9dde1; color: #fff; box-shadow: 0 10px 30px #0002; }
+.screen-footer { color: #777d84; border-top-color: #e1e4e7; }
+
+/* Tela inicial institucional; vídeo local em loop, com SVG como fallback. */
+.home-screen { display: flex; flex-direction: column; gap: clamp(14px, 1.8vh, 24px); padding: clamp(17px, 2.2vh, 28px) 0 8px; overflow: auto; background: #fff; }
+.home-brand-lockup { display: flex; align-items: center; gap: clamp(14px, 2vw, 28px); min-height: 68px; flex: 0 0 auto; padding: 0 0 clamp(13px, 1.8vh, 22px); border-bottom: 1px solid #e4e6e8; }
+.home-logo-slot { width: clamp(190px, 20vw, 290px); height: clamp(54px, 7vh, 76px); flex: 0 0 auto; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.home-logo-image { display: block; max-width: 100%; max-height: 100%; width: 100%; height: 100%; object-fit: contain; }
+.home-logo-fallback { display: flex; flex-direction: column; align-items: stretch; justify-content: center; width: 100%; line-height: 1; }
+.home-logo-fallback strong { display: block; padding: 8px 12px 7px; background: #ed1c24; color: #fff; text-align: center; font-size: clamp(24px, 2.3vw, 34px); font-weight: 950; font-style: italic; letter-spacing: -.07em; border-radius: 5px; transform: skewX(-3deg); }
+.home-logo-fallback span { color: #33373c; text-align: center; font-size: 9px; font-weight: 800; letter-spacing: .2em; margin-top: 7px; }
+.home-brand-divider { align-self: stretch; width: 2px; background: #ed1c24; flex: 0 0 2px; }
+.home-brand-copy { display: grid; gap: 7px; min-width: 0; }
+.home-brand-copy>span { font-size: clamp(8px, .68vw, 10px); letter-spacing: .15em; color: #777d83; font-weight: 850; }
+.home-brand-copy>strong { font-size: clamp(15px, 1.35vw, 20px); line-height: 1.25; color: #272b30; font-weight: 800; }
+.home-experience-mark { display: flex; align-items: center; gap: 9px; margin-left: auto; color: #737980; font-size: 8px; line-height: 1.45; font-weight: 850; letter-spacing: .12em; }
+.home-experience-mark strong { display: grid; place-items: center; width: 37px; height: 37px; border: 1px solid #dedfe2; border-radius: 50%; color: #ed1c24; font-size: 12px; }
+.home-layout { flex: 1 1 auto; min-height: 340px; display: grid; grid-template-columns: minmax(290px, .76fr) minmax(0, 1.24fr); align-items: stretch; gap: clamp(22px, 4vw, 64px); }
+.home-copy { align-self: center; padding: 8px 0 14px; z-index: 1; }
+.home-copy .eyebrow { font-size: clamp(9px, .78vw, 11px); margin-bottom: clamp(18px, 3vh, 30px); color: #60666d; }
+.home-screen h1 { color: #24272b; font-size: clamp(42px, 4.6vw, 72px); font-weight: 900; line-height: .99; letter-spacing: -.065em; }
+.home-screen h1 span { color: #ed1c24; }
+.home-copy .lead-copy { max-width: 430px; margin: clamp(17px, 2.4vh, 27px) 0 clamp(20px, 3vh, 32px); color: #666d74; font-size: clamp(14px, 1.12vw, 18px); line-height: 1.65; }
+.home-copy .primary-button { min-height: clamp(54px, 6vh, 66px); padding: 0 clamp(20px, 2.2vw, 30px); border-radius: 6px; gap: clamp(18px, 2vw, 28px); }
+.home-copy .primary-button .arrow { font-size: 23px; }
+.home-proof { margin-top: clamp(22px, 3.5vh, 38px); max-width: 380px; gap: 11px; color: #6b7279; font-size: 11px; line-height: 1.55; }
+.proof-symbol { display: grid; place-items: center; border: 1px solid #ed1c2438; width: 24px; height: 24px; flex: 0 0 24px; border-radius: 50%; font-size: 12px; color: #ed1c24; }
+.home-video-panel { position: relative; min-width: 0; min-height: 340px; height: 100%; overflow: hidden; align-self: stretch; border: 1px solid #dfe3e7; border-radius: 18px; background: #f1f3f5; box-shadow: 0 16px 38px #272b300e; isolation: isolate; }
+.home-loop-video { position: absolute; z-index: 0; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .45s ease; background: #f1f3f5; }
+.home-loop-video.is-ready { opacity: 1; }
+.home-video-fallback { position: absolute; z-index: 1; inset: 0; display: flex; flex-direction: column; align-items: stretch; justify-content: center; padding: clamp(18px, 2vw, 30px); overflow: hidden; background: linear-gradient(135deg, #f9fafb 0%, #f0f2f4 56%, #e8ebee 100%); }
+.video-fallback-glow { position: absolute; width: 75%; aspect-ratio: 1; right: -12%; top: -35%; border-radius: 50%; background: radial-gradient(circle, #ed1c2410, transparent 68%); pointer-events: none; }
+.video-fallback-topline { position: absolute; z-index: 2; left: clamp(18px, 2vw, 30px); top: clamp(18px, 2vw, 30px); display: flex; gap: 9px; align-items: center; color: #6e747b; font-size: 9px; font-weight: 900; letter-spacing: .14em; }
+.video-pulse, .video-live-dot { width: 7px; height: 7px; display: inline-block; border-radius: 50%; background: #ed1c24; flex: 0 0 7px; }
+.home-video-fallback .hero-truck { width: 100%; max-width: 760px; align-self: center; transform: none; }
+.home-video-fallback .hero-truck svg { filter: drop-shadow(0 15px 15px #0002); }
+.video-fallback-copy { position: absolute; z-index: 2; left: clamp(18px, 2vw, 30px); right: clamp(18px, 2vw, 30px); bottom: clamp(18px, 2vw, 28px); display: flex; flex-direction: column; gap: 7px; }
+.video-fallback-copy strong { color: #272b30; font-size: clamp(17px, 1.5vw, 24px); letter-spacing: -.035em; }
+.video-fallback-copy span { color: #777d83; font-size: 10px; }
+.home-video-overlay { position: absolute; inset: 0; z-index: 2; pointer-events: none; background: linear-gradient(180deg, transparent 72%, #fff2 100%); }
+.home-video-caption { position: absolute; z-index: 3; left: 18px; right: 18px; bottom: 13px; display: flex; justify-content: space-between; align-items: center; gap: 12px; color: #fff; font-size: 8px; letter-spacing: .12em; font-weight: 900; text-shadow: 0 1px 4px #0007; pointer-events: none; }
+.home-video-caption .video-live-dot { margin-right: 7px; background: #ed1c24; vertical-align: middle; }
+.home-video-panel:has(.home-loop-video:not(.is-ready)) .home-video-caption { color: #70767c; text-shadow: none; }
+.home-video-panel:has(.home-loop-video:not(.is-ready)) .home-video-overlay { display: none; }
+.home-bottom { display: flex; align-items: center; gap: 12px; flex: 0 0 auto; padding: 3px 0 0; color: #7b8187; font-size: 9px; font-weight: 900; letter-spacing: .13em; }
+.home-bottom .bottom-line { width: 42px; height: 2px; background: #ed1c24; }
+.home-bottom #home-product-count { color: #ed1c24; margin-left: auto; font-size: 14px; }
+
+@media (max-width: 1000px) {
+  .home-layout { grid-template-columns: minmax(255px, .8fr) minmax(0, 1.2fr); gap: 24px; }
+  .home-brand-copy>strong { font-size: 15px; }
+  .home-experience-mark { display: none; }
+  .home-video-panel { min-height: 300px; }
+}
+@media (max-width: 720px) {
+  .home-screen { overflow-y: auto; padding-top: 18px; gap: 16px; }
+  .home-brand-lockup { gap: 12px; min-height: 0; padding-bottom: 14px; }
+  .home-logo-slot { width: min(44vw, 190px); height: 54px; }
+  .home-logo-fallback strong { font-size: clamp(17px, 5vw, 25px); padding: 7px; }
+  .home-logo-fallback span { font-size: 6px; letter-spacing: .13em; }
+  .home-brand-divider { display: none; }
+  .home-brand-copy>span { font-size: 7px; letter-spacing: .08em; }
+  .home-brand-copy>strong { font-size: 11px; }
+  .home-layout { display: flex; flex-direction: column; min-height: 0; gap: 16px; }
+  .home-copy { flex: 0 0 auto; padding: 6px 0 0; }
+  .home-copy .eyebrow { margin-bottom: 15px; font-size: 8px; }
+  .home-screen h1 { font-size: clamp(43px, 10vw, 62px); }
+  .home-copy .lead-copy { font-size: 13px; margin: 15px 0 18px; }
+  .home-proof { margin-top: 18px; font-size: 10px; }
+  .home-video-panel { flex: 0 0 245px; height: 245px; min-height: 245px; }
+  .home-video-fallback { padding: 14px; }
+  .video-fallback-topline { top: 13px; left: 14px; font-size: 7px; }
+  .video-fallback-copy { left: 14px; right: 14px; bottom: 32px; }
+  .video-fallback-copy strong { font-size: 16px; }
+  .video-fallback-copy span { font-size: 8px; }
+  .home-video-caption { left: 14px; right: 14px; bottom: 10px; font-size: 6px; }
+  .home-bottom { font-size: 7px; gap: 8px; }
+}
+@media (orientation: portrait) and (min-width: 721px) and (max-width: 1300px) {
+  .home-screen { overflow-y: auto; }
+  .home-layout { display: flex; flex-direction: column; min-height: 0; gap: 24px; }
+  .home-copy { flex: 0 0 auto; }
+  .home-video-panel { min-height: clamp(360px, 42vh, 560px); height: clamp(360px, 42vh, 560px); flex: 0 0 auto; }
+  .home-video-fallback .hero-truck { max-width: 90%; }
+}
+@media (max-height: 700px) and (min-width: 721px) and (orientation: landscape) {
+  .home-screen { gap: 12px; padding-top: 12px; }
+  .home-brand-lockup { min-height: 52px; padding-bottom: 10px; }
+  .home-logo-slot { height: 52px; }
+  .home-layout { min-height: 280px; gap: 30px; }
+  .home-video-panel { min-height: 280px; }
+  .home-copy .eyebrow { margin-bottom: 15px; }
+  .home-copy .lead-copy { margin: 14px 0 18px; }
+  .home-proof { margin-top: 16px; }
+  .home-bottom { padding-top: 0; }
+}
+
+/* Revisão da tela inicial: identidade sem logotipos desenhados em HTML e sem textos repetidos. */
+:root { color-scheme: light; --bg: #fff; --panel: #fff; --panel2: #f7f8fa; --text: #25272b; --muted: #687078; --line: rgba(37,39,43,.12); --pink: #ed1c24; --pink2: #cf151d; }
+.app-shell:has(.screen[data-screen="home"]:not(.hidden)) { padding-top: clamp(14px, 2vw, 28px); padding-bottom: 14px; padding-left: clamp(24px, 4.2vw, 68px); padding-right: clamp(24px, 4.2vw, 68px); }
+body:has(.screen[data-screen="home"]:not(.hidden)) .topbar-right,
+body:has(.screen[data-screen="home"]:not(.hidden)) .global-footer { display: none !important; }
+.topbar { min-height: 66px; padding-bottom: 12px; border-bottom: 1px solid #e6e8ea; }
+.brand { min-width: 190px; min-height: 42px; gap: 0; }
+.brand-logo-slot { display: flex; align-items: center; justify-content: flex-start; width: clamp(150px, 16vw, 220px); height: 48px; overflow: hidden; }
+.brand-logo-image { display: block; max-width: 100%; max-height: 100%; width: 100%; height: 100%; object-fit: contain; object-position: left center; }
+.brand-logo-placeholder { display: grid; place-items: center; width: 168px; height: 42px; border: 1px dashed #cfd4d8; border-radius: 7px; background: #fafbfc; color: #9ca3aa; }
+.brand-logo-placeholder svg { width: 23px; height: 23px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.brand-mark, .brand-copy { display: none !important; }
+.home-screen { display: flex; flex-direction: column; gap: 0; padding: clamp(22px, 4vh, 46px) 0 0; overflow: hidden; background: #fff; }
+.home-layout { flex: 1 1 auto; min-height: 0; width: 100%; display: grid; grid-template-columns: minmax(320px, .78fr) minmax(0, 1.22fr); align-items: center; gap: clamp(30px, 5vw, 80px); }
+.home-copy { align-self: center; max-width: 560px; padding: 0; z-index: 1; }
+.home-copy .eyebrow { margin-bottom: clamp(18px, 2.6vh, 28px); color: #666d74; font-size: clamp(9px, .75vw, 11px); letter-spacing: .17em; }
+.home-screen h1 { margin: 0; color: #25272b; font-size: clamp(52px, 5.3vw, 84px); line-height: .98; font-weight: 900; letter-spacing: -.065em; }
+.home-screen h1 span { color: #ed1c24; }
+.home-copy .lead-copy { max-width: 425px; margin: clamp(18px, 2.6vh, 28px) 0 clamp(23px, 3.4vh, 38px); color: #687078; font-size: clamp(16px, 1.28vw, 20px); line-height: 1.65; }
+.home-copy .primary-button { min-height: 62px; border-radius: 7px; padding: 0 27px; gap: 30px; font-size: 14px; box-shadow: 0 10px 25px #ed1c2418; }
+.home-copy .primary-button .arrow { font-size: 23px; }
+.home-video-panel { position: relative; align-self: center; width: 100%; height: min(66vh, 660px); min-height: 340px; overflow: hidden; border: 1px solid #e1e4e7; border-radius: 21px; background: #f3f5f6; box-shadow: 0 24px 60px #20252b12; isolation: isolate; }
+.home-loop-video { position: absolute; inset: 0; z-index: 0; display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 0; background: #f3f5f6; transition: opacity .35s ease; }
+.home-loop-video.is-ready { opacity: 1; }
+.home-video-fallback { position: absolute; inset: 0; z-index: 1; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: clamp(18px, 2.2vw, 32px); background: radial-gradient(ellipse at 70% 25%, #ed1c240b, transparent 43%), linear-gradient(140deg, #fbfcfc 0%, #f0f2f4 100%); }
+.home-video-fallback .hero-truck { position: relative; z-index: 1; width: 100%; max-width: 790px; transform: none; }
+.home-video-fallback .hero-truck svg { width: 100%; filter: drop-shadow(0 18px 18px #1f293314); }
+.video-fallback-topline { position: absolute; top: 22px; left: 24px; z-index: 2; display: flex; align-items: center; gap: 9px; color: #737a81; font-size: 9px; font-weight: 850; letter-spacing: .14em; }
+.video-pulse { width: 7px; height: 7px; border-radius: 50%; background: #ed1c24; display: inline-block; flex: 0 0 7px; }
+.video-fallback-caption { position: absolute; bottom: 22px; left: 24px; right: 24px; z-index: 2; color: #737a81; font-size: 9px; font-weight: 850; letter-spacing: .15em; }
+.home-screen .home-visual:before, .home-screen .visual-orbit, .home-screen .visual-number, .home-screen .visual-caption, .home-screen .home-bottom, .home-screen .home-proof, .home-screen .home-brand-lockup, .home-screen .home-video-overlay, .home-screen .home-video-caption { display: none !important; }
+.home-screen .view, .home-screen .screen { background: #fff; }
+@media (max-width: 1050px) and (orientation: landscape) {
+  .app-shell { padding: 22px 34px 16px; }
+  .home-screen { padding-top: 22px; }
+  .home-layout { grid-template-columns: minmax(285px, .8fr) minmax(0, 1.2fr); gap: 30px; }
+  .home-screen h1 { font-size: clamp(45px, 5vw, 64px); }
+  .home-video-panel { height: min(63vh, 500px); min-height: 290px; }
+}
+@media (max-width: 720px), (orientation: portrait) and (max-width: 1300px) {
+  .home-screen { overflow-y: auto; padding-top: 18px; }
+  .home-layout { display: flex; flex-direction: column; align-items: stretch; justify-content: flex-start; gap: 24px; }
+  .home-copy { flex: 0 0 auto; max-width: 760px; padding: 12px 0 0; }
+  .home-copy .eyebrow { margin-bottom: 16px; }
+  .home-screen h1 { font-size: clamp(45px, 7vw, 72px); }
+  .home-copy .lead-copy { max-width: 620px; margin: 16px 0 22px; font-size: clamp(14px, 2vw, 18px); }
+  .home-video-panel { flex: 0 0 auto; height: clamp(250px, 36vh, 430px); min-height: 250px; }
+  .brand-logo-slot { width: min(48vw, 190px); height: 42px; }
+  .brand-logo-placeholder { width: 150px; height: 38px; }
+}
+@media (max-height: 720px) and (min-width: 721px) and (orientation: landscape) {
+  .app-shell { padding-top: 16px; padding-bottom: 12px; }
+  .topbar { min-height: 52px; padding-bottom: 8px; }
+  .brand-logo-slot { height: 38px; }
+  .home-screen { padding-top: 12px; }
+  .home-layout { gap: 34px; }
+  .home-copy .eyebrow { margin-bottom: 15px; }
+  .home-screen h1 { font-size: clamp(44px, 4.6vw, 68px); }
+  .home-copy .lead-copy { margin: 16px 0 20px; font-size: clamp(14px, 1.1vw, 17px); }
+  .home-copy .primary-button { min-height: 54px; }
+  .home-video-panel { min-height: 270px; height: min(66vh, 520px); }
+}
+
+/* Adicione no final do ficheiro style.css, substituindo as media queries de portrait anteriores */
+
+@media (orientation: portrait) and (max-width: 1300px) {
+  /* Enquadramento principal */
+  .app-shell { 
+    padding: 3vh 5vw 2vh; 
+  }
+  .app-shell:has(.screen[data-screen="home"]:not(.hidden)) {
+    padding: 4vh 6vw 2vh; 
+  }
+  
+  /* Ecrã Inicial */
+  .home-screen { 
+    overflow-y: auto; 
+    padding-top: 2vh; 
+    justify-content: center;
+  }
+  .home-layout { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 3vh; 
+  }
+  .home-copy { 
+    flex: 0 0 auto; 
+    max-width: 100%; 
+    padding: 0; 
+    text-align: center; 
+  }
+  .home-copy .eyebrow { 
+    justify-content: center; 
+    margin-bottom: 2vh; 
+  }
+  .home-screen h1 { 
+    font-size: clamp(42px, 6.5vh, 76px); 
+    text-align: center;
+  }
+  .home-copy .lead-copy { 
+    max-width: 100%; 
+    margin: 2vh auto 4vh; 
+    text-align: center;
+  }
+  .home-copy .primary-button { 
+    width: 100%; 
+    justify-content: center;
+  }
+  
+  /* Painel de Vídeo Dinâmico */
+  .home-video-panel { 
+    flex: 1 1 auto; 
+    width: 100%;
+    height: auto; 
+    min-height: 35vh; 
+    max-height: 45vh;
+    border-radius: 24px;
+  }
+  
+  /* Cartões e Grelhas */
+  .category-grid, .product-grid {
+    grid-template-columns: 1fr;
+    gap: 2vh;
+  }
+  .category-card, .product-card {
+    min-height: 180px;
+    display: grid;
+    grid-template-columns: 1fr 38%;
+  }
+  
+  /* Páginas Internas */
+  .detail-layout, .lead-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+  }
+  .detail-visual-panel {
+    min-height: 35vh;
+    height: auto;
+  }
+  .qr-screen {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    padding: 4vh 5vw;
+    gap: 4vh;
+  }
+}
+
+/* Ajustes solicitados: logo oficial centralizado no cabeçalho e CTA QR fixo na página do produto. */
+.topbar {
+  position: relative !important;
+  justify-content: center !important;
+  min-height: 78px !important;
+  padding: 10px 0 12px !important;
+}
+.topbar .brand {
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  min-width: 0 !important;
+  width: auto !important;
+  min-height: 0 !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  z-index: 5 !important;
+}
+.topbar .brand-logo-slot {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: clamp(180px, 21vw, 285px) !important;
+  height: 56px !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+}
+.topbar .brand-logo-image {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 56px !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+.topbar .topbar-right {
+  position: relative !important;
+  z-index: 6 !important;
+  margin-left: auto !important;
+}
+
+/* Reserva espaço no conteúdo para a ação fixa não cobrir a ficha técnica. */
+.detail-screen {
+  padding-bottom: 132px !important;
+}
+.detail-screen .detail-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.detail-screen #qr-button {
+  position: fixed !important;
+  left: 50% !important;
+  bottom: clamp(38px, 5vh, 58px) !important;
+  transform: translateX(-50%);
+  z-index: 60 !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: min(560px, calc(100vw - 56px)) !important;
+  min-height: 76px !important;
+  padding: 0 34px !important;
+  border-radius: 15px !important;
+  gap: 20px !important;
+  font-size: clamp(18px, 1.65vw, 23px) !important;
+  font-weight: 900 !important;
+  letter-spacing: .01em !important;
+  box-shadow: 0 12px 32px rgba(198, 28, 36, .27) !important;
+}
+.detail-screen #qr-button:hover {
+  transform: translateX(-50%) translateY(-2px);
+}
+.detail-screen #qr-button:active {
+  transform: translateX(-50%) scale(.98);
+}
+.detail-screen #qr-button .arrow {
+  font-size: 25px;
+}
+
+@media (max-width: 720px) {
+  .topbar {
+    min-height: 62px !important;
+    padding: 8px 0 10px !important;
+  }
+  .topbar .brand-logo-slot {
+    width: clamp(140px, 36vw, 190px) !important;
+    height: 42px !important;
+  }
+  .topbar .brand-logo-image {
+    max-height: 42px !important;
+  }
+  .detail-screen {
+    padding-bottom: 106px !important;
+  }
+  .detail-screen #qr-button {
+    width: calc(100vw - 28px) !important;
+    min-height: 66px !important;
+    bottom: max(12px, env(safe-area-inset-bottom)) !important;
+    padding: 0 20px !important;
+    border-radius: 13px !important;
+    font-size: 17px !important;
+  }
+}
+@media (max-width: 390px) {
+  .topbar .brand-logo-slot {
+    width: 136px !important;
+    height: 38px !important;
+  }
+  .topbar .brand-logo-image {
+    max-height: 38px !important;
+  }
+  .detail-screen #qr-button {
+    width: calc(100vw - 24px) !important;
+    min-height: 60px !important;
+    font-size: 15px !important;
+  }
+}
+@media (orientation: portrait) and (min-width: 721px) and (max-width: 1300px) {
+  .topbar .brand-logo-slot {
+    width: clamp(205px, 26vw, 310px) !important;
+    height: 60px !important;
+  }
+  .topbar .brand-logo-image {
+    max-height: 60px !important;
+  }
+  .detail-screen {
+    padding-bottom: 132px !important;
+  }
+  .detail-screen #qr-button {
+    width: min(620px, calc(100vw - 64px)) !important;
+    min-height: 82px !important;
+    bottom: max(20px, env(safe-area-inset-bottom)) !important;
+    font-size: 22px !important;
+  }
+}
+@media (max-height: 700px) and (min-width: 721px) and (orientation: landscape) {
+  .topbar { min-height: 58px !important; padding-top: 5px !important; padding-bottom: 7px !important; }
+  .topbar .brand-logo-slot { height: 42px !important; }
+  .topbar .brand-logo-image { max-height: 42px !important; }
+  .detail-screen { padding-bottom: 96px !important; }
+  .detail-screen #qr-button { min-height: 58px !important; bottom: 38px !important; font-size: 17px !important; }
+}
+
+/* Corrige o corte dos cards na tela de categorias */
+.category-screen {
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  overscroll-behavior: contain;
+}
+
+.category-screen .category-grid {
+  flex: 0 0 auto !important;
+  min-height: max-content !important;
+  align-content: start;
+  grid-auto-rows: auto;
+}
+
+.category-screen .category-card {
+  min-height: 220px;
+  height: auto;
+}
+
+.category-screen .category-card-copy {
+  min-width: 0;
+  overflow: visible;
+}
+
+.category-screen .category-card-copy h2,
+.category-screen .category-card-copy p {
+  height: auto;
+  overflow: visible;
+}
+
+.category-screen .category-card-bottom {
+  min-height: 36px;
+  flex-shrink: 0;
+  line-height: 1.4;
+  white-space: normal;
+}
+
+.category-screen .screen-footer {
+  position: relative;
+  flex-shrink: 0;
+  margin-top: 20px;
+}
+
+/* Ajustes para telas verticais e celulares */
+@media (max-width: 720px) {
+  .category-screen {
+    display: block !important;
+    padding-bottom: 28px !important;
+  }
+
+  .category-screen .category-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    grid-auto-rows: minmax(210px, auto);
+    gap: 14px;
+  }
+
+  .category-screen .category-card {
+    min-height: 210px !important;
+    grid-template-rows: auto minmax(75px, 1fr) auto !important;
+    padding: 15px 14px 16px !important;
+    overflow: hidden;
+  }
+
+  .category-screen .category-card-top {
+    grid-column: 1 / -1;
+  }
+
+  .category-screen .category-card-copy {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: center;
+  }
+
+  .category-screen .category-art {
+    grid-column: 2;
+    grid-row: 2;
+    min-height: 75px;
+    height: 100%;
+    align-self: center;
+  }
+
+  .category-screen .category-card-bottom {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    margin-top: 12px;
+    padding-top: 10px;
+  }
+}
+
+/* Corrige sobreposição do botão fixo de QR Code */
+#qr-button {
+  position: fixed !important;
+  left: 50% !important;
+  bottom: max(18px, env(safe-area-inset-bottom)) !important;
+  transform: translateX(-50%);
+  z-index: 99999 !important;
+  isolation: isolate;
+  width: min(92vw, 520px);
+  min-height: 68px;
+  background: #ed1c24 !important;
+  color: #fff !important;
+  opacity: 1 !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Impede que textos do rodapé apareçam sobre o botão */
+body:has(.detail-screen:not(.hidden)) .global-footer {
+  display: none !important;
+}
+
+/* Reserva espaço para o botão na página do produto */
+.detail-screen {
+  padding-bottom: 105px !important;
+}
+
+/* Evita que o botão secundário ocupe a posição fixa */
+#lead-button {
+  position: static !important;
+}
+
+/* Abas dos produtos com visual de botões de totem */
+.detail-tabs {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  width: 100%;
+  margin: 20px 0;
+  padding: 0;
+  border: 0 !important;
+  overflow: visible !important;
+}
+
+.detail-tabs .detail-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 9px;
+
+  min-width: 0;
+  min-height: 82px;
+  margin: 0;
+  padding: 13px;
+
+  background: #f7f8fa;
+  color: #424954;
+  border: 1px solid #dfe3e8 !important;
+  border-radius: 13px;
+  border-bottom: 1px solid #dfe3e8 !important;
+
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.35;
+  text-align: left;
+  white-space: normal;
+
+  transition:
+    background .2s ease,
+    border-color .2s ease,
+    transform .2s ease,
+    box-shadow .2s ease;
+}
+
+/* Ícones */
+.detail-tabs .detail-tab::before {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+
+  border-radius: 9px;
+  background: #feecee;
+  color: #ed1c24;
+
+  font-size: 19px;
+  line-height: 1;
+}
+
+.detail-tabs .detail-tab[data-tab="overview"]::before {
+  content: "◉";
+}
+
+.detail-tabs .detail-tab[data-tab="specs"]::before {
+  content: "⚙";
+}
+
+.detail-tabs .detail-tab[data-tab="configs"]::before {
+  content: "↔";
+}
+
+.detail-tabs .detail-tab[data-tab="sheet"]::before {
+  content: "▤";
+}
+
+/* Aba selecionada */
+.detail-tabs .detail-tab.active {
+  background: #fff0f1 !important;
+  color: #c81720 !important;
+  border: 2px solid #ed1c24 !important;
+  box-shadow: 0 4px 12px rgba(237, 28, 36, .08);
+}
+
+/* Resposta visual ao toque */
+.detail-tabs .detail-tab:active {
+  transform: scale(.97);
+}
+
+.detail-tabs .detail-tab:focus-visible {
+  outline: 3px solid #ed1c24;
+  outline-offset: 3px;
+}
+
+/* Totem vertical e telas estreitas */
+@media (max-width: 720px), (orientation: portrait) {
+  .detail-tabs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin: 18px 0;
+  }
+
+  .detail-tabs .detail-tab {
+    min-height: 78px;
+    padding: 12px;
+    font-size: 12px;
+  }
+}
+
+/* === QR Code em destaque: compacto, centralizado e responsivo === */
+.qr-screen {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0 !important;
+  padding: clamp(12px, 1.8vh, 22px) 18px clamp(18px, 2.5vh, 28px) !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  text-align: center;
+  scrollbar-width: none;
+}
+
+.qr-screen::-webkit-scrollbar {
+  display: none;
+}
+
+/* Remove o visual lateral para priorizar o QR Code */
+.qr-screen .qr-side-visual {
+  display: none !important;
+}
+
+.qr-screen .qr-content {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.qr-screen .qr-content .eyebrow {
+  justify-content: center;
+  margin: 0 0 7px;
+  font-size: clamp(9px, 1.1vh, 12px);
+}
+
+.qr-screen .qr-content h1 {
+  margin: 0;
+  font-size: clamp(29px, 4vh, 46px) !important;
+  line-height: 1.02;
+  letter-spacing: -.05em;
+}
+
+.qr-screen .qr-content .lead-copy {
+  max-width: 650px;
+  margin: 9px 0 8px;
+  font-size: clamp(12px, 1.55vh, 17px);
+  line-height: 1.4;
+}
+
+.qr-screen .qr-product-name {
+  margin: 7px 0 10px;
+  font-size: clamp(13px, 1.7vh, 18px);
+  line-height: 1.35;
+  font-weight: 850;
+  text-align: center;
+}
+
+.qr-screen .qr-frame {
+  flex: 0 0 auto;
+  width: min(76vw, 50vh, 620px) !important;
+  max-width: 620px;
+  min-width: 0;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto 7px;
+  padding: 10px;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid #dfe3e8;
+  box-shadow: 0 14px 38px rgba(25, 35, 45, .12);
+}
+
+.qr-screen .qr-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.qr-screen .qr-placeholder {
+  width: 100%;
+  height: 100%;
+  gap: 8px;
+  padding: 12px;
+}
+
+.qr-screen .qr-help {
+  max-width: 580px;
+  margin: 5px 0 10px;
+  font-size: clamp(10px, 1.25vh, 13px);
+  line-height: 1.4;
+  text-align: center;
+}
+
+.qr-screen .qr-content > .primary-button {
+  align-self: center;
+  width: auto;
+  min-width: 220px;
+  min-height: 48px;
+  margin: 3px 0 0;
+  padding: 0 22px;
+}
+
+/* Oculta o rodapé global na página do QR Code */
+body:has(.qr-screen:not(.hidden)) .global-footer {
+  display: none !important;
+}
+
+/* Telas verticais e menores */
+@media (max-width: 720px), 
+       (orientation: portrait) and (max-width: 1300px) {
+  .qr-screen {
+    padding: 10px 14px 20px !important;
+  }
+
+  .qr-screen .qr-content {
+    max-width: 680px;
+  }
+
+  .qr-screen .qr-content h1 {
+    font-size: clamp(25px, 5.2vw, 38px) !important;
+  }
+
+  .qr-screen .qr-content .lead-copy {
+    max-width: 620px;
+    font-size: clamp(12px, 1.6vh, 16px);
+    margin: 7px 0 6px;
+  }
+
+  .qr-screen .qr-frame {
+    width: min(78vw, 50vh, 560px) !important;
+    margin-bottom: 5px;
+    padding: 8px;
+  }
+
+  .qr-screen .qr-product-name {
+    margin: 5px 0 7px;
+  }
+
+  .qr-screen .qr-help {
+    margin: 4px 0 7px;
+  }
+}
+
+/* Telas com pouca altura */
+@media (max-height: 740px) {
+  .qr-screen {
+    justify-content: flex-start !important;
+    padding-top: 8px !important;
+    padding-bottom: 12px !important;
+  }
+
+  .qr-screen .qr-content h1 {
+    font-size: clamp(24px, 3.5vh, 36px) !important;
+  }
+
+  .qr-screen .qr-frame {
+    width: min(62vw, 42vh, 440px) !important;
+  }
+}
+
+
+/* Logo São Pedro maior somente na tela inicial */
+body:has(.screen[data-screen="home"]:not(.hidden))
+.topbar .brand-logo-slot {
+    width: clamp(230px, 25vw, 330px) !important;
+    height: 68px !important;
+}
+
+body:has(.screen[data-screen="home"]:not(.hidden))
+.topbar .brand-logo-image {
+    max-height: 68px !important;
+}
+
+/* Totem vertical */
+@media (orientation: portrait) and (min-width: 721px) and (max-width: 1300px) {
+    body:has(.screen[data-screen="home"]:not(.hidden))
+    .topbar .brand-logo-slot {
+        width: clamp(240px, 31vw, 360px) !important;
+        height: 72px !important;
+    }
+
+    body:has(.screen[data-screen="home"]:not(.hidden))
+    .topbar .brand-logo-image {
+        max-height: 72px !important;
+    }
+}
+
+
+/* =========================================
+   TELA INICIAL — VISUAL INSTITUCIONAL
+   ========================================= */
+
+/* Libera a tela inteira para o vídeo */
+.app-shell:has(.screen[data-screen="home"]:not(.hidden)) {
+    padding: 0 !important;
+    background: #080c11;
+}
+
+/* Remove o cabeçalho da inicial:
+   o logo principal estará no conteúdo */
+.app-shell:has(.screen[data-screen="home"]:not(.hidden)) > .topbar {
+    display: none !important;
+}
+
+/* Faz a área principal ocupar toda a janela */
+.app-shell:has(.screen[data-screen="home"]:not(.hidden)) > .view {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+}
+
+/* Estrutura da tela inicial */
+.app-shell:has(.screen[data-screen="home"]:not(.hidden))
+.home-screen {
+    position: absolute !important;
+    inset: 0 !important;
+    display: block !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    background: #080c11 !important;
+}
+
+/* A área do vídeo passa a ser o fundo */
+.app-shell:has(.screen[data-screen="home"]:not(.hidden))
+.home-screen .home-layout {
+    position: absolute !important;
+    inset: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Vídeo em tela cheia */
+.app-shell:has(.screen[data-screen="home"]:not(.hidden))
+.home-screen .home-video-panel {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    margin: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    overflow: hidden !important;
+    background: #080c11 !important;
+    z-index: 0 !important;
+    animation: none !important;
+}
+
+/* Preenche o fundo sem distorcer o vídeo */
+.app-shell:has(.screen[data-screen="home"]:not(.hidden))
+.home-screen .home-loop-video {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    background: #080c11;
+}
+
+/* Máscara escura: mais contraste à esquerda,
+   mantendo o vídeo visível ao fundo */
+.app-shell:has(.screen[data-screen="home"]:not(.hidden))
+.home-screen .home-video-panel::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5, 9, 14, .90) 0%,
+            rgba(5, 9, 14, .76) 34%,
+            rgba(5, 9, 14, .42) 70%,
+            rgba(5, 9, 14, .32) 100%
+        ),
+        linear-gradient(
+            0deg,
+            rgba(5, 9, 14, .48) 0%,
+            transparent 55%,
+            rgba(5, 9, 14, .20) 100%
+        );
+}
+
+/* A ilustração do caminhão só aparece
+   se o vídeo não estiver pronto */
+.app-shell:has(.screen[data-screen="home"]:not(.hidden))
+.home-video-panel:has(.home-loop-video.is-ready)
+.home-video-fallback {
+    display: none !important;
+}
+
+/* Conteúdo sobre o vídeo */
+.app-shell:has(.screen[data-screen="home"]:not(.hidden))
+.home-screen .home-copy {
+    position: absolute !important;
+    z-index: 4 !important;
+    top: 50% !important;
+    left: clamp(32px, 8vw, 145px) !important;
+    right: auto !important;
+    width: min(760px, 76vw) !important;
+    max-width: 760px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    transform: translateY(-50%);
+    text-align: left;
+    animation: spRiseIn .8s ease both;
+}
+
+/* Exibe o logo oficial dentro da composição */
+.app-shell:has(.screen[data-screen="home"]:not(.hidden))
+.home-screen .home-brand-lockup {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    margin: 0 0 clamp(28px, 4vh, 48px) !important;
+}
+
+.app-shell:has(.screen[data-screen="home"]:not(.hidden))
+.home-screen .home-brand-logo {
+    display: block;
+    width: clamp(230px, 25vw, 390px) !important;
+    max-width: 100% !important;
+    max-height: clamp(85px, 13vh, 145px) !important;
+    object-fit: contain !important;
+    object-position: left center !important;
+    filter: drop-shadow(0 4px 18px rgba(0, 0, 0, .28));
+}
+
+/* Identificação institucional */
+.app-shell:has(.screen[data-screen="home"]:not(.hidden))
+.home-screen .eyebrow {
+    color: rgba(255, 255, 255, .82) !important;
+    font-size: clamp(11px, 1vw, 14px) !important;
+    letter-spacing: .18em !important;
+    margin-bottom: 24px !important;
+}
+
+.app-shell:has(.screen[data-screen="home"]:not(.hidden))
+.home-screen .eyebrow-line {
+    background: #ed1c24 !important;
+}
+
+/* Frase principal */
+.app-shell:has(.screen[data-screen="home"]:not(.hidden))
+.home-screen h1 {
+    max-width: 850px;
+    color: #fff !important;
+    font-size: clamp(54px, 6.4vw, 106px) !important;
+    font-weight: 900 !important;
+    line-height: 1.02 !important;
+    letter-spacing: -.055em !important;
+    text-wrap: balance;
+    text-shadow: 0 4px 28px rgba(0, 0, 0, .22);
+}
+
+.app-shell:has(.screen[data-screen="home"]:not(.hidden))
+.home-screen h1 span {
+    color: #ff4148 !important;
+}
+
+/* Texto secundário */
+.app-shell:has(.screen[data-screen="home"]:not(.hidden))
+.home-screen .lead-copy {
+    max-width: 550px !important;
+    margin: 24px 0 32px !important;
+    color: rgba(255, 255, 255, .84) !important;
+    font-size: clamp(17px, 1.4vw, 22px) !important;
+    line-height: 1.6 !important;
+}
+
+/* Botão de entrada no catálogo */
+.app-shell:has(.screen[data-screen="home"]:not(.hidden))
+.home-screen .primary-button.large {
+    min-height: 66px;
+    padding: 0 30px !important;
+    border-radius: 9px !important;
+    background: #ed1c24 !important;
+    color: #fff !important;
+    font-size: 15px !important;
+    box-shadow: 0 12px 35px rgba(237, 28, 36, .28) !important;
+}
+
+.app-shell:has(.screen[data-screen="home"]:not(.hidden))
+.home-screen .primary-button.large:hover {
+    background: #c9151c !important;
+    transform: translateY(-3px);
+}
+
+/* Adaptação para o totem vertical */
+@media (orientation: portrait) and (max-width: 1300px) {
+    .app-shell:has(.screen[data-screen="home"]:not(.hidden))
+    .home-screen .home-copy {
+        left: 7vw !important;
+        right: 7vw !important;
+        width: auto !important;
+        max-width: 900px !important;
+        text-align: center;
+    }
+
+    .app-shell:has(.screen[data-screen="home"]:not(.hidden))
+    .home-screen .home-brand-lockup {
+        justify-content: center !important;
+        margin-bottom: clamp(24px, 3vh, 42px) !important;
+    }
+
+    .app-shell:has(.screen[data-screen="home"]:not(.hidden))
+    .home-screen .home-brand-logo {
+        width: clamp(220px, 58vw, 420px) !important;
+        max-height: clamp(90px, 12vh, 150px) !important;
+        object-position: center !important;
+    }
+
+    .app-shell:has(.screen[data-screen="home"]:not(.hidden))
+    .home-screen .eyebrow {
+        justify-content: center;
+        font-size: clamp(10px, 1.5vw, 15px) !important;
+        margin-bottom: 20px !important;
+    }
+
+    .app-shell:has(.screen[data-screen="home"]:not(.hidden))
+    .home-screen h1 {
+        font-size: clamp(44px, 7vw, 78px) !important;
+        line-height: 1.05 !important;
+    }
+
+    .app-shell:has(.screen[data-screen="home"]:not(.hidden))
+    .home-screen .lead-copy {
+        margin: 22px auto 28px !important;
+        font-size: clamp(16px, 2vw, 22px) !important;
+    }
+
+    .app-shell:has(.screen[data-screen="home"]:not(.hidden))
+    .home-screen .primary-button.large {
+        width: min(100%, 560px);
+        justify-content: center;
+    }
+}
+
+
+/* Corrige o alinhamento vertical do conteúdo inicial */
+.app-shell:has(.screen[data-screen="home"]:not(.hidden))
+.home-screen .home-copy {
+    top: 50% !important;
+    bottom: auto !important;
+    transform: translateY(-50%) !important;
+    animation: none !important;
+}
+
+
+/* Fotos reais dos implementos — cards de categorias */
+.category-art .category-product-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 0;
+    object-fit: contain;
+    object-position: center;
+    padding: 6px;
+    filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.12));
+}
+
+/* Fotos reais dos implementos — catálogo de produtos */
+.product-art.vehicle-art .product-card-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 0;
+    object-fit: contain;
+    object-position: center;
+    padding: 3px;
+    filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.12));
+}
+
+
+/* Botão flutuante — somente no catálogo completo */
+.catalog-screen .launch-floating-button {
+    position: fixed;
+    z-index: 30;
+    right: clamp(12px, 2vw, 30px);
+    bottom: clamp(18px, 3vh, 30px);
+
+    display: block;
+    width: clamp(235px, 27vw, 360px);
+    aspect-ratio: 1200 / 654;
+
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    line-height: 0;
+    cursor: pointer;
+    touch-action: manipulation;
+
+    filter: drop-shadow(0 8px 18px rgba(10, 15, 22, .30));
+    transition: transform .25s ease, filter .25s ease;
+}
+
+.catalog-screen .launch-floating-button img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    user-select: none;
+    pointer-events: none;
+}
+
+.catalog-screen .launch-floating-button:hover {
+    transform: translateY(-4px) scale(1.025);
+    filter: drop-shadow(0 13px 23px rgba(198, 40, 40, .30));
+}
+
+.catalog-screen .launch-floating-button:active {
+    transform: scale(.97);
+}
+
+.catalog-screen .launch-floating-button:focus-visible {
+    outline: 3px solid #ed1c24;
+    outline-offset: 3px;
+    border-radius: 12px;
+}
+
+/* Adaptação ao totem vertical */
+@media (orientation: portrait) and (max-width: 720px) {
+    .catalog-screen .launch-floating-button {
+        width: clamp(160px, 42vw, 230px);
+        right: 8px;
+        bottom: 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .catalog-screen .launch-floating-button {
+        transition: none;
+    }
+}
+
+
+/* Evita que o botão Black Edition cubra o footer */
+.catalog-screen .launch-floating-button {
+    bottom: 80px !important;
+}
+
+@media (orientation: portrait) and (max-width: 720px) {
+    .catalog-screen .launch-floating-button {
+        bottom: 90px !important;
+        right: 8px;
+    }
+}
+
+
+/* =========================================
+   CARD ESPECIAL — SEMIRREBOQUE BAÚ BLACK EDITION
+   ========================================= */
+
+.product-card[data-product="semirreboque-bau-bk-edition"] {
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 100% 0%,
+            rgba(237, 28, 36, 0.22),
+            transparent 48%
+        ),
+        linear-gradient(
+            135deg,
+            #14171c 0%,
+            #202329 55%,
+            #301619 100%
+        ) !important;
+
+    border: 1px solid rgba(237, 28, 36, 0.75) !important;
+    border-left: 4px solid #ed1c24 !important;
+    border-radius: 16px;
+
+    color: #ffffff !important;
+
+    box-shadow:
+        0 12px 30px rgba(15, 18, 24, 0.20),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+/* Brilho decorativo */
+.product-card[data-product="semirreboque-bau-bk-edition"]::before {
+    background: radial-gradient(
+        circle at 85% 15%,
+        rgba(237, 28, 36, 0.25),
+        transparent 65%
+    ) !important;
+
+    pointer-events: none;
+}
+
+/* Efeito ao interagir */
+.product-card[data-product="semirreboque-bau-bk-edition"]:hover {
+    background:
+        radial-gradient(
+            circle at 100% 0%,
+            rgba(237, 28, 36, 0.30),
+            transparent 48%
+        ),
+        linear-gradient(
+            135deg,
+            #191c22 0%,
+            #262930 55%,
+            #40171c 100%
+        ) !important;
+
+    border-color: #ff4148 !important;
+
+    box-shadow:
+        0 16px 36px rgba(0, 0, 0, 0.25),
+        0 0 22px rgba(237, 28, 36, 0.12);
+
+    transform: translateY(-4px);
+}
+
+/* Etiqueta de lançamento */
+.product-card[data-product="semirreboque-bau-bk-edition"]
+.product-tag {
+    background: #ed1c24 !important;
+    border-color: #ed1c24 !important;
+    color: #ffffff !important;
+}
+
+/* Numeração do card */
+.product-card[data-product="semirreboque-bau-bk-edition"]
+.product-index {
+    color: #b7bbc3 !important;
+}
+
+/* Título do produto */
+.product-card[data-product="semirreboque-bau-bk-edition"] h2 {
+    color: #ffffff !important;
+    font-weight: 850;
+}
+
+/* Descrição */
+.product-card[data-product="semirreboque-bau-bk-edition"] p {
+    color: #c4c7ce !important;
+}
+
+/* Imagem do implemento */
+.product-card[data-product="semirreboque-bau-bk-edition"]
+.product-art.vehicle-art {
+    background:
+        linear-gradient(145deg, #292d34, #111318) !important;
+
+    border-color: rgba(255, 255, 255, 0.13) !important;
+}
+
+/* Rodapé e chamada para detalhes */
+.product-card[data-product="semirreboque-bau-bk-edition"]
+.card-bottom {
+    color: #ffffff !important;
+    border-top-color: rgba(255, 255, 255, 0.19) !important;
+}
+
+/* Ícone de acesso */
+.product-card[data-product="semirreboque-bau-bk-edition"]
+.card-bottom span:last-child {
+    color: #ffffff !important;
+    background: #ed1c24;
+    border-color: #ed1c24 !important;
+    border-radius: 8px;
+}
+
+/* Acessibilidade */
+.product-card[data-product="semirreboque-bau-bk-edition"]:focus-visible {
+    outline: 3px solid #ff4148;
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .product-card[data-product="semirreboque-bau-bk-edition"] {
+        transition: none;
+    }
+}
+
+/* ==========================================
+   CATÁLOGO VERTICAL 9:16 — IMAGENS MAIORES
+   ========================================== */
+
+@media (orientation: portrait) and (max-width: 720px) {
+
+    /* Cards ligeiramente mais altos */
+    .catalog-screen .product-card {
+        min-height: 225px !important;
+        grid-template-columns:
+            minmax(0, 1.05fr)
+            minmax(118px, .95fr) !important;
+        column-gap: 10px !important;
+        padding: 14px !important;
+    }
+
+    /* Área da foto do implemento */
+    .catalog-screen .product-card .product-art.vehicle-art {
+        grid-column: 2 !important;
+        grid-row: 2 / 4 !important;
+
+        width: 100% !important;
+        height: clamp(118px, 14svh, 150px) !important;
+        min-height: 118px !important;
+
+        margin: 0 !important;
+        padding: 4px !important;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        overflow: hidden;
+        border: 1px solid #dce1e6 !important;
+        border-radius: 12px !important;
+
+        background: linear-gradient(
+            145deg,
+            #f7f8fa 0%,
+            #e8ecf0 100%
+        ) !important;
+
+        align-self: center;
+    }
+
+    /* Mostra o implemento inteiro */
+    .catalog-screen .product-card
+    .product-art.vehicle-art .product-card-image {
+        display: block;
+        width: 100% !important;
+        height: 100% !important;
+
+        max-width: 100% !important;
+        max-height: 100% !important;
+
+        object-fit: contain !important;
+        object-position: center !important;
+
+        padding: 2px !important;
+        border-radius: 8px;
+
+        filter: none !important;
+    }
+
+    /* Remove efeitos que possam cobrir a foto */
+    .catalog-screen .product-card
+    .product-art.vehicle-art::after {
+        display: none !important;
+    }
+
+    /* Melhor legibilidade dos nomes */
+    .catalog-screen .product-card h2 {
+        font-size: clamp(16px, 4vw, 19px);
+        line-height: 1.2;
+        overflow-wrap: break-word;
+    }
+
+    .catalog-screen .product-card p {
+        font-size: 11px;
+        line-height: 1.45;
+    }
+}
+
+/* Ajuste para telas verticais muito estreitas */
+@media (orientation: portrait) and (max-width: 390px) {
+    .catalog-screen .product-card {
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(112px, .9fr) !important;
+        column-gap: 8px !important;
+    }
+
+    .catalog-screen .product-card .product-art.vehicle-art {
+        height: 118px !important;
+        min-height: 118px !important;
+    }
+}
+
+/* Fotos dos produtos — sem faixas e com cantos arredondados */
+@media (orientation: portrait) and (max-width: 720px) {
+
+    .catalog-screen .product-card .product-art.vehicle-art {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        aspect-ratio: 16 / 9;
+
+        padding: 0 !important;
+        overflow: hidden !important;
+
+        border: 1px solid #dce1e6 !important;
+        border-radius: 12px !important;
+        background: transparent !important;
+    }
+
+    .catalog-screen .product-card
+    .product-art.vehicle-art .product-card-image {
+        display: block;
+        width: 100% !important;
+        height: 100% !important;
+
+        padding: 0 !important;
+        margin: 0 !important;
+
+        object-fit: cover !important;
+        object-position: center !important;
+
+        border-radius: 11px !important;
+        filter: none !important;
+    }
+}
+
+
+/* ==========================================
+   FOTO DO PRODUTO — ENQUADRAMENTO DEFINITIVO
+   Totem vertical
+   ========================================== */
+
+@media (orientation: portrait) and (max-width: 720px) {
+
+    /* Painel externo */
+    .detail-screen .detail-visual-panel {
+        position: relative !important;
+        height: clamp(290px, 34svh, 330px) !important;
+        min-height: 290px !important;
+        padding: 0 !important;
+
+        overflow: hidden !important;
+        box-sizing: border-box !important;
+
+        background: #f3f5f7 !important;
+        border: 1px solid #e0e4e8 !important;
+        border-radius: 18px !important;
+        box-shadow: none !important;
+    }
+
+    /* Elimina os efeitos decorativos antigos */
+    .detail-screen .detail-visual-panel::before,
+    .detail-screen .detail-visual-panel::after {
+        content: none !important;
+        display: none !important;
+    }
+
+    /* Área da imagem: proporção horizontal do implemento */
+    .detail-screen #detail-art {
+        position: absolute !important;
+        top: 54px !important;
+        left: 14px !important;
+        right: auto !important;
+        bottom: auto !important;
+
+        width: calc(100% - 28px) !important;
+        height: auto !important;
+        aspect-ratio: 1.82 / 1 !important;
+        min-height: 0 !important;
+        max-width: none !important;
+
+        display: block !important;
+        margin: 0 !important;
+        padding: 0 !important;
+
+        overflow: hidden !important;
+        background: transparent !important;
+
+        border: none !important;
+        outline: none !important;
+        border-radius: 14px !important;
+        box-shadow: none !important;
+    }
+
+    /* Imagem real preenchendo a área */
+    .detail-screen #detail-art img.detail-product-image {
+        display: block !important;
+
+        width: 100% !important;
+        height: 100% !important;
+        max-width: none !important;
+        max-height: none !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        object-fit: cover !important;
+        object-position: center !important;
+
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+        filter: none !important;
+
+        border-radius: 14px !important;
+        clip-path: inset(0 round 14px) !important;
+    }
+
+    /* Mantém a etiqueta acima da fotografia */
+    .detail-screen .detail-visual-panel .detail-badge {
+        position: absolute !important;
+        top: 13px !important;
+        left: 14px !important;
+        z-index: 3 !important;
+    }
+
+    /* Legendas alinhadas ao rodapé do painel */
+    .detail-screen .detail-visual-panel .visual-caption {
+        position: absolute !important;
+        left: 14px !important;
+        right: 14px !important;
+        bottom: 10px !important;
+        z-index: 3 !important;
+    }
+}
+
+
+/* Restaura o botão de QR Code na página do produto */
+.detail-screen {
+    animation: none !important;
+    transform: none !important;
+    padding-bottom: 100px !important;
+}
+
+.detail-screen #qr-button {
+    position: fixed !important;
+
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+
+    left: 50% !important;
+    right: auto !important;
+    bottom: max(16px, env(safe-area-inset-bottom)) !important;
+
+    transform: translateX(-50%) !important;
+
+    width: min(520px, calc(100vw - 32px)) !important;
+    min-height: 62px !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 16px !important;
+
+    z-index: 99999 !important;
+
+    background: #ed1c24 !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: 13px !important;
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .2) !important;
+}
+
+/* Mantém o botão visível em telas pequenas */
+@media (max-width: 720px) {
+    .detail-screen #qr-button {
+        width: calc(100vw - 28px) !important;
+        min-height: 58px !important;
+        font-size: 16px !important;
+    }
+}
+
+/* ==========================================
+   IMAGENS DOS CARDS DE CATEGORIAS
+   Totem vertical 9:16
+   ========================================== */
+
+@media (orientation: portrait) and (max-width: 720px) {
+
+    /* Dá um pouco mais de espaço às imagens */
+    .category-screen .category-card {
+        grid-template-columns: minmax(0, 1fr) 38% !important;
+    }
+
+    /* Área da foto em formato horizontal */
+    .category-screen .category-card .category-art {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        aspect-ratio: 16 / 9 !important;
+
+        align-self: center !important;
+        margin: 0 !important;
+        padding: 0 !important;
+
+        display: block !important;
+        overflow: hidden !important;
+
+        border-radius: 12px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Imagem real do produto */
+    .category-screen .category-card
+    .category-art .category-product-image {
+        display: block !important;
+
+        width: 100% !important;
+        height: 100% !important;
+        max-width: none !important;
+        max-height: none !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        object-fit: cover !important;
+        object-position: center !important;
+
+        border: none !important;
+        outline: none !important;
+        border-radius: 11px !important;
+
+        filter: none !important;
+    }
+
+    /* Foto do catálogo completo */
+    .category-screen .category-card-all .category-art {
+        background: #edf0f3 !important;
+        border: 1px solid #dce1e6 !important;
+    }
+
+    /* Foto do lançamento Black Edition */
+    .category-screen .category-card-launch .category-art {
+        background: #202a35 !important;
+        border: 1px solid #424d59 !important;
+    }
+}
+
+/* GALERIA DE FOTOS DO PRODUTO */
+
+.product-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    width: 100%;
+    padding: 12px 0 24px;
+}
+
+.product-gallery-item {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #f2f4f6;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.product-gallery-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.gallery-empty {
+    padding: 40px 20px;
+    text-align: center;
+    color: #777;
+    font-size: 16px;
+}
+
+/* Ajuste para totens verticais */
+@media (max-width: 650px) {
+    .product-gallery {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .product-gallery-item {
+        aspect-ratio: 4 / 3;
+        border-radius: 16px;
+    }
+}
+
+
+/* =====================================================
+   REVAMP DESKTOP / WIDESCREEN - SÃO PEDRO
+   Otimizado para 16:9, Full HD e telas horizontais
+   A tela inicial permanece inalterada.
+===================================================== */
+
+@media screen and (orientation: landscape) and (min-width: 1100px) and (min-height: 650px) {
+
+  /* BASE DAS PÁGINAS INTERNAS */
+
+  .category-screen,
+  .catalog-screen,
+  .detail-screen,
+  .gallery-screen,
+  .qr-screen,
+  .lead-screen,
+  .success-screen {
+    padding: 20px 0 12px !important;
+  }
+
+  .screen-footer {
+    margin-top: 14px !important;
+    padding-top: 10px !important;
+  }
+
+  .eyebrow {
+    margin-bottom: 12px !important;
+    font-size: 9px;
+  }
+
+  /* =================================
+     CATEGORIAS
+  ================================= */
+
+  .category-screen {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .category-heading {
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 25px;
+  }
+
+  .category-heading h1 {
+    font-size: clamp(36px, 3.2vw, 52px);
+    line-height: 1;
+  }
+
+  .category-heading > p {
+    max-width: 350px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .category-grid {
+    flex: 1;
+    min-height: 0;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .category-card {
+    min-height: 0 !important;
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .category-art {
+    min-height: 0;
+    flex: 1;
+    max-height: 220px;
+  }
+
+  /* =================================
+     CATÁLOGO DE PRODUTOS
+  ================================= */
+
+  .catalog-screen {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+
+  .section-heading {
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 25px;
+  }
+
+  .section-heading h1 {
+    font-size: clamp(32px, 3vw, 48px);
+    line-height: 1.04;
+  }
+
+  .section-heading .eyebrow {
+    margin-bottom: 10px;
+  }
+
+  .section-heading p {
+    font-size: 12px;
+    line-height: 1.5;
+    max-width: 300px;
+  }
+
+  .catalog-instruction {
+    margin: 0 0 12px;
+    font-size: 9px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 13px;
+    align-items: stretch;
+  }
+
+  .product-card {
+    min-height: 0 !important;
+    height: 218px;
+    padding: 13px;
+    border-radius: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .product-card .card-top {
+    flex-shrink: 0;
+  }
+
+  .product-card .product-tag {
+    padding: 5px 7px;
+    font-size: 7px;
+  }
+
+  .product-card .product-index {
+    font-size: 8px;
+  }
+
+  .product-card .product-art {
+    height: 88px;
+    min-height: 88px;
+    max-height: 88px;
+    width: 100%;
+    margin: 5px 0;
+    overflow: hidden;
+    border-radius: 9px;
+  }
+
+  .product-card .product-art .product-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .product-card h2 {
+    font-size: clamp(13px, 1vw, 16px);
+    line-height: 1.2;
+    margin: 3px 0;
+  }
+
+  .product-card p {
+    font-size: 10px;
+    line-height: 1.3;
+  }
+
+  .product-card .card-bottom {
+    margin-top: 7px;
+    padding-top: 7px;
+    font-size: 8px;
+  }
+
+  .product-card .card-bottom span:last-child {
+    width: 23px;
+    height: 23px;
+    font-size: 14px;
+  }
+
+  /* Botão de galeria, caso esteja implementado */
+
+  .product-gallery-button {
+    min-height: 30px;
+    margin-top: 7px;
+    font-size: 9px;
+    border-radius: 7px;
+  }
+
+  .launch-floating-button {
+    width: 105px;
+    height: auto;
+  }
+
+  /* =================================
+     DETALHES DO PRODUTO
+  ================================= */
+
+  .detail-screen {
+    overflow-y: auto;
+  }
+
+  .detail-topline {
+    padding-bottom: 9px;
+  }
+
+  .detail-layout {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
+    gap: 28px;
+    min-height: 0;
+    align-items: stretch;
+  }
+
+  .detail-visual-panel {
+    min-height: 0;
+    height: clamp(300px, 48vh, 460px);
+    padding: 22px;
+    border-radius: 16px;
+  }
+
+  .detail-art {
+    max-width: 100%;
+  }
+
+  .detail-art .detail-product-image {
+    max-height: 100%;
+  }
+
+  .detail-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+  }
+
+  .detail-info h1 {
+    font-size: clamp(32px, 3.4vw, 52px);
+    line-height: 1.03;
+  }
+
+  .detail-description {
+    font-size: 12px;
+    line-height: 1.5;
+    margin: 12px 0;
+  }
+
+  .detail-tabs {
+    margin-bottom: 10px;
+    gap: 5px;
+  }
+
+  .detail-tab {
+    padding: 10px 11px;
+    font-size: 10px;
+  }
+
+  .tab-panel {
+    min-height: 0;
+    font-size: 12px;
+  }
+
+  .detail-actions {
+    margin-top: 10px;
+  }
+
+  .detail-info .primary-button,
+  .detail-info .secondary-button {
+    min-height: 45px;
+    font-size: 11px;
+  }
+
+  /* =================================
+     GALERIA
+  ================================= */
+
+  .gallery-screen {
+    overflow-y: auto;
+  }
+
+  .gallery-heading {
+    margin: 8px 0 18px;
+  }
+
+  .gallery-heading h1 {
+    font-size: clamp(32px, 3vw, 48px);
+  }
+
+  .gallery-heading p {
+    font-size: 12px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .gallery-item {
+    border-radius: 12px;
+  }
+
+  /* =================================
+     QR CODE
+  ================================= */
+
+  .qr-screen {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    padding: 25px 4vw;
+    align-items: center;
+  }
+
+  .qr-content {
+    max-width: 480px;
+  }
+
+  .qr-content h1 {
+    font-size: clamp(38px, 4vw, 58px);
+  }
+
+  .qr-content .lead-copy {
+    font-size: 12px;
+    margin: 15px 0;
+  }
+
+  .qr-product-name {
+    font-size: 11px;
+    margin: 14px 0;
+  }
+
+  .qr-frame {
+    width: 205px;
+    padding: 11px;
+    border-radius: 13px;
+  }
+
+  .qr-side-visual {
+    min-height: 0;
+    height: 390px;
+  }
+
+  .qr-side-visual .truck-scene {
+    max-width: 100%;
+  }
+
+  /* =================================
+     FORMULÁRIO DE CONTATO
+  ================================= */
+
+  .lead-screen {
+    overflow-y: auto;
+  }
+
+  .lead-layout {
+    grid-template-columns: .8fr 1.2fr;
+    max-width: 1120px;
+    gap: 35px;
+    align-items: center;
+  }
+
+  .lead-intro {
+    padding: 5px 0;
+  }
+
+  .lead-intro h1 {
+    font-size: clamp(32px, 3vw, 47px);
+  }
+
+  .lead-intro > p {
+    font-size: 11px;
+    line-height: 1.5;
+    margin: 13px 0;
+  }
+
+  .lead-product-card {
+    padding: 9px;
+    gap: 10px;
+  }
+
+  .lead-truck {
+    width: 90px;
+    flex-basis: 90px;
+  }
+
+  .privacy-note {
+    font-size: 9px;
+    margin-top: 12px;
+  }
+
+  .lead-form {
+    padding: 18px;
+    border-radius: 14px;
+  }
+
+  .form-heading {
+    margin-bottom: 12px;
+  }
+
+  .form-grid {
+    gap: 10px;
+  }
+
+  .field {
+    gap: 5px;
+  }
+
+  .field input,
+  .field select {
+    min-height: 39px;
+    padding: 9px 11px;
+    font-size: 11px;
+  }
+
+  .field > span {
+    font-size: 10px;
+  }
+
+  .consent {
+    margin-top: 12px;
+    font-size: 10px;
+  }
+
+  .form-submit {
+    min-height: 43px;
+    margin-top: 12px;
+    font-size: 11px;
+  }
+
+  .form-footnote {
+    font-size: 9px;
+    margin-top: 8px;
+  }
+
+  /* =================================
+     CONFIRMAÇÃO
+  ================================= */
+
+  .success-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 25px !important;
+  }
+
+  .success-screen h1 {
+    font-size: clamp(42px, 4vw, 62px);
+  }
+
+  .success-screen .lead-copy {
+    font-size: 13px;
+    max-width: 470px;
+    margin: 18px auto 25px;
+  }
+
+  .success-mark {
+    margin-bottom: 18px;
+  }
+}
+
+/* =====================================================
+   FULL HD - AJUSTE ESPECIAL 1920 x 1080
+===================================================== */
+
+@media screen and (orientation: landscape) and
+       (min-width: 1600px) and
+       (min-height: 850px) {
+
+  .product-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 15px;
+  }
+
+  .product-card {
+    height: 225px;
+  }
+
+  .product-card .product-art {
+    height: 95px;
+    min-height: 95px;
+  }
+
+  .category-grid {
+    max-width: 1250px;
+  }
+
+  .detail-layout {
+    gap: 45px;
+  }
+
+  .detail-visual-panel {
+    height: 54vh;
+    max-height: 540px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+/* =====================================================
+   TELAS HORIZONTAIS COM POUCA ALTURA
+===================================================== */
+
+@media screen and (orientation: landscape) and
+       (min-width: 1100px) and
+       (max-height: 750px) {
+
+  .category-heading {
+    margin-bottom: 12px;
+  }
+
+  .category-card {
+    padding: 13px;
+  }
+
+  .product-card {
+    height: 185px;
+  }
+
+  .product-card .product-art {
+    height: 65px;
+    min-height: 65px;
+  }
+
+  .detail-visual-panel {
+    height: 42vh;
+  }
+
+  .qr-frame {
+    width: 170px;
+  }
+
+  .qr-side-visual {
+    height: 280px;
+  }
+
+  .lead-form {
+    padding: 13px;
+  }
+
+  .lead-layout {
+    gap: 22px;
+  }
+}
+
+
+/* =====================================================
+   CATEGORIAS - LAYOUT WIDESCREEN FINAL
+   Imagens na proporção original 1037:571
+   Otimizado para Full HD 1920x1080
+===================================================== */
+
+@media screen and (orientation: landscape) and (min-width: 1100px) {
+
+  /* Estrutura principal */
+
+  .category-screen {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    box-sizing: border-box !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    padding: 20px 30px 12px !important;
+  }
+
+  /* Cabeçalho */
+
+  .category-screen .category-heading {
+    width: 100%;
+    flex-shrink: 0;
+    margin: 0 0 20px !important;
+    align-items: center;
+  }
+
+  .category-screen .category-heading h1 {
+    font-size: clamp(42px, 4vw, 62px);
+    line-height: 1;
+  }
+
+  /* Grade de categorias */
+
+  .category-screen .category-grid {
+    display: grid !important;
+    flex: 0 0 auto !important;
+
+    width: min(100%, 1200px) !important;
+    max-width: 1200px !important;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-template-rows: auto !important;
+
+    gap: 24px !important;
+    margin: 0 auto !important;
+    align-items: start !important;
+  }
+
+  /* Cards */
+
+  .category-screen .category-card {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+
+    padding: 18px !important;
+    box-sizing: border-box !important;
+    border-radius: 16px !important;
+  }
+
+  /* Área das imagens - proporção original */
+
+  .category-screen .category-card .category-art {
+    position: relative !important;
+    display: block !important;
+
+    flex: 0 0 auto !important;
+
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+
+    aspect-ratio: 1037 / 571 !important;
+
+    margin: 14px 0 !important;
+    padding: 0 !important;
+
+    overflow: hidden !important;
+    border-radius: 11px !important;
+  }
+
+  /* Imagens preenchendo a área */
+
+  .category-screen .category-card .category-art img {
+    position: absolute !important;
+    inset: 0 !important;
+
+    display: block !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    max-width: none !important;
+    max-height: none !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    object-fit: cover !important;
+    object-position: center !important;
+
+    border-radius: 10px !important;
+    filter: none !important;
+  }
+
+  /* Textos */
+
+  .category-screen .category-card-copy {
+    flex: 0 0 auto !important;
+    min-height: 0 !important;
+  }
+
+  .category-screen .category-card-copy h2 {
+    font-size: clamp(21px, 1.8vw, 27px) !important;
+    line-height: 1.12 !important;
+    margin-bottom: 8px !important;
+  }
+
+  .category-screen .category-card-copy p {
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Rodapé interno dos cards */
+
+  .category-screen .category-card-bottom {
+    flex: 0 0 auto !important;
+    margin-top: 14px !important;
+    padding-top: 10px !important;
+  }
+
+  /* Rodapé da página */
+
+  .category-screen .screen-footer {
+    width: 100%;
+    flex-shrink: 0;
+    margin-top: auto !important;
+    padding-top: 12px !important;
+  }
+}
+
+/* =====================================================
+   AJUSTE FULL HD E TELAS GRANDES
+===================================================== */
+
+@media screen and (orientation: landscape) and
+       (min-width: 1600px) and
+       (min-height: 850px) {
+
+  .category-screen .category-grid {
+    width: min(100%, 1250px) !important;
+    max-width: 1250px !important;
+    gap: 28px !important;
+  }
+
+  .category-screen .category-card {
+    padding: 20px !important;
+  }
+
+  .category-screen .category-card-copy h2 {
+    font-size: 29px !important;
+  }
+
+  .category-screen .category-card-copy p {
+    font-size: 13px !important;
+  }
+}
+
+/* =====================================================
+   TELAS HORIZONTAIS COM POUCA ALTURA
+===================================================== */
+
+@media screen and (orientation: landscape) and
+       (min-width: 1100px) and
+       (max-height: 750px) {
+
+  .category-screen {
+    padding-top: 12px !important;
+  }
+
+  .category-screen .category-heading {
+    margin-bottom: 12px !important;
+  }
+
+  .category-screen .category-grid {
+    gap: 16px !important;
+  }
+
+  .category-screen .category-card {
+    padding: 13px !important;
+  }
+
+  .category-screen .category-card .category-art {
+    margin: 9px 0 !important;
+  }
+
+  .category-screen .category-card-copy h2 {
+    font-size: 21px !important;
+  }
+
+  .category-screen .category-card-bottom {
+    margin-top: 9px !important;
+  }
+}
+
+
+/* =====================================================
+   CATÁLOGO DE PRODUTOS - REVAMP WIDESCREEN 43"
+   Referência: 1920x1080 / Full HD / 16:9
+===================================================== */
+
+@media screen and (orientation: landscape) and
+       (min-width: 1500px) and
+       (min-height: 650px) {
+
+  /* Área principal */
+
+  .catalog-screen {
+    display: flex !important;
+    flex-direction: column !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    padding: 18px 0 15px !important;
+  }
+
+  /* Cabeçalho mais compacto */
+
+  .catalog-screen .section-heading {
+    flex-shrink: 0;
+    margin-bottom: 12px !important;
+    align-items: center;
+  }
+
+  .catalog-screen .section-heading h1 {
+    font-size: clamp(38px, 3.2vw, 56px) !important;
+    line-height: 1.02 !important;
+  }
+
+  .catalog-screen .section-heading p {
+    max-width: 350px;
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+  }
+
+  .catalog-screen .catalog-instruction {
+    flex-shrink: 0;
+    margin: 0 0 12px !important;
+    font-size: 10px !important;
+  }
+
+  /* Grade: quatro colunas */
+
+  .catalog-screen .product-grid {
+    display: grid !important;
+
+    width: 100% !important;
+    max-width: none !important;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    grid-auto-rows: auto !important;
+
+    gap: 16px !important;
+    align-items: stretch !important;
+  }
+
+  /* Cards maiores */
+
+  .catalog-screen .product-card {
+    position: relative !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+
+    width: 100% !important;
+    height: clamp(245px, 24vh, 275px) !important;
+    min-height: 245px !important;
+    max-height: 275px !important;
+
+    padding: 15px !important;
+    box-sizing: border-box !important;
+
+    border-radius: 15px !important;
+    overflow: hidden !important;
+
+    text-align: left !important;
+  }
+
+  /* Identificação do produto */
+
+  .catalog-screen .product-card .card-top {
+    flex-shrink: 0;
+    margin-bottom: 5px;
+  }
+
+  .catalog-screen .product-card .product-tag {
+    font-size: 8px !important;
+    padding: 6px 9px !important;
+  }
+
+  .catalog-screen .product-card .product-index {
+    font-size: 9px !important;
+  }
+
+  /* Área da fotografia */
+
+  .catalog-screen .product-card .product-art {
+    position: relative !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    flex: 0 0 115px !important;
+
+    width: 100% !important;
+    height: 115px !important;
+    min-height: 115px !important;
+    max-height: 115px !important;
+
+    margin: 5px 0 9px !important;
+
+    overflow: hidden !important;
+    border-radius: 10px !important;
+  }
+
+  /* Fotografias maiores, sem deformar */
+
+  .catalog-screen .product-card .product-art .product-card-image {
+    display: block !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    max-width: 100% !important;
+    max-height: 100% !important;
+
+    object-fit: contain !important;
+    object-position: center !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    border-radius: 9px !important;
+    filter: none !important;
+  }
+
+  /* Nome do produto */
+
+  .catalog-screen .product-card h2 {
+    flex-shrink: 0;
+
+    font-size: clamp(15px, 1.05vw, 19px) !important;
+    line-height: 1.2 !important;
+
+    margin: 2px 0 5px !important;
+
+    min-height: 0 !important;
+  }
+
+  /* Descrição */
+
+  .catalog-screen .product-card p {
+    flex-shrink: 0;
+
+    font-size: 11px !important;
+    line-height: 1.4 !important;
+
+    margin: 0 !important;
+  }
+
+  /* Acesso aos detalhes */
+
+  .catalog-screen .product-card .card-bottom {
+    flex-shrink: 0;
+
+    margin-top: auto !important;
+    padding-top: 9px !important;
+
+    font-size: 9px !important;
+  }
+
+  .catalog-screen .product-card .card-bottom span:last-child {
+    width: 27px !important;
+    height: 27px !important;
+    font-size: 16px !important;
+  }
+
+  /* Botão de galeria, caso esteja instalado */
+
+  .catalog-screen .product-gallery-button {
+    min-height: 32px !important;
+    margin-top: 8px !important;
+    font-size: 9px !important;
+  }
+
+  /* Black Edition mantém seu destaque */
+
+  .catalog-screen .product-card[data-product="semirreboque-bau-bk-edition"] {
+    border-radius: 15px !important;
+  }
+
+  /* Rodapé do catálogo */
+
+  .catalog-screen .screen-footer {
+    flex-shrink: 0;
+    margin-top: 15px !important;
+    padding-top: 12px !important;
+  }
+
+  /* Banner de lançamento */
+
+  .catalog-screen .launch-floating-button {
+    width: clamp(190px, 15vw, 260px) !important;
+    right: 20px !important;
+    bottom: 15px !important;
+  }
+}
+
+/* =====================================================
+   FULL HD - AJUSTE PARA 1920x1080
+===================================================== */
+
+@media screen and (orientation: landscape) and
+       (min-width: 1800px) and
+       (min-height: 900px) {
+
+  .catalog-screen .product-grid {
+    gap: 18px !important;
+  }
+
+  .catalog-screen .product-card {
+    height: clamp(250px, 24vh, 275px) !important;
+  }
+
+  .catalog-screen .product-card .product-art {
+    flex-basis: 125px !important;
+    height: 125px !important;
+    min-height: 125px !important;
+    max-height: 125px !important;
+  }
+
+  .catalog-screen .product-card h2 {
+    font-size: 18px !important;
+  }
+
+  .catalog-screen .product-card p {
+    font-size: 12px !important;
+  }
+}
+
+/* =====================================================
+   WIDESCREEN COM MENOR ALTURA
+===================================================== */
+
+@media screen and (orientation: landscape) and
+       (min-width: 1500px) and
+       (max-height: 850px) {
+
+  .catalog-screen .product-grid {
+    gap: 12px !important;
+  }
+
+  .catalog-screen .product-card {
+    height: 225px !important;
+    min-height: 225px !important;
+    max-height: 225px !important;
+    padding: 12px !important;
+  }
+
+  .catalog-screen .product-card .product-art {
+    flex-basis: 95px !important;
+    height: 95px !important;
+    min-height: 95px !important;
+    max-height: 95px !important;
+  }
+
+  .catalog-screen .product-card h2 {
+    font-size: 15px !important;
+  }
+}
+
+
+/* =====================================================
+   CATÁLOGO - 3 PRODUTOS POR LINHA
+   TOTEM 43 POLEGADAS - FULL HD 1920x1080
+   Correção de corte do botão VER DETALHES
+===================================================== */
+
+@media screen and (orientation: landscape) and
+       (min-width: 1500px) {
+
+  /* Área do catálogo */
+
+  .catalog-screen {
+    display: flex !important;
+    flex-direction: column !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    padding: 18px 0 16px !important;
+  }
+
+  /* Cabeçalho */
+
+  .catalog-screen .section-heading {
+    flex-shrink: 0;
+    margin-bottom: 14px !important;
+    align-items: center;
+  }
+
+  .catalog-screen .section-heading h1 {
+    font-size: clamp(38px, 3.2vw, 56px) !important;
+    line-height: 1.02 !important;
+  }
+
+  .catalog-screen .section-heading p {
+    max-width: 350px;
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+  }
+
+  .catalog-screen .catalog-instruction {
+    flex-shrink: 0;
+    margin: 0 0 14px !important;
+    font-size: 10px !important;
+  }
+
+  /* GRADE - 3 COLUNAS */
+
+  .catalog-screen .product-grid {
+    display: grid !important;
+
+    width: 100% !important;
+    max-width: none !important;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    grid-auto-rows: auto !important;
+
+    gap: 18px !important;
+    align-items: stretch !important;
+  }
+
+  /* CARDS - ALTURA AUTOMÁTICA */
+
+  .catalog-screen .product-card {
+    position: relative !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+
+    width: 100% !important;
+    height: auto !important;
+    min-height: 285px !important;
+    max-height: none !important;
+
+    padding: 16px !important;
+    box-sizing: border-box !important;
+
+    overflow: hidden !important;
+    border-radius: 15px !important;
+  }
+
+  /* Identificação */
+
+  .catalog-screen .product-card .card-top {
+    flex-shrink: 0;
+    margin-bottom: 7px;
+  }
+
+  .catalog-screen .product-card .product-tag {
+    font-size: 9px !important;
+    padding: 6px 10px !important;
+  }
+
+  .catalog-screen .product-card .product-index {
+    font-size: 9px !important;
+  }
+
+  /* Fotografia */
+
+  .catalog-screen .product-card .product-art {
+    position: relative !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    flex: 0 0 145px !important;
+
+    width: 100% !important;
+    height: 145px !important;
+    min-height: 145px !important;
+    max-height: 145px !important;
+
+    margin: 5px 0 11px !important;
+    overflow: hidden !important;
+
+    border-radius: 11px !important;
+  }
+
+  .catalog-screen .product-card .product-art .product-card-image {
+    display: block !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    max-width: 100% !important;
+    max-height: 100% !important;
+
+    object-fit: contain !important;
+    object-position: center !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    border-radius: 9px !important;
+    filter: none !important;
+  }
+
+  /* Nome */
+
+  .catalog-screen .product-card h2 {
+    flex-shrink: 0;
+
+    font-size: clamp(17px, 1.15vw, 21px) !important;
+    line-height: 1.2 !important;
+
+    margin: 2px 0 6px !important;
+  }
+
+  /* Descrição */
+
+  .catalog-screen .product-card p {
+    flex-shrink: 0;
+
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+
+    margin: 0 !important;
+  }
+
+  /* VER DETALHES - NÃO CORTAR */
+
+  .catalog-screen .product-card .card-bottom {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    position: relative !important;
+
+    flex-shrink: 0 !important;
+    flex-grow: 0 !important;
+
+    width: 100% !important;
+    min-height: 36px !important;
+    height: auto !important;
+
+    margin-top: auto !important;
+    padding: 10px 0 2px !important;
+
+    box-sizing: border-box !important;
+    overflow: visible !important;
+
+    line-height: 1.5 !important;
+    font-size: 10px !important;
+  }
+
+  .catalog-screen .product-card .card-bottom span {
+    display: flex;
+    align-items: center;
+  }
+
+  .catalog-screen .product-card .card-bottom span:last-child {
+    flex: 0 0 28px !important;
+
+    width: 28px !important;
+    height: 28px !important;
+
+    display: grid !important;
+    place-items: center !important;
+
+    font-size: 16px !important;
+  }
+
+  /* GALERIA */
+
+  .catalog-screen .product-gallery-button {
+    flex-shrink: 0;
+    min-height: 35px !important;
+    margin-top: 9px !important;
+    font-size: 10px !important;
+  }
+
+  /* Black Edition */
+
+  .catalog-screen .product-card[data-product="semirreboque-bau-bk-edition"] {
+    border-radius: 15px !important;
+  }
+
+  /* Rodapé do catálogo */
+
+  .catalog-screen .screen-footer {
+    flex-shrink: 0;
+    margin-top: 16px !important;
+    padding-top: 12px !important;
+  }
+
+  /* Banner de lançamento */
+
+  .catalog-screen .launch-floating-button {
+    width: clamp(180px, 13vw, 235px) !important;
+    right: 15px !important;
+    bottom: 12px !important;
+  }
+}
+
+/* Full HD: refinamento das fotografias */
+
+@media screen and (orientation: landscape) and
+       (min-width: 1800px) and
+       (min-height: 900px) {
+
+  .catalog-screen .product-grid {
+    gap: 20px !important;
+  }
+
+  .catalog-screen .product-card {
+    min-height: 300px !important;
+    padding: 18px !important;
+  }
+
+  .catalog-screen .product-card .product-art {
+    flex-basis: 155px !important;
+    height: 155px !important;
+    min-height: 155px !important;
+    max-height: 155px !important;
+  }
+
+  .catalog-screen .product-card h2 {
+    font-size: 20px !important;
+  }
+
+  .catalog-screen .product-card p {
+    font-size: 12px !important;
+  }
+}
+
+
+/* =====================================================
+   CATÁLOGO - PROPORÇÃO REAL DAS FOTOGRAFIAS
+   Imagens originais: 1037 x 571
+   Layout: 3 produtos por linha
+===================================================== */
+
+@media screen and (orientation: landscape) and
+       (min-width: 1500px) {
+
+  /* Mantém três colunas */
+
+  .catalog-screen .product-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    grid-auto-rows: auto !important;
+    align-items: stretch !important;
+    gap: 18px !important;
+  }
+
+  /* Cards acompanham a altura do conteúdo */
+
+  .catalog-screen .product-card {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+
+    padding: 16px !important;
+    overflow: hidden !important;
+  }
+
+  /* Área da fotografia com proporção 1037:571 */
+
+  .catalog-screen .product-card .product-art {
+    position: relative !important;
+    display: block !important;
+
+    flex: 0 0 auto !important;
+
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+
+    aspect-ratio: 1037 / 571 !important;
+
+    margin: 8px 0 13px !important;
+    padding: 0 !important;
+
+    overflow: hidden !important;
+    border-radius: 11px !important;
+  }
+
+  /* Fotografia ocupa toda a área */
+
+  .catalog-screen .product-card .product-art .product-card-image {
+    position: absolute !important;
+    inset: 0 !important;
+
+    display: block !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    min-width: 0 !important;
+    min-height: 0 !important;
+
+    max-width: none !important;
+    max-height: none !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    object-fit: cover !important;
+    object-position: center center !important;
+
+    border-radius: 10px !important;
+    filter: none !important;
+  }
+
+  /* Organização do conteúdo */
+
+  .catalog-screen .product-card h2 {
+    flex-shrink: 0 !important;
+    margin: 2px 0 6px !important;
+    font-size: clamp(17px, 1.15vw, 21px) !important;
+    line-height: 1.2 !important;
+  }
+
+  .catalog-screen .product-card p {
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+  }
+
+  /* Botão sempre visível */
+
+  .catalog-screen .product-card .card-bottom {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    flex-shrink: 0 !important;
+    flex-grow: 0 !important;
+
+    width: 100% !important;
+    min-height: 38px !important;
+
+    margin-top: auto !important;
+    padding: 10px 0 2px !important;
+
+    box-sizing: border-box !important;
+    overflow: visible !important;
+  }
+
+  /* Botão de galeria */
+
+  .catalog-screen .product-gallery-button {
+    flex-shrink: 0 !important;
+    min-height: 35px !important;
+    margin-top: 9px !important;
+  }
+}
+
+/* =====================================================
+   FULL HD - FOTOGRAFIAS E CARDS
+===================================================== */
+
+@media screen and (orientation: landscape) and
+       (min-width: 1800px) and
+       (min-height: 900px) {
+
+  .catalog-screen .product-grid {
+    gap: 20px !important;
+  }
+
+  .catalog-screen .product-card {
+    padding: 18px !important;
+  }
+
+  .catalog-screen .product-card .product-art {
+    margin-bottom: 15px !important;
+  }
+
+  .catalog-screen .product-card h2 {
+    font-size: 20px !important;
+  }
+}
+
+
+/* =====================================================
+   PÁGINA DO PRODUTO - ALINHAMENTO DAS ABAS
+===================================================== */
+
+@media screen and (orientation: landscape) and
+       (min-width: 1100px) {
+
+  /* Cinco botões perfeitamente alinhados */
+
+  .detail-screen .detail-tabs {
+    display: grid !important;
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+
+    width: 100% !important;
+    margin: 18px 0 !important;
+    padding: 0 !important;
+
+    border: 0 !important;
+    overflow: visible !important;
+    align-items: stretch !important;
+  }
+
+  /* Padronização dos botões */
+
+  .detail-screen .detail-tabs .detail-tab {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 82px !important;
+    height: 82px !important;
+
+    margin: 0 !important;
+    padding: 11px !important;
+
+    border: 1px solid #dfe3e8 !important;
+    border-radius: 12px !important;
+    background: #f7f8fa !important;
+
+    color: #424954 !important;
+
+    font-size: clamp(9px, .75vw, 12px) !important;
+    font-weight: 800 !important;
+    line-height: 1.3 !important;
+    white-space: normal !important;
+
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Ícones padronizados */
+
+  .detail-screen .detail-tabs .detail-tab::before {
+    display: grid !important;
+    place-items: center !important;
+
+    width: 30px !important;
+    height: 30px !important;
+    min-width: 30px !important;
+
+    flex: 0 0 30px !important;
+
+    margin-bottom: 3px;
+
+    border-radius: 9px !important;
+    background: #feecee !important;
+    color: #ed1c24 !important;
+
+    font-size: 19px !important;
+    line-height: 1 !important;
+  }
+
+  /* Ícone exclusivo da galeria */
+
+  .detail-screen .detail-tabs
+  .detail-tab[data-tab="gallery"]::before {
+    content: "▦" !important;
+    font-size: 21px !important;
+  }
+
+  /* Estado selecionado */
+
+  .detail-screen .detail-tabs .detail-tab.active {
+    background: #fff0f1 !important;
+    color: #c81720 !important;
+    border: 2px solid #ed1c24 !important;
+    box-shadow: 0 4px 12px rgba(237, 28, 36, .08);
+  }
+
+  .detail-screen .detail-tabs .detail-tab.active::before {
+    background: #feecee !important;
+    color: #ed1c24 !important;
+  }
+
+  /* Interação */
+
+  .detail-screen .detail-tabs .detail-tab:hover {
+    border-color: #ed1c24 !important;
+    transform: translateY(-2px);
+  }
+}
+/* =====================================================
+   AMPLIAÇÃO DAS IMAGENS DA GALERIA
+===================================================== */
+
+/* Imagens clicáveis */
+.product-gallery-item {
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 0;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-gallery-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.product-gallery-item img {
+    pointer-events: none;
+}
+
+/* Janela de ampliação */
+.gallery-dialog {
+    width: min(95vw, 1600px);
+    max-width: none;
+    max-height: 94vh;
+    overflow: hidden;
+}
+
+/* Área da imagem */
+.gallery-dialog-stage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: calc(94vh - 85px);
+    overflow: hidden;
+    background: #17181e;
+    border-radius: 10px;
+}
+
+/* Imagem ampliada */
+.gallery-dialog-stage img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: calc(94vh - 110px);
+    object-fit: contain;
+    margin: auto;
+}
+
+/* Animação de abertura */
+.gallery-dialog[open] {
+    animation: galleryZoomIn 0.25s ease-out;
+}
+
+@keyframes galleryZoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.94);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsividade para o totem vertical */
+@media (max-width: 650px) {
+    .gallery-dialog {
+        width: 96vw;
+        padding: 10px;
+    }
+
+    .gallery-dialog-stage {
+        max-height: calc(94vh - 75px);
+    }
+
+    .gallery-dialog-stage img {
+        max-height: calc(94vh - 100px);
+    }
+}
+
+/* ==========================================
+   HOME — COMEMORAÇÃO 65 ANOS
+========================================== */
+
+.home-screen .home-anniversary {
+    max-width: 850px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0;
+    padding: 20px 0;
+}
+
+/* Logo comemorativo */
+.home-anniversary-logo {
+    width: min(100%, 760px);
+    margin-bottom: 28px;
+    animation: anniversaryEntrance .9s ease both;
+}
+
+.home-anniversary-logo img {
+    display: block;
+    width: 100%;
+    max-height: 270px;
+    object-fit: contain;
+    object-position: left center;
+    filter: drop-shadow(0 8px 22px rgba(0,0,0,.3));
+}
+
+/* Botão */
+.home-anniversary .primary-button {
+    animation: anniversaryEntrance .9s .3s ease both;
+}
+
+/* Animação */
+@keyframes anniversaryEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Telas menores */
+@media (max-width: 900px) {
+    .home-anniversary-logo {
+        width: min(100%, 620px);
+    }
+
+    .home-anniversary-logo img {
+        max-height: 210px;
+    }
+}
+
+@media (max-width: 640px) {
+    .home-anniversary-logo {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .home-anniversary-logo img {
+        max-height: 150px;
+    }
+
+   
+}
+
+/* ==========================================
+   FRASE COMEMORATIVA — 65 ANOS
+========================================== */
+
+.home-anniversary-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 9px;
+
+    max-width: 680px;
+    margin: 0 0 34px;
+
+    color: #fff;
+    text-align: left;
+    text-shadow: 0 3px 18px rgba(0, 0, 0, .4);
+}
+
+/* Primeira linha: assinatura */
+.home-anniversary-copy .anniversary-intro {
+    color: #dfbd8c;
+    font-size: clamp(17px, 1.35vw, 22px);
+    font-weight: 600;
+    letter-spacing: .045em;
+    line-height: 1.3;
+}
+
+/* Mensagem principal */
+.home-anniversary-copy strong {
+    display: block;
+    font-size: clamp(29px, 2.8vw, 43px);
+    font-weight: 750;
+    letter-spacing: -.045em;
+    line-height: 1.16;
+    text-wrap: balance;
+}
+
+/* Destaque dourado */
+.home-anniversary-copy strong span {
+    color: #e1b778;
+    font-weight: 800;
+}
+
+/* Totem e telas menores */
+@media (max-width: 640px) {
+    .home-anniversary-copy {
+        gap: 8px;
+        margin-bottom: 26px;
+    }
+
+    .home-anniversary-copy .anniversary-intro {
+        font-size: 16px;
+    }
+
+    .home-anniversary-copy strong {
+        font-size: clamp(27px, 6vw, 35px);
+        line-height: 1.2;
+    }
+}

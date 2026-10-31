@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Catálogo interativo São Pedro — implementos rodoviários.">
+  <title>São Pedro | Catálogo Interativo</title>
+  <link rel="stylesheet" href="css/style.css?v=20261029-detail-image-clean-02">
+  <link rel="stylesheet" href="css/portrait-kiosk.css?v=20261028-qr-unfreeze-fix-01">
+  <link rel="stylesheet" href="css/categories-launch.css?v=20261028-qr-unfreeze-fix-01">
+  <style>
+    /* Mantém telas secundárias ocultas mesmo com CSS antigo em cache. */
+    .screen.hidden { display: none !important; }
+
+    /* Refinamento visual da página inicial */
+    :root { --sp-red: #c62828; --sp-ink: #17212b; }
+    .topbar { min-height: 96px; }
+    .brand { min-width: 250px; min-height: 76px; display:flex; align-items:center; }
+    .brand-logo-slot { display:flex; align-items:center; justify-content:flex-start; width:250px; min-height:70px; }
+    .brand-logo-image { display:block; width:min(100%, 250px); max-height:76px; object-fit:contain; object-position:left center; }
+    .home-screen .home-layout { gap:clamp(32px, 5vw, 88px); align-items:center; }
+    .home-screen .home-copy { position:relative; z-index:2; max-width:690px; padding:clamp(12px, 2vw, 28px) 0; animation:spRiseIn .75s cubic-bezier(.2,.7,.2,1) both; }
+    .home-brand-lockup { display:flex; align-items:center; gap:18px; margin:0 0 clamp(28px, 3vw, 44px); }
+    .home-brand-logo { display:block; width:clamp(210px, 24vw, 340px); max-height:132px; object-fit:contain; object-position:left center; filter:drop-shadow(0 8px 18px rgba(23,33,43,.08)); }
+    .home-brand-fallback { color:var(--sp-ink); font-size:clamp(28px,3vw,42px); font-weight:900; letter-spacing:-.055em; line-height:1; }
+    .home-brand-fallback span { display:block; margin-top:8px; color:var(--sp-red); font-size:11px; letter-spacing:.22em; font-weight:800; }
+    .home-screen .eyebrow { margin-bottom:18px; font-size:clamp(12px, .95vw, 15px); letter-spacing:.17em; font-weight:800; }
+    .home-screen h1 { max-width:720px; margin:0; font-size:clamp(48px, 5.5vw, 86px); line-height:.98; letter-spacing:-.065em; font-weight:850; text-wrap:balance; }
+    .home-screen h1 span { display:inline-block; margin-top:8px; color:var(--sp-red); }
+    .home-screen .lead-copy { max-width:480px; margin:26px 0 32px; font-size:clamp(18px,1.45vw,23px); line-height:1.55; color:#56616b; }
+    .home-screen .primary-button.large { min-height:64px; padding:0 30px; font-size:16px; box-shadow:0 12px 28px rgba(198,40,40,.18); transition:transform .22s ease, box-shadow .22s ease, background .22s ease; }
+    .home-screen .primary-button.large:hover { transform:translateY(-3px); box-shadow:0 17px 34px rgba(198,40,40,.25); }
+    .home-screen .primary-button.large:active { transform:translateY(0) scale(.98); }
+    .home-screen .home-visual { overflow:hidden; border-radius:24px; animation:spVisualIn .9s .12s cubic-bezier(.2,.7,.2,1) both; box-shadow:0 26px 70px rgba(23,33,43,.14); }
+    .home-loop-video { transition:transform .8s cubic-bezier(.2,.7,.2,1); }
+    .home-screen .home-visual:hover .home-loop-video { transform:scale(1.025); }
+    .primary-button, .secondary-button, .icon-button, .text-button, .detail-tab, .category-card, .product-card { transition:transform .2s ease, box-shadow .2s ease, background-color .2s ease, border-color .2s ease; }
+    .primary-button:active, .secondary-button:active, .icon-button:active, .detail-tab:active { transform:scale(.97); }
+    .screen:not(.hidden) { animation:spScreenIn .42s cubic-bezier(.2,.7,.2,1) both; }
+    .screen:not(.hidden) h1 { animation:spTextIn .55s .05s ease both; }
+    .screen-footer { animation:spRiseIn .5s .12s ease both; }
+    @keyframes spRiseIn { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes spVisualIn { from { opacity:0; transform:translateX(24px) scale(.985); } to { opacity:1; transform:translateX(0) scale(1); } }
+    @keyframes spScreenIn { from { opacity:0; } to { opacity:1; } }
+    @keyframes spTextIn { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+    @media (max-width: 900px) { .home-screen .home-layout { gap:28px; } .home-brand-logo { width:clamp(190px,35vw,280px); } .home-screen h1 { font-size:clamp(44px,7vw,66px); } }
+    @media (max-width: 640px) { .topbar { min-height:76px; } .brand, .brand-logo-slot { min-width:0; width:175px; min-height:58px; } .brand-logo-image { width:170px; max-height:56px; } .home-brand-lockup { margin-bottom:24px; } .home-brand-logo { width:min(72vw,260px); max-height:100px; } .home-screen h1 { font-size:clamp(42px,12vw,60px); } .home-screen .lead-copy { margin:20px 0 26px; } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; scroll-behavior:auto !important; transition-duration:.01ms !important; } }
+
+  </style>
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div id="app" class="app-shell">
+    <header class="topbar">
+      <button class="brand" id="brand-home" aria-label="Voltar ao início">
+        <span class="brand-logo-slot" aria-label="Espaço para o logotipo oficial">
+          <img class="brand-logo-image" src="assets/brand/logo-saopedro.png" alt="São Pedro — Implementos Rodoviários" hidden onload="this.hidden=false" onerror="this.hidden=true">
+        </span>
+      </button>
+      <div class="topbar-right">
+        <span class="edition-label"><span class="status-dot"></span> CATÁLOGO DIGITAL</span>
+        <button id="home-button" class="icon-button" aria-label="Ir para o início" title="Início">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <main id="view" class="view" tabindex="-1">
+      <section class="screen home-screen" data-screen="home">
+        <div class="home-layout">
+          <div class="home-copy home-anniversary">
+
+    <div class="home-anniversary-logo">
+        <img
+            src="assets/brand/logo-65-anos.png"
+            alt="São Pedro — 65 anos"
+        >
+    </div>
+
+    <p class="home-anniversary-copy">
+    <span class="anniversary-intro">São Pedro 65 anos,</span>
+    <strong>sua carga com a <span>nossa história!</span></strong>
+</p>
+
+    <button class="primary-button large" data-action="categories">
+        Explorar produtos <span class="arrow">↗</span>
+    </button>
+
+</div>
+          <div class="home-visual home-video-panel" aria-label="Vídeo institucional da São Pedro">
+            <video id="home-loop-video" class="home-loop-video" src="assets/videos/sao-pedro-loop.mp4" autoplay muted loop playsinline preload="auto" aria-label="Vídeo institucional da São Pedro"></video>
+            <div class="home-video-fallback" id="home-video-fallback" aria-hidden="true">
+              <span class="video-fallback-topline"><i class="video-pulse"></i> APRESENTAÇÃO DO PRODUTO</span>
+              <div class="truck-scene hero-truck" id="hero-truck"></div>
+              <span class="video-fallback-caption">FORÇA PARA SEGUIR EM FRENTE</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="screen category-screen hidden" data-screen="categories">
+        <div class="category-heading">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-line"></span> CATÁLOGO SÃO PEDRO</div>
+            <h1>Explore nossos<br><span>produtos.</span></h1>
+          </div>
+          <p>Acesse o portfólio completo ou conheça em primeira mão o lançamento em destaque.</p>
+        </div>
+        <div class="category-grid" id="category-grid" aria-live="polite"></div>
+
+        <div class="screen-footer"><button class="text-button" data-action="home">← Voltar ao início</button><span>São Pedro · Implementos rodoviários</span></div>
+      </section>
+
+      <section class="screen catalog-screen hidden" data-screen="catalog">
+        <div class="section-heading">
+          <div><div class="eyebrow"><span class="eyebrow-line"></span> NOSSO PORTFÓLIO</div><h1>Encontre a solução<br><span>para sua operação.</span></h1></div>
+          <p>Explore nossa linha de implementos e descubra os detalhes de cada solução.</p>
+        </div>
+        <p class="catalog-instruction">TOQUE EM UM PRODUTO PARA EXPLORAR</p>
+        <div class="product-grid" id="product-grid" aria-live="polite"></div>
+         <button
+          class="launch-floating-button"
+          type="button"
+          data-product="semirreboque-bau-bk-edition"
+          aria-label="Conhecer o Semirreboque Baú Black Edition"
+        >
+          <img
+            src="assets/promotions/btn-black-edition.png"
+            alt=""
+            draggable="false"
+          >
+        </button>
+        <div class="screen-footer"><button class="text-button" data-action="categories">← Voltar às categorias</button><span>São Pedro · Catálogo digital</span></div>
+      </section>
+
+      <section class="screen detail-screen hidden" data-screen="detail">
+        <div class="detail-topline"><button class="text-button" data-action="catalog">← Todos os produtos</button><span class="detail-counter" id="detail-counter">PRODUTO 01 / 03</span></div>
+        <div class="detail-layout">
+          <div class="detail-visual-panel">
+            <div class="detail-badge" id="detail-badge">DESTAQUE</div>
+            <div class="detail-art" id="detail-art"></div>
+            <div class="visual-caption"><span id="detail-category">IMPLEMENTOS RODOVIÁRIOS</span><span>IMAGEM DO PRODUTO</span></div>
+          </div>
+          <div class="detail-info">
+            <div class="eyebrow"><span class="eyebrow-line"></span> SÃO PEDRO / PRODUTOS</div>
+            <h1 id="detail-title">Basculante<br><span>3 eixos.</span></h1>
+            <p id="detail-description" class="detail-description"></p>
+            <div class="detail-tabs" role="tablist" aria-label="Informações do produto">
+              <button class="detail-tab active" role="tab" aria-selected="true" data-tab="overview">Visão geral</button>
+              <button class="detail-tab" role="tab" aria-selected="false" data-tab="specs">Ficha técnica</button>
+              <button class="detail-tab" role="tab" aria-selected="false" data-tab="configs">Dimensões</button>
+              <button class="detail-tab" role="tab" aria-selected="false" data-tab="sheet">Ficha original</button>
+              <button class="detail-tab" role="tab" aria-selected="false" data-tab="gallery">
+    Galeria
+</button>
+            </div>
+            <div class="tab-panel" id="detail-tab-panel"></div>
+          <button class="primary-button large" id="qr-button">Ver QR Code <span class="arrow">↗</span></button>
+          </div>
+        </div>
+        <div class="screen-footer"><button class="text-button" data-action="catalog">← Voltar aos produtos</button><span>Conteúdo organizado a partir das fichas técnicas fornecidas.</span></div>
+      </section>
+
+      <section class="screen qr-screen hidden" data-screen="qr">
+        <div class="qr-content">
+          <div class="eyebrow"><span class="eyebrow-line"></span> LEVE COM VOCÊ</div>
+          <h1>Continue essa<br><span>experiência.</span></h1>
+          <p class="lead-copy">Aponte a câmera do celular para o QR Code e acesse o material completo deste produto.</p>
+          <div class="qr-product-name" id="qr-product-name"></div>
+          <div class="qr-frame" id="qr-frame"><div class="qr-placeholder"><div class="qr-placeholder-mark">SP</div><strong>QR CODE</strong><span>A imagem estática do QR Code será adicionada aqui.</span></div></div>
+          <p class="qr-help" id="qr-help">A imagem do QR Code será adicionada posteriormente pela equipe São Pedro.</p>
+          <button class="primary-button large" id="qr-back-button" data-action="detail">Voltar ao produto <span class="arrow">↗</span></button>
+        </div>
+        <div class="qr-side-visual"><div class="qr-side-number">SP<span> / 65</span></div><div id="qr-truck" class="truck-scene"></div><p>CONHECIMENTO PARA SEGUIR EM FRENTE.</p></div>
+      </section>
+    </main>
+    <footer class="global-footer"><span>© SÃO PEDRO · IMPLEMENTOS RODOVIÁRIOS</span><span class="footer-center"><span class="footer-dot"></span> EXPERIÊNCIA INTERATIVA</span><span id="clock-label">TOQUE PARA EXPLORAR</span></footer>
+  </div>
+  <dialog class="sheet-dialog" id="sheet-dialog" aria-label="Ficha técnica original">
+    <div class="sheet-dialog-toolbar"><strong id="sheet-dialog-title">Ficha técnica original</strong><button type="button" class="secondary-button" data-action="close-sheet">Fechar ×</button></div>
+    <div class="sheet-dialog-stage"><img id="sheet-dialog-image" alt="Ficha técnica original do produto selecionado"></div>
+  </dialog>
+  <!-- Ampliação das imagens da galeria -->
+<dialog class="sheet-dialog gallery-dialog" id="gallery-dialog" aria-label="Imagem ampliada do produto">
+  <div class="sheet-dialog-toolbar">
+    <strong id="gallery-dialog-title">Galeria do produto</strong>
+    <button type="button" class="secondary-button" data-action="close-gallery">
+      Fechar ×
+    </button>
+  </div>
+
+  <div class="sheet-dialog-stage gallery-dialog-stage">
+    <img id="gallery-dialog-image" alt="Imagem ampliada do produto">
+  </div>
+</dialog>
+  
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+  <script src="data/products.js?v=20261030-static" defer></script>
+<script src="js/app.js?v=20261030-static" defer></script>
+</body>
+</html>
