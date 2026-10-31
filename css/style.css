@@ -3879,3 +3879,251 @@ body:has(.screen[data-screen="home"]:not(.hidden))
         line-height: 1.2;
     }
 }
+
+/* =========================================
+   BLACK EDITION - BOTÃO DE VÍDEO
+========================================= */
+
+.black-edition-video-button[hidden] {
+    display: none !important;
+}
+
+.black-edition-video-button {
+    position: relative;
+    width: 100%;
+    min-height: 88px;
+    margin: 0 0 24px;
+    padding: 16px 20px;
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 15px;
+
+    color: #fff;
+    background:
+        linear-gradient(115deg, #292a2e 0%, #111214 65%, #242529 100%);
+
+    cursor: pointer;
+    text-align: left;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.20),
+        inset 0 1px 0 rgba(255,255,255,.08);
+
+    transition: transform .25s ease,
+                border-color .25s ease,
+                box-shadow .25s ease;
+}
+
+.black-edition-video-button:hover {
+    transform: translateY(-3px);
+    border-color: #ed145b;
+    box-shadow:
+        0 16px 36px rgba(0,0,0,.30),
+        0 0 22px rgba(237,20,91,.15);
+}
+
+.black-edition-video-button:active {
+    transform: scale(.98);
+}
+
+.black-video-icon {
+    width: 49px;
+    height: 49px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: #ed145b;
+    box-shadow: 0 5px 18px rgba(237,20,91,.35);
+}
+
+.black-video-icon svg {
+    width: 22px;
+    height: 22px;
+    margin-left: 3px;
+}
+
+.black-video-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+}
+
+.black-video-copy strong {
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: .13em;
+}
+
+.black-video-copy small {
+    color: #a5a6ad;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.black-video-arrow {
+    font-size: 24px;
+    color: #ed145b;
+    font-weight: 400;
+}
+
+/* =========================================
+   BLACK EDITION - TELA DO VÍDEO
+========================================= */
+
+.black-video-dialog {
+    width: min(94vw, 540px);
+    max-width: 540px;
+    max-height: 94dvh;
+
+    padding: 18px;
+
+    border: 1px solid rgba(255,255,255,.13);
+    border-radius: 22px;
+
+    color: #fff;
+    background: #111214;
+
+    box-shadow: 0 30px 100px rgba(0,0,0,.65);
+
+    overflow: hidden;
+}
+
+.black-video-dialog[open] {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    animation: blackVideoEnter .3s ease both;
+}
+
+.black-video-dialog::backdrop {
+    background: rgba(5,6,8,.90);
+    backdrop-filter: blur(12px);
+}
+
+@keyframes blackVideoEnter {
+    from {
+        opacity: 0;
+        transform: scale(.96) translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.black-video-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+}
+
+.black-video-header > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.black-video-header span {
+    color: #ed145b;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: .18em;
+}
+
+.black-video-header strong {
+    font-size: 17px;
+    font-weight: 900;
+    letter-spacing: .06em;
+}
+
+.black-video-close {
+    width: 40px;
+    height: 40px;
+
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 50%;
+
+    background: #25262a;
+    color: #fff;
+
+    font-size: 27px;
+    line-height: 1;
+    cursor: pointer;
+
+    transition: background .2s ease, transform .2s ease;
+}
+
+.black-video-close:hover {
+    background: #ed145b;
+    transform: rotate(90deg);
+}
+
+/* Área vertical 9:16 */
+
+.black-video-stage {
+    width: 100%;
+    max-height: calc(94dvh - 130px);
+
+    aspect-ratio: 9 / 16;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    border-radius: 15px;
+
+    background: #050505;
+}
+
+.black-video-stage video {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    background: #050505;
+}
+
+.black-video-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+    padding: 3px 0 2px;
+    flex-shrink: 0;
+}
+
+.black-video-footer span:first-child {
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: .13em;
+}
+
+.black-video-footer span:last-child {
+    color: #85868e;
+    font-size: 8px;
+    letter-spacing: .13em;
+}
+
+@media (max-width: 640px) {
+    .black-video-dialog {
+        width: 94vw;
+        padding: 12px;
+    }
+
+    .black-edition-video-button {
+        min-height: 78px;
+    }
+}
