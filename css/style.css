@@ -4075,3 +4075,152 @@ body:has(.screen[data-screen="home"]:not(.hidden))
         padding: 16px !important;
     }
 }
+
+
+/* ==========================================
+   BLACK EDITION — IMAGEM + VÍDEO LATERAL
+========================================== */
+
+/* Organização dos dois elementos */
+.detail-screen.black-edition-video-enabled #detail-art {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    gap: clamp(14px, 1.8vw, 24px) !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    overflow: visible !important;
+}
+
+/* PNG continua sendo o elemento principal */
+.detail-screen.black-edition-video-enabled
+#detail-art > .detail-product-image {
+    flex: 0 1 60% !important;
+
+    width: 60% !important;
+    max-width: 60% !important;
+
+    height: 100% !important;
+    max-height: 100% !important;
+
+    object-fit: contain !important;
+    object-position: center !important;
+
+    border-radius: 12px !important;
+}
+
+/* Card secundário do vídeo */
+.black-edition-motion-card {
+    flex: 0 1 28%;
+
+    width: 28%;
+    max-width: 185px;
+    min-width: 130px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 10px;
+
+    padding: 10px;
+
+    background: linear-gradient(
+        145deg,
+        #292a31,
+        #17181e
+    );
+
+    border: 1px solid #ffffff20;
+    border-radius: 15px;
+
+    box-shadow: 0 12px 28px #0004;
+}
+
+/* Título do card */
+.black-edition-motion-heading {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.black-edition-motion-heading > span {
+    display: block;
+
+    width: 3px;
+    height: 25px;
+
+    flex: 0 0 3px;
+
+    background: #ed1c24;
+    border-radius: 3px;
+}
+
+.black-edition-motion-heading div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.black-edition-motion-heading strong {
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: .08em;
+}
+
+.black-edition-motion-heading small {
+    color: #a7a8b1;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: .13em;
+}
+
+/* Vídeo vertical 9:16 */
+.black-edition-motion-video {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 9 / 16;
+
+    max-height: min(44vh, 390px);
+
+    object-fit: cover;
+    object-position: center;
+
+    background: #08090c;
+
+    border: 1px solid #ffffff24;
+    border-radius: 10px;
+}
+
+/* Legenda inferior */
+.black-edition-motion-caption {
+    color: #ed5960;
+
+    font-size: 8px;
+    font-weight: 900;
+
+    letter-spacing: .11em;
+    text-align: center;
+}
+
+/* Em telas muito estreitas, preserva a apresentação original */
+@media (max-width: 720px) {
+    .detail-screen.black-edition-video-enabled
+    .black-edition-motion-card {
+        display: none !important;
+    }
+
+    .detail-screen.black-edition-video-enabled
+    #detail-art > .detail-product-image {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}

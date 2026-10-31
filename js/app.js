@@ -195,36 +195,22 @@ function showScreen(screenName) {
             screen.dataset.screen !== screenName
         );
     });
+// Controle de reprodução do vídeo Black Edition
+const blackVideo = $('#black-edition-video');
 
-    // Controle do vídeo Black Edition
-    const blackVideo = $('#black-edition-video');
-
-    const shouldPlay =
+if (blackVideo) {
+    if (
         screenName === 'detail' &&
         currentProduct &&
-        currentProduct.id === LAUNCH_PRODUCT_ID;
+        currentProduct.id === LAUNCH_PRODUCT_ID
+    ) {
+        blackVideo.muted = true;
 
-    if (blackVideo) {
-
-        if (shouldPlay) {
-
-            blackVideo.muted = true;
-
-            const playAttempt = blackVideo.play();
-
-            if (playAttempt && typeof playAttempt.catch === 'function') {
-                playAttempt.catch(error => {
-                    console.warn('Não foi possível iniciar o vídeo:', error);
-                });
-            }
-
-        } else {
-
-            blackVideo.pause();
-
-        }
+        blackVideo.play().catch(() => {});
+    } else {
+        blackVideo.pause();
     }
-
+}
     const selected = $(`[data-screen="${screenName}"]`, view);
 
     if (selected) selected.scrollTop = 0;
@@ -351,45 +337,67 @@ function showScreen(screenName) {
     $('#detail-badge').textContent = currentProduct.isLaunch ? 'PRODUTO DE LANÇAMENTO' : (currentProduct.tag || 'LINHA SÃO PEDRO').toUpperCase();
 
     
+
 const isBlackEdition = currentProduct.id === LAUNCH_PRODUCT_ID;
 
-// Aplica uma classe exclusiva à página Black Edition
 const detailScreen = $('[data-screen="detail"]', view);
 
 if (detailScreen) {
-    detailScreen.classList.toggle('is-black-edition', isBlackEdition);
+    // Remove as classes da implementação anterior
+    detailScreen.classList.remove(
+        'is-black-edition',
+        'black-edition-active'
+    );
+
+    // Ativa somente a nova composição
+    detailScreen.classList.toggle(
+        'black-edition-video-enabled',
+        isBlackEdition
+    );
+
+    const caption = $('.visual-caption span:last-child', detailScreen);
+
+    if (caption) {
+        caption.textContent = isBlackEdition
+            ? 'IMAGEM + VÍDEO'
+            : 'IMAGEM DO PRODUTO';
+    }
 }
 
-// Atualiza o selo do produto
-$('#detail-badge').textContent = isBlackEdition
-    ? 'EDIÇÃO ESPECIAL'
-    : (currentProduct.isLaunch
-        ? 'PRODUTO DE LANÇAMENTO'
-        : (currentProduct.tag || 'LINHA SÃO PEDRO').toUpperCase());
+// PRIMEIRO: mantém a imagem PNG original.
+$('#detail-art').innerHTML = `
+    <img
+        class="detail-product-image"
+        src="${escapeHtml(currentProduct.image || '')}"
+        alt="${escapeHtml(currentProduct.name)}"
+        loading="eager"
+        decoding="async"
+    >
+`;
 
-// Exibição exclusiva do Black Edition
+// SEGUNDO: adiciona o vídeo ao lado da imagem.
 if (isBlackEdition) {
 
-    const poster = escapeHtml(currentProduct.image || '');
+    $('#detail-art').insertAdjacentHTML('beforeend', `
+        <div class="black-edition-motion-card">
 
-    $('#detail-art').innerHTML = `
-        <div class="black-edition-video-frame">
-
-            <img
-                class="black-edition-video-poster"
-                src="${poster}"
-                alt="${escapeHtml(currentProduct.name)}"
-            >
+            <div class="black-edition-motion-heading">
+                <span></span>
+                <div>
+                    <strong>EM MOVIMENTO</strong>
+                    <small>BLACK EDITION</small>
+                </div>
+            </div>
 
             <video
                 id="black-edition-video"
-                class="black-edition-video"
+                class="black-edition-motion-video"
                 autoplay
                 muted
                 loop
                 playsinline
-                preload="auto"
-                poster="${poster}"
+                preload="metadata"
+                aria-label="Vídeo do Semirreboque Black Edition"
             >
                 <source
                     src="assets/videos/black-edition-loop.mp4"
@@ -397,35 +405,14 @@ if (isBlackEdition) {
                 >
             </video>
 
-            <div class="black-edition-video-shade"></div>
-
-            <div class="black-edition-video-content">
-                <span class="black-edition-video-kicker">
-                    SÃO PEDRO · EDIÇÃO ESPECIAL
-                </span>
-
-                <div class="black-edition-video-title">
-                    <span>SEMIRREBOQUE BAÚ</span>
-                    <strong>BLACK <em>EDITION</em></strong>
-                    <p>Presença marcante. Robustez em cada detalhe.</p>
-                </div>
+            <div class="black-edition-motion-caption">
+                CONHEÇA CADA DETALHE
             </div>
 
         </div>
-    `;
-
-    const video = $('#black-edition-video');
-
-    video.addEventListener('playing', () => {
-        video.classList.add('is-playing');
-    });
-
-    video.addEventListener('error', () => {
-        video.classList.remove('is-playing');
-        console.error('Erro ao carregar vídeo:', video.currentSrc, video.error);
-    });
-
-} else {
+    `);
+}
+ else {
 
     // Todos os outros produtos continuam iguais
     $('#detail-art').innerHTML = `
