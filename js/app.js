@@ -188,6 +188,30 @@
 
   function showScreen(screenName) {
     $$('.screen', view).forEach(screen => screen.classList.toggle('hidden', screen.dataset.screen !== screenName));
+    
+// Controla a reprodução do vídeo exclusivo da Black Edition.
+const detailVideo = $('#detail-art .black-edition-video');
+
+if (detailVideo) {
+
+    if (
+        screenName === 'detail' &&
+        currentProduct &&
+        currentProduct.id === LAUNCH_PRODUCT_ID
+    ) {
+        detailVideo.muted = true;
+
+        const playPromise = detailVideo.play();
+
+        if (playPromise && typeof playPromise.catch === 'function') {
+            playPromise.catch(() => {});
+        }
+
+    } else {
+        detailVideo.pause();
+    }
+}
+
     const selected = $(`[data-screen="${screenName}"]`, view);
     if (selected) selected.scrollTop = 0;
     // Alguns WebViews antigos não aceitam FocusOptions; a navegação não deve parar por isso.
@@ -304,15 +328,71 @@
     $('#detail-category').textContent = (currentProduct.category || 'SÃO PEDRO').toUpperCase();
     $('#detail-badge').textContent = currentProduct.isLaunch ? 'PRODUTO DE LANÇAMENTO' : (currentProduct.tag || 'LINHA SÃO PEDRO').toUpperCase();
 
+    
+const isBlackEdition = currentProduct.id === LAUNCH_PRODUCT_ID;
+
+// Identifica a página especial sem alterar os demais produtos.
+const detailScreen = $('[data-screen="detail"]');
+
+if (detailScreen) {
+    detailScreen.classList.toggle('black-edition-active', isBlackEdition);
+}
+
+// Atualiza a legenda da área visual.
+const visualCaption = $('.detail-visual-panel .visual-caption span:last-child');
+
+if (visualCaption) {
+    visualCaption.textContent = isBlackEdition
+        ? 'VÍDEO EM DESTAQUE'
+        : 'IMAGEM DO PRODUTO';
+}
+
+// Conteúdo visual específico do Black Edition.
+if (isBlackEdition) {
+
     $('#detail-art').innerHTML = `
-      <img
-        class="detail-product-image"
-        src="${escapeHtml(currentProduct.image || '')}"
-        alt="${escapeHtml(currentProduct.name)}"
-        loading="eager"
-        decoding="async"
-      >
+        <div class="black-edition-video-frame">
+
+            <video
+                class="black-edition-video"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="auto"
+                poster="${escapeHtml(currentProduct.image || '')}"
+                aria-label="Vídeo do Semirreboque Baú Black Edition"
+            >
+                <source
+                    src="assets/videos/black-edition-loop.mp4"
+                    type="video/mp4"
+                >
+            </video>
+
+            <div class="black-edition-video-shade"></div>
+
+            <div class="black-edition-video-label">
+                <span>SÃO PEDRO · EDIÇÃO ESPECIAL</span>
+                <strong>BLACK EDITION</strong>
+            </div>
+
+        </div>
     `;
+
+} else {
+
+    // Mantém exatamente o comportamento original dos outros produtos.
+    $('#detail-art').innerHTML = `
+        <img
+            class="detail-product-image"
+            src="${escapeHtml(currentProduct.image || '')}"
+            alt="${escapeHtml(currentProduct.name)}"
+            loading="eager"
+            decoding="async"
+        >
+    `;
+}
+
     renderDetailTab();
     showScreen('detail');
   }

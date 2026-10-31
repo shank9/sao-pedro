@@ -3879,3 +3879,206 @@ body:has(.screen[data-screen="home"]:not(.hidden))
         line-height: 1.2;
     }
 }
+
+
+/* =====================================================
+   BLACK EDITION — VÍDEO VERTICAL 9:16
+   Estilo exclusivo do Semirreboque Black Edition
+===================================================== */
+
+/* Painel principal */
+.detail-screen.black-edition-active .detail-visual-panel {
+
+    position: relative !important;
+    top: auto !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: min(100%, 620px) !important;
+
+    height: clamp(560px, 76vh, 880px) !important;
+    min-height: 0 !important;
+
+    margin: 0 auto !important;
+    padding: 52px 18px 42px !important;
+
+    overflow: hidden !important;
+
+    background:
+        radial-gradient(circle at 50% 35%, #29232b, transparent 65%),
+        linear-gradient(145deg, #17181e, #08090c) !important;
+
+    border: 1px solid #ffffff18 !important;
+    border-radius: 24px !important;
+
+    box-shadow: 0 20px 60px #0005;
+}
+
+/* Remove efeitos decorativos anteriores */
+.detail-screen.black-edition-active .detail-visual-panel::before,
+.detail-screen.black-edition-active .detail-visual-panel::after {
+
+    content: none !important;
+    display: none !important;
+}
+
+/* Área do vídeo: proporção vertical 9:16 */
+.detail-screen.black-edition-active #detail-art {
+
+    position: relative !important;
+
+    inset: auto !important;
+
+    display: block !important;
+
+    width: min(100%, 420px, 33.75vh) !important;
+    height: auto !important;
+
+    aspect-ratio: 9 / 16 !important;
+
+    min-height: 0 !important;
+    max-width: 100% !important;
+
+    margin: 0 auto !important;
+    padding: 0 !important;
+
+    overflow: hidden !important;
+
+    background: #050505 !important;
+
+    border: 1px solid #ffffff20 !important;
+    border-radius: 20px !important;
+
+    box-shadow:
+        0 25px 60px #0009,
+        0 0 35px #ed145b12;
+}
+
+/* Moldura interna */
+.black-edition-video-frame {
+
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    background: #050505;
+
+    border-radius: inherit;
+}
+
+/* Reprodução do vídeo */
+.black-edition-video {
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    border: 0;
+    outline: none;
+
+    background: #050505;
+}
+
+/* Gradiente para destacar a identificação */
+.black-edition-video-shade {
+
+    position: absolute;
+    inset: 0;
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    background: linear-gradient(
+        180deg,
+        transparent 55%,
+        #05050522 72%,
+        #050505cc 100%
+    );
+}
+
+/* Identificação sobre o vídeo */
+.black-edition-video-label {
+
+    position: absolute;
+
+    left: 22px;
+    right: 22px;
+    bottom: 22px;
+
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    pointer-events: none;
+}
+
+.black-edition-video-label span {
+
+    font-size: 9px;
+    font-weight: 850;
+
+    letter-spacing: .18em;
+
+    color: #ff668f;
+}
+
+.black-edition-video-label strong {
+
+    font-size: clamp(19px, 2vw, 27px);
+
+    font-weight: 950;
+
+    letter-spacing: .04em;
+
+    color: #ffffff;
+
+    text-shadow: 0 3px 15px #0009;
+}
+
+/* Legenda inferior do painel */
+.detail-screen.black-edition-active
+.detail-visual-panel .visual-caption {
+
+    left: 20px !important;
+    right: 20px !important;
+    bottom: 14px !important;
+
+    z-index: 3;
+}
+
+/* =====================================================
+   RESPONSIVIDADE — TOTEM VERTICAL
+===================================================== */
+
+@media (orientation: portrait) {
+
+    .detail-screen.black-edition-active .detail-layout {
+
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+
+        gap: 28px !important;
+    }
+
+    .detail-screen.black-edition-active .detail-visual-panel {
+
+        width: min(100%, 620px) !important;
+
+        height: clamp(560px, 76vh, 880px) !important;
+
+        margin-inline: auto !important;
+    }
+}
