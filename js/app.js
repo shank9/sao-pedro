@@ -365,26 +365,88 @@ if (detailScreen) {
     if (currentTab === 'overview') {
       const facts = (currentProduct.summary || []).map((item, i) => `
         <li class="overview-fact"><span class="fact-index">${String(i + 1).padStart(2, '0')}</span><span>${escapeHtml(item)}</span></li>`).join('');
-      panel.innerHTML = `<div class="detail-overview"><p class="overview-intro">${escapeHtml(currentProduct.description || '')}</p><ul class="overview-list">${facts}</ul><p class="overview-note">As especificações podem variar conforme a configuração selecionada. Consulte a ficha técnica original nesta página.</p></div>`;
+      panel.innerHTML = `<div class="detail-overview"><p class="overview-intro">${escapeHtml(currentProduct.description || '')}</p><ul class="overview-list">${facts}</ul><p class="overview-note">As especificações podem variar conforme a configuração selecionada. Consulte o desenho técnico na aba Dimensões.</p></div>`;
     } else if (currentTab === 'specs') {
       const sections = currentProduct.sections || [];
       panel.innerHTML = `<div class="spec-sections">${sections.map((section, i) => `
         <section class="spec-section"><div class="spec-section-heading"><span>${String(i + 1).padStart(2, '0')}</span><h3>${escapeHtml(section.title)}</h3></div><ul>${(section.items || []).map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul></section>`).join('')}</div>`;
-    } else if (currentTab === 'configs') {
-      const dims = currentProduct.dimensions || {};
-      const headers = dims.headers || [];
-      const rows = dims.rows || [];
-      const notes = dims.notes || [];
-      panel.innerHTML = `<div class="dimensions-panel">${headers.length && rows.length ? `
-        <div class="dimensions-title"><span>CONFIGURAÇÕES DISPONÍVEIS</span><small>Conforme ficha técnica</small></div>
-        <div class="table-scroll"><table class="dimensions-table"><thead><tr>${headers.map(h => `<th>${escapeHtml(h)}</th>`).join('')}</tr></thead><tbody>${rows.map(row => `<tr>${row.map(cell => `<td>${escapeHtml(cell)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>` : ''}
-        ${notes.length ? `<div class="dimension-notes"><h3>Cotas e observações do desenho</h3><ul>${notes.map(note => `<li>${escapeHtml(note)}</li>`).join('')}</ul></div>` : ''}
-        <p class="overview-note">As dimensões estão apresentadas conforme o material recebido. Para medidas complementares e leitura do desenho, abra a ficha técnica original.</p></div>`;
-    } else if (currentTab === 'sheet') {
-      
-      const imagePath = String(currentProduct.sheetImage || '').trim();
-      panel.innerHTML = imagePath ? `<div class="original-sheet-card"><div class="original-sheet-head"><div><strong>Ficha técnica fornecida pela São Pedro</strong><span>Imagem completa da segunda página do PDF original.</span></div><button type="button" class="secondary-button" data-action="sheet-zoom">Ampliar ficha ↗</button></div><button type="button" class="original-sheet-preview" data-action="sheet-zoom" aria-label="Ampliar ficha técnica original"><img src="${escapeHtml(imagePath)}" alt="Ficha técnica original de ${escapeHtml(currentProduct.name)}" loading="lazy"></button></div>` : '<p>Ficha técnica original ainda não disponível para este produto.</p>';
-    }
+   } else if (currentTab === 'configs') {
+
+    const dims = currentProduct.dimensions || {};
+    const headers = dims.headers || [];
+    const rows = dims.rows || [];
+    const notes = dims.notes || [];
+
+    // Imagem da ficha técnica original do produto
+    const imagePath = String(currentProduct.sheetImage || '').trim();
+
+    panel.innerHTML = `
+        <div class="dimensions-panel">
+
+            ${headers.length && rows.length ? `
+                <div class="dimensions-title">
+                    <span>CONFIGURAÇÕES DISPONÍVEIS</span>
+                    <small>Conforme ficha técnica</small>
+                </div>
+
+                <div class="table-scroll">
+                    <table class="dimensions-table">
+                        <thead>
+                            <tr>
+                                ${headers.map(h => `<th>${escapeHtml(h)}</th>`).join('')}
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            ${rows.map(row => `
+                                <tr>
+                                    ${row.map(cell => `<td>${escapeHtml(cell)}</td>`).join('')}
+                                </tr>
+                            `).join('')}
+                        </tbody>
+                    </table>
+                </div>
+            ` : ''}
+
+            ${imagePath ? `
+                <div class="original-sheet-card">
+
+                    <div class="original-sheet-head">
+                        
+
+                        <button
+                            type="button"
+                            class="secondary-button"
+                            data-action="sheet-zoom"
+                        >
+                            Ampliar imagem ↗
+                        </button>
+                    </div>
+
+                    <button
+                        type="button"
+                        class="original-sheet-preview"
+                        data-action="sheet-zoom"
+                        aria-label="Ampliar desenho técnico de ${escapeHtml(currentProduct.name)}"
+                    >
+                        <img
+                            src="${escapeHtml(imagePath)}"
+                            alt="Desenho técnico de ${escapeHtml(currentProduct.name)}"
+                            loading="lazy"
+                        >
+                    </button>
+
+                </div>
+            ` : `
+                <p class="overview-note">
+                    Desenho técnico original ainda não disponível para este produto.
+                </p>
+            `}
+
+        </div>
+    `;
+
+}
     else if (currentTab === 'gallery') {
     const images = Array.isArray(currentProduct.gallery)
         ? currentProduct.gallery.filter(

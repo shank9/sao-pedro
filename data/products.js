@@ -1,12 +1,11 @@
 window.PRODUCTS = [
   {
     "id": "semirreboque-porta-container",
-    "name": "Semirreboque Porta-contêiner",
-    "shortName": "Semirreboque Porta-contêiner",
+    "name": "Semirreboque Porta-container",
+    "shortName": "Semirreboque Porta-container",
     "category": "Semirreboques",
-    "tag": "Porta-contêiner",
-    "description": "Implemento para transporte de contêineres de 20 e 40 pés, com engates homologados e plataforma de desova.",
-    "subtitle": "Contêineres de 20 e 40 pés",
+    "tag": "Porta-container",
+    "subtitle": "containeres de 20 e 40 pés",
     "accent": "#ed1c24",
     "isLaunch": false,
     "image": "assets/products/semirreboque-porta-container-cover.png",
@@ -20,7 +19,7 @@ window.PRODUCTS = [
 ],
     "sheetImage": "assets/products/semirreboque-porta-container-sheet.png",
     "summary": [
-      "Configuração ilustrada para contêineres de 20 e 40 pés.",
+      "Configuração ilustrada para containeres de 20 e 40 pés.",
       "12 engates homologados, com opção de 8 ou 4 engates.",
       "Plataforma de desova com chapa xadrez de 3/16” (4,75 mm) e reforço anti-afundamento."
     ],
@@ -62,7 +61,7 @@ window.PRODUCTS = [
         "title": "Base de carga",
         "items": [
           "Braços em perfis de aço enrijecidos.",
-          "12 engates para contêiner, homologados; opções de 8 ou 4 engates.",
+          "12 engates para container, homologados; opções de 8 ou 4 engates.",
           "Plataforma de desova com assoalho em chapa xadrez de 3/16” (4,75 mm), com perfis de reforço anti-afundamento."
         ]
       },
@@ -99,11 +98,11 @@ window.PRODUCTS = [
           "2.260 mm e 2.580 mm"
         ],
         [
-          "Posição para contêiner de 20 pés",
+          "Posição para container de 20 pés",
           "5.853 mm por posição (conforme cotas ilustradas)"
         ],
         [
-          "Configuração para contêiner de 40 pés",
+          "Configuração para container de 40 pés",
           "11.985 mm (conforme cota ilustrada)"
         ]
       ],
@@ -116,12 +115,11 @@ window.PRODUCTS = [
   },
   {
     "id": "bitrem-porta-container",
-    "name": "Bitrem Porta-contêiner",
-    "shortName": "Bitrem Porta-contêiner",
+    "name": "Bitrem Porta-container",
+    "shortName": "Bitrem Porta-container",
     "category": "Bitrens",
-    "tag": "Porta-contêiner",
-    "description": "Conjunto bitrem porta-contêiner com engates homologados e plataforma de desova para operações com contêineres.",
-    "subtitle": "Conjunto para contêineres",
+    "tag": "Porta-container",
+    "subtitle": "Conjunto para containeres",
     "accent": "#ed1c24",
     "isLaunch": false,
     "image": "assets/products/bitrem-porta-container-cover.png",
@@ -132,8 +130,8 @@ window.PRODUCTS = [
 ],
     "sheetImage": "assets/products/bitrem-porta-container-sheet.png",
     "summary": [
-      "Conjunto com dimensões ilustradas para contêineres de 20 e 40 pés.",
-      "12+12 engates homologados para contêiner.",
+      "Conjunto com dimensões ilustradas para containeres de 20 e 40 pés.",
+      "12+12 engates homologados para container.",
       "Plataforma de desova com assoalho xadrez de 3/16” (4,75 mm)."
     ],
     "sections": [
@@ -175,7 +173,7 @@ window.PRODUCTS = [
         "title": "Base de carga",
         "items": [
           "Braços em perfis de aço enrijecidos.",
-          "12+12 engates homologados para contêiner.",
+          "12+12 engates homologados para container.",
           "Plataforma de desova com assoalho em chapa xadrez de 3/16” (4,75 mm), com perfis de reforço anti-afundamento."
         ]
       },
@@ -217,7 +215,7 @@ window.PRODUCTS = [
         ],
         [
           "Configurações ilustradas",
-          "Contêineres de 20 e 40 pés"
+          "containeres de 20 e 40 pés"
         ]
       ],
       "notes": [
@@ -233,7 +231,6 @@ window.PRODUCTS = [
     "shortName": "Bitrem Sider",
     "category": "Bitrens",
     "tag": "Sider",
-    "description": "Implemento tipo sider com laterais em lona vinílica, colunas removíveis e teto com lona vinílica branca.",
     "subtitle": "Bitrem 4 eixos (2+2) ou super bitrem 6 eixos (3+3)",
     "accent": "#ed1c24",
     "isLaunch": false,
@@ -352,7 +349,6 @@ window.PRODUCTS = [
     "shortName": "Bitrem Carga Seca",
     "category": "Bitrens",
     "tag": "Carga seca",
-    "description": "Implemento de carga seca com painel frontal de aço, laterais com estrutura metálica e placas ACM, e dispositivos de amarração para cintas de 6 t.",
     "subtitle": "Super bitrem 6 eixos (3+3)",
     "accent": "#ed1c24",
     "isLaunch": false,
@@ -474,7 +470,6 @@ window.PRODUCTS = [
     "shortName": "Bitrem Baú",
     "category": "Bitrens",
     "tag": "Baú",
-    "description": "Implemento tipo baú com painéis de alumínio, teto liso em peça única e estrutura interna em perfis de aço galvanizado.",
     "subtitle": "Bitrem 4 eixos (2+2) ou super bitrem 6 eixos (3+3)",
     "accent": "#ed1c24",
     "isLaunch": false,
@@ -594,7 +589,6 @@ window.PRODUCTS = [
     "shortName": "Semirreboque Sider",
     "category": "Semirreboques",
     "tag": "Sider",
-    "description": "Implemento sider com painel frontal reforçado, laterais em lona vinílica e colunas móveis para facilitar a operação de carga.",
     "subtitle": "Configurações de 2, 3 ou 4 eixos",
     "accent": "#ed1c24",
     "isLaunch": false,
@@ -747,7 +741,6 @@ window.PRODUCTS = [
     "shortName": "Semirreboque Graneleiro",
     "category": "Semirreboques",
     "tag": "Graneleiro",
-    "description": "Implemento graneleiro com laterais de estrutura metálica e placas ACM, lona de cobertura, bocas de escoamento e amarração para cinta de 6 t.",
     "subtitle": "Configurações de 2, 3 ou 4 eixos",
     "accent": "#ed1c24",
     "isLaunch": false,
@@ -877,7 +870,6 @@ window.PRODUCTS = [
     "shortName": "Semirreboque Carga Seca",
     "category": "Semirreboques",
     "tag": "Carga seca",
-    "description": "Implemento de carga seca com estrutura frontal em aço, tampas laterais com placas ACM e dispositivos de amarração de carga.",
     "subtitle": "Configurações de 2, 3 ou 4 eixos",
     "accent": "#ed1c24",
     "isLaunch": false,
@@ -1012,7 +1004,6 @@ window.PRODUCTS = [
     "shortName": "Semirreboque Baú",
     "category": "Semirreboques",
     "tag": "Baú",
-    "description": "Implemento baú com estrutura em perfis extrudados de alumínio, revestimentos corrugados e portas traseiras de alumínio.",
     "subtitle": "Configurações com 2, 3 ou 4 eixos",
     "accent": "#ed1c24",
     "isLaunch": false,
@@ -1166,7 +1157,6 @@ window.PRODUCTS = [
     "shortName": "Semirreboque Baú Black Edition",
     "category": "Semirreboques",
     "tag": "Black Edition",
-    "description": "Versão Black Edition do semirreboque baú, com painéis externos corrugados em alumínio preto e portas traseiras em alumínio liso preto.",
     "subtitle": "Acabamento Black Edition",
     "accent": "#ed1c24",
     "isLaunch": false,

@@ -957,10 +957,6 @@ body:has(.detail-screen:not(.hidden)) .global-footer {
   content: "↔";
 }
 
-.detail-tabs .detail-tab[data-tab="sheet"]::before {
-  content: "▤";
-}
-
 /* Aba selecionada */
 .detail-tabs .detail-tab.active {
   background: #fff0f1 !important;
