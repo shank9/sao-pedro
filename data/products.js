@@ -1177,7 +1177,7 @@ window.PRODUCTS = [
     "sheetImage": "assets/products/semirreboque-bau-bk-edition-sheet.png",
     "summary": [
       "Painel frontal em chapa de alumínio corrugado preto.",
-      "Caixa carga em chapa de alumínio corrugaod natural.",
+      "Caixa carga em chapa de alumínio corrugado natural.",
       "Molas: 11 lâminas, com quatro lâminas mestas",
       "Duas caixas de ferramentas e uma caixa de cozinha"
     ],
