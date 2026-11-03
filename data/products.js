@@ -1179,7 +1179,8 @@ window.PRODUCTS = [
       "Painel frontal em chapa de alumínio corrugado preto.",
       "Caixa carga em chapa de alumínio corrugado natural.",
       "Molas: 11 lâminas, com quatro lâminas mestas",
-      "Duas caixas de ferramentas e uma caixa de cozinha"
+      "Duas caixas de ferramentas e uma caixa de cozinha",
+      "Portas traseiras em alumínio liso preto, com quatro varões de travamento."
     ],
     "sections": [
       {
