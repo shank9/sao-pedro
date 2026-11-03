@@ -314,7 +314,6 @@
     $('#detail-counter').textContent = `PRODUTO ${String(products.indexOf(currentProduct) + 1).padStart(2,'0')} / ${String(products.length).padStart(2,'0')}`;
     $('#detail-title').innerHTML = titleMarkup(currentProduct.name);
     $('#detail-description').textContent = currentProduct.description;
-    $('#detail-category').textContent = (currentProduct.category || 'SÃO PEDRO').toUpperCase();
     $('#detail-badge').textContent = currentProduct.isLaunch ? 'PRODUTO DE LANÇAMENTO' : (currentProduct.tag || 'LINHA SÃO PEDRO').toUpperCase();
     // Controle de exibição do botão Black Edition.
 const isBlackEdition = currentProduct.id === LAUNCH_PRODUCT_ID;
