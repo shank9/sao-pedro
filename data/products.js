@@ -10,7 +10,7 @@ window.PRODUCTS = [
     "isLaunch": false,
     "image": "assets/products/semirreboque-porta-container-cover.png",
     "gallery": [
-    "assets/products/galeria/pc1.CR2",
+    "assets/products/galeria/pc1.jpg",
     "assets/products/galeria/pc2.jpg",
     "assets/products/galeria/pc3.jpg",
     "assets/products/galeria/pc4.jpg",
@@ -246,7 +246,7 @@ window.PRODUCTS = [
     "summary": [
       "Lateral em lona vinílica com cores definidas pelo cliente; logomarca opcional com impressão digital.",
       "Oito colunas móveis por vão e quatro travessas de contenção por vão.",
-      "Configurações de 24+24 paletes indicadas na ficha."
+      "Configurações de 24+24 paletes padrão"
     ],
     "sections": [
       {
@@ -487,7 +487,7 @@ window.PRODUCTS = [
     "summary": [
       "Painéis laterais e frontal em chapa corrugada de alumínio natural.",
       "Teto em chapa lisa de peça única, sem emendas.",
-      "Configurações de 24+24 paletes na ficha técnica."
+      "Configurações de 24+24 paletes padrão."
     ],
     "sections": [
       {
@@ -621,7 +621,7 @@ window.PRODUCTS = [
     "summary": [
       "Laterais em lona vinílica trava (12×12), com cores definidas pelo cliente.",
       "Oito colunas móveis de fácil remoção e quatro travessas de contenção em cada vão.",
-      "Capacidade indicada na tabela: 30 paletes."
+      "Capacidade padrão: 30 paletes."
     ],
     "sections": [
       {
@@ -1019,7 +1019,7 @@ window.PRODUCTS = [
     "summary": [
       "Revestimento externo em alumínio corrugado natural; teto liso em peça única.",
       "Estrutura interna com perfis de aço galvanizado.",
-      "Variantes de 30 ou 32 paletes indicadas na tabela técnica."
+      "Capacidade 30 ou 32 paletes, (padrão)."
     ],
     "sections": [
       {
@@ -1176,9 +1176,10 @@ window.PRODUCTS = [
 ],
     "sheetImage": "assets/products/semirreboque-bau-bk-edition-sheet.png",
     "summary": [
-      "Painéis laterais e frontal em alumínio corrugado preto.",
-      "Teto em chapa lisa de peça única, sem emendas.",
-      "Portas traseiras em alumínio liso preto com quatro varões de travamento."
+      "Painel frontal em chapa de alumínio corrugado preto.",
+      "Caixa carga em chapa de alumínio corrugaod natural.",
+      "Molas: 11 lâminas, com quatro lâminas mestas",
+      "Duas caixas de ferramentas e uma caixa de cozinha"
     ],
     "sections": [
       {
